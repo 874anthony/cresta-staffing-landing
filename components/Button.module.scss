@@ -1,0 +1,27 @@
+@use "../scss/base/variables" as variables;
+@use "../scss/base/colors" as colors;
+
+.btn {
+  font-family: "Inter", sans-serif;
+  padding: 0.6rem 1.8rem;
+  border-radius: variables.$rounded-full;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 0;
+  cursor: pointer;
+
+  &.btn_primary {
+    background: colors.$color-primary;
+    color: colors.$white;
+  }
+
+  &.btn_secondary {
+    background: colors.$color-secondary;
+    color: colors.$black;
+  }
+
+  &.btn_large {
+    padding: 0.6rem 2.4rem;
+    font-size: 1rem;
+  }
+}
