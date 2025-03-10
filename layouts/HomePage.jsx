@@ -2,7 +2,7 @@ import Hero from "@/views/home/sections/Hero";
 import OurProcess from "@/views/shared/OurProcess";
 import Overview from "@/views/home/sections/Overview";
 import Separator from "@/views/shared/Separator";
-import Testimonials from "@/views/home/sections/Testimonials";
+import Testimonials from "@/views/shared/Testimonials";
 import ContactForm from "@/views/home/sections/ContactForm";
 
 import styles from "./Home.module.scss";

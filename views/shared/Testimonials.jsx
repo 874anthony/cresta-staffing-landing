@@ -1,12 +1,10 @@
 import styles from "./Testimonials.module.scss";
 
-export default function Testimonials() {
+export default function Testimonials({ title = "Real Stories, Real Results" }) {
   return (
     <section className={styles.testimonials}>
       <span className={styles.testimonials__subCaption}>Testimonials</span>
-      <h2 className={styles.testimonials__captionTitle}>
-        Real Stories, Real Results
-      </h2>
+      <h2 className={styles.testimonials__captionTitle}>{title}</h2>
 
       <div className={styles.testimonials__list}>
         <div className={styles.testimonials__card}>

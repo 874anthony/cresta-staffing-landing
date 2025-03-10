@@ -1,0 +1,75 @@
+@use "../../../scss/base/variables" as variables;
+@use "../../../scss/base/colors" as colors;
+@use "../../../scss/base/typography" as typography;
+@use "../../../scss/mixins/mixins" as mixins;
+@use "../../../scss/mixins/typography" as typographyMixins;
+
+.benefits {
+  @include mixins.centered-bg-gray-section($gap: 1.2rem);
+}
+
+.benefits__subCaption {
+  font-size: typography.$font-size-lg;
+  color: colors.$text-color-gray;
+}
+
+.benefits__captionTitle {
+  margin-top: -1.5rem;
+  @include typographyMixins.title;
+}
+
+.benefits__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  margin-top: 3.4rem;
+}
+
+.benefits__item {
+  display: flex;
+  gap: 1.2rem;
+  padding: 1.6rem;
+  border-radius: variables.$rounded-lg;
+  background-color: colors.$bg-color-primary;
+
+  svg {
+    fill: colors.$text-color-white;
+  }
+}
+
+.benefits__text {
+  color: colors.$text-color-white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.benefits__itemTitle {
+  font-size: 1.4rem;
+}
+
+.benefits__item:nth-child(2),
+.benefits__item:nth-child(3) {
+  background-color: colors.$bg-color-white;
+
+  svg {
+    fill: rgba(24, 99, 194, 255);
+  }
+
+  .benefits__text {
+    color: colors.$color-primary;
+  }
+}
+
+.benefits__item:nth-child(1),
+.benefits__item:nth-child(3) {
+  transform: translateY(-2.4rem);
+}
+
+.benefits__item:nth-child(1) {
+  border-top-left-radius: 0;
+}
+
+.benefits__item:nth-child(4) {
+  border-bottom-right-radius: 0;
+}

@@ -1,10 +1,14 @@
 import HeroServices from "@/views/services/sections/HeroServices";
 import OurProcess from "@/views/shared/OurProcess";
 import Separator from "@/views/shared/Separator";
+import SoftwareUsed from "@/views/services/sections/SoftwareUsed";
+import Benefits from "@/views/services/sections/Benefits";
+import SeparatorServices from "@/views/services/sections/SeparatorServices";
+import Testimonials from "@/views/shared/Testimonials";
 
 import styles from "./Services.module.scss";
 import Button from "@/components/Button";
-import SoftwareUsed from "@/views/services/sections/SoftwareUsed";
+import ServicesFAQ from "@/views/services/sections/FAQ";
 
 export default function ServicesPage() {
   return (
@@ -37,6 +41,14 @@ export default function ServicesPage() {
       <Separator />
 
       <SoftwareUsed />
+
+      <Benefits />
+
+      <SeparatorServices />
+
+      <Testimonials title="Hear from our clients" />
+
+      <ServicesFAQ />
     </main>
   );
 }
