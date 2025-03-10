@@ -1,0 +1,36 @@
+@use "../../../scss/base/variables" as variables;
+@use "../../../scss/base/colors" as colors;
+@use "../../../scss/base/typography" as typography;
+@use "../../../scss/mixins/mixins" as mixins;
+@use "../../../scss/mixins/typography" as typographyMixins;
+
+.job__alert {
+  font-family: "Inter", sans-serif;
+  padding: variables.$spacing-section-center;
+  background-color: colors.$bg-color-primary;
+  color: colors.$text-color-white;
+  border-top-left-radius: variables.$rounded-lg;
+}
+
+.job__alertTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.1rem;
+}
+
+.job__alertText {
+  margin-top: 0.2rem;
+  font-size: 1.4rem;
+}
+
+.job__alertForm {
+  display: flex;
+  gap: 1.4rem;
+  margin-top: 2rem;
+  width: 100%;
+  align-items: center;
+}
+
+.input_icon {
+  margin-right: 0.5rem;
+}
