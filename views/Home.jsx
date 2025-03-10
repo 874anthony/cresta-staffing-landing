@@ -1,3 +1,6 @@
+import NextImage from "next/image";
+import Button from "@/components/Button";
+
 import styles from "./Home.module.scss";
 
 export default function HomePage() {
@@ -19,12 +22,26 @@ export default function HomePage() {
           </p>
 
           <div className={styles.hero__captionCTA}>
-            <button>Get Expert Consultation</button>
-            <button>Find a Job</button>
+            <Button variant="primary" size="large">
+              Get Expert Consultation
+            </Button>
+            <Button variant="secondary" size="large">
+              Find a job
+            </Button>
           </div>
         </div>
 
-        <div className={styles.hero__images}></div>
+        <div className={styles.hero__images}>
+          <img
+            src={"/assets/home/home_banner_slide_1.png"}
+            alt="AEC Staffing Agency"
+          />
+
+          <img
+            src={"/assets/home/home_banner_slide_4.png"}
+            alt="AEC Staffing Agency"
+          />
+        </div>
       </section>
     </main>
   );
