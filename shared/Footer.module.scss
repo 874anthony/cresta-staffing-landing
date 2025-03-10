@@ -1,6 +1,5 @@
 @use "../scss/base/variables" as variables;
 @use "../scss/base/colors" as colors;
-// @use "../scss/utils/utils" as utils;
 
 .footer {
   font-family: "Inter", sans-serif;
@@ -10,6 +9,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding-bottom: 3rem;
 }
 
 .footer__logo {

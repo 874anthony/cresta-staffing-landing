@@ -4,6 +4,7 @@
 
 .hero {
   padding: variables.$spacing-section-center;
+  margin-top: -3rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }

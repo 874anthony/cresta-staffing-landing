@@ -1,0 +1,30 @@
+@use "../base/variables" as variables;
+@use "../base/colors" as colors;
+
+@mixin centered-bg-gray-section(
+  $padding: variables.$spacing-section-center,
+  $color: colors.$bg-color-gray,
+  $gap: 2.2rem
+) {
+  font-family: "Inter", sans-serif;
+  background-color: $color;
+  padding: $padding;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin centered-bg-primary-section(
+  $padding: variables.$spacing-section-center,
+  $color: colors.$bg-color-primary,
+  $gap: 2.2rem
+) {
+  font-family: "Inter", sans-serif;
+  background-color: $color;
+  padding: $padding;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $gap;
+}

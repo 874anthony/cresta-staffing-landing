@@ -1,0 +1,75 @@
+@use "../../scss/base/variables" as variables;
+@use "../../scss/base/colors" as colors;
+@use "../../scss/base/typography" as typography;
+@use "../../scss/mixins/mixins" as mixins;
+@use "../../scss/mixins/typography" as typographyMixins;
+
+.testimonials {
+  @include mixins.centered-bg-gray-section(
+    $color: colors.$bg-color-white,
+    $gap: 0.5rem
+  );
+}
+
+.testimonials__subCaption {
+  font-size: typography.$font-size-lg;
+  color: colors.$text-color-gray;
+}
+
+.testimonials__captionTitle {
+  margin-top: -0.5rem;
+  @include typographyMixins.title;
+}
+
+.testimonials__list {
+  width: 100%;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.6rem;
+}
+
+.testimonials__card {
+  display: flex;
+  flex-direction: column;
+  background-color: colors.$bg-color-gray;
+  padding: 2rem;
+  border-radius: variables.$rounded-md;
+}
+
+.testimonials__cardQuote {
+  display: inline;
+  font-size: 6rem;
+  line-height: 0.8;
+  color: colors.$color-primary;
+}
+
+.testimonials__cardText {
+  font-size: typography.$font-size-lg;
+  margin-top: -1.2rem;
+}
+
+.testimonials__cardAuthor {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+
+  img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+.testimonials__cardAuthorName {
+  font-weight: 700;
+  color: colors.$color-primary;
+  font-size: typography.$font-size-lg;
+}
+
+.testimonials__cardAuthorPosition {
+  font-size: typography.$font-size-sm;
+  color: colors.$text-color-gray;
+}

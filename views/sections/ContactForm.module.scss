@@ -1,0 +1,77 @@
+@use "../../scss/base/variables" as variables;
+@use "../../scss/base/colors" as colors;
+@use "../../scss/base/typography" as typography;
+@use "../../scss/mixins/mixins" as mixins;
+@use "../../scss/mixins/typography" as typographyMixins;
+
+.contact__section {
+  @include mixins.centered-bg-primary-section($gap: 1.2rem);
+  border-top-left-radius: variables.$rounded-section;
+  border-top-right-radius: variables.$rounded-section;
+
+  flex-direction: row;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.contact__container {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact__title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: colors.$text-color-white;
+}
+
+.contact__description {
+  margin-top: 0.5rem;
+  font-size: typography.$font-size-md;
+  color: colors.$text-color-white;
+}
+
+.contact__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  font-size: typography.$font-size-md;
+  color: colors.$text-color-white;
+
+  .contact__formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .contact__formGroup:has(textarea) {
+    grid-column: 1 / -1;
+  }
+
+  .contact__formGroup input,
+  .contact__formGroup textarea {
+    padding: 0.8rem;
+    border-radius: variables.$rounded-md;
+    background-color: colors.$bg-color-gray;
+    border: none;
+  }
+}
+
+.contact__submit {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.contact__terms {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
