@@ -1,23 +1,15 @@
-import Hero from "@/views/home/sections/Hero";
+import HeroServices from "@/views/services/sections/HeroServices";
 import OurProcess from "@/views/shared/OurProcess";
-import Overview from "@/views/home/sections/Overview";
 import Separator from "@/views/shared/Separator";
-import Testimonials from "@/views/home/sections/Testimonials";
-import ContactForm from "@/views/home/sections/ContactForm";
 
-import styles from "./Home.module.scss";
+import styles from "./Services.module.scss";
 import Button from "@/components/Button";
+import SoftwareUsed from "@/views/services/sections/SoftwareUsed";
 
-export default function HomePage() {
+export default function ServicesPage() {
   return (
     <main>
-      <Hero />
-
-      <Overview />
-
-      <OurProcess />
-
-      <Separator />
+      <HeroServices />
 
       <section className={styles.our__services}>
         <h3 className={styles.our__servicesTitle}>Our professional services</h3>
@@ -40,9 +32,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      <Testimonials />
+      <OurProcess />
 
-      <ContactForm />
+      <Separator />
+
+      <SoftwareUsed />
     </main>
   );
 }

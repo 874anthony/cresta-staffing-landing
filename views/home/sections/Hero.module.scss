@@ -1,6 +1,6 @@
-@use "../../scss/base/variables" as variables;
-@use "../../scss/base/colors" as colors;
-@use "../../scss/base/typography" as typography;
+@use "../../../scss/base/variables" as variables;
+@use "../../../scss/base/colors" as colors;
+@use "../../../scss/base/typography" as typography;
 
 .hero {
   padding: variables.$spacing-section-center;

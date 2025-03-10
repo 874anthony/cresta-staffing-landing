@@ -6,10 +6,12 @@
 .cta__separator {
   font-family: "Inter", sans-serif;
   padding: variables.$spacing-section-center;
+  padding-block: 3rem;
   background-color: colors.$bg-color-primary;
   color: colors.$text-color-white;
   border-top-left-radius: variables.$rounded-lg;
   display: flex;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
   text-align: center;

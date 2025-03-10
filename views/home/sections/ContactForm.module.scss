@@ -1,8 +1,8 @@
-@use "../../scss/base/variables" as variables;
-@use "../../scss/base/colors" as colors;
-@use "../../scss/base/typography" as typography;
-@use "../../scss/mixins/mixins" as mixins;
-@use "../../scss/mixins/typography" as typographyMixins;
+@use "../../../scss/base/variables" as variables;
+@use "../../../scss/base/colors" as colors;
+@use "../../../scss/base/typography" as typography;
+@use "../../../scss/mixins/mixins" as mixins;
+@use "../../../scss/mixins/typography" as typographyMixins;
 
 .contact__section {
   @include mixins.centered-bg-primary-section($gap: 1.2rem);

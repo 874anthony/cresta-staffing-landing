@@ -1,14 +1,11 @@
-@use "../../scss/base/variables" as variables;
-@use "../../scss/base/colors" as colors;
-@use "../../scss/base/typography" as typography;
-@use "../../scss/mixins/mixins" as mixins;
-@use "../../scss/mixins/typography" as typographyMixins;
+@use "../../../scss/base/variables" as variables;
+@use "../../../scss/base/colors" as colors;
+@use "../../../scss/base/typography" as typography;
+@use "../../../scss/mixins/mixins" as mixins;
+@use "../../../scss/mixins/typography" as typographyMixins;
 
 .testimonials {
-  @include mixins.centered-bg-gray-section(
-    $color: colors.$bg-color-white,
-    $gap: 0.5rem
-  );
+  @include mixins.centered-bg-white-section($gap: 0.5rem);
 }
 
 .testimonials__subCaption {

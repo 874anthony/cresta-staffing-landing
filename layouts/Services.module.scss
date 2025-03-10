@@ -6,6 +6,8 @@
 
 .our__services {
   @include mixins.centered-bg-gray-section($gap: 1.2rem);
+  border-top-left-radius: variables.$rounded-section;
+  border-top-right-radius: variables.$rounded-section;
 }
 
 .our__servicesTitle {
@@ -21,3 +23,5 @@
   grid-template-columns: repeat(4, 1fr);
   width: 100%;
 }
+
+// ========================= SOFTWARE WE USE FROM HERE =========================
