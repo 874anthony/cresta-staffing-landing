@@ -1,0 +1,103 @@
+@use "../../scss/base/variables" as variables;
+@use "../../scss/base/colors" as colors;
+@use "../../scss/base/typography" as typography;
+@use "../../scss/mixins/typography" as typographyMixins;
+
+.ourProcess {
+  font-family: "Inter", sans-serif;
+  padding: variables.$spacing-section-center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.ourProcess__caption {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.ourProcess__subCaption {
+  font-size: typography.$font-size-lg;
+  color: colors.$text-color-gray;
+}
+
+.ourProcess__captionTitle {
+  margin-top: -0.5rem;
+  @include typographyMixins.title;
+}
+
+.ourProcess__captionText {
+  margin-top: 0.875rem;
+}
+
+.ourProcess__steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.1rem;
+  align-items: start;
+}
+
+.ourProcess__step {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: colors.$bg-color-primary;
+  color: colors.$text-color-white;
+  padding: 1.6rem 2rem;
+  border-radius: variables.$rounded-lg;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  svg {
+    margin-left: auto;
+  }
+
+  &:hover {
+    background-color: colors.$bg-color-gray;
+    color: colors.$text-color-black;
+
+    svg {
+      fill: colors.$color-primary;
+    }
+
+    .ourProcess__stepTitle {
+      color: colors.$color-primary;
+    }
+
+    .ourProcess__stepDescription {
+      font-size: typography.$font-size-sm;
+      color: colors.$text-color-gray;
+      opacity: 1;
+      max-height: fit-content; // Adjust as needed
+    }
+  }
+}
+
+.ourProcess__step:nth-child(1) {
+  border-bottom-left-radius: 0;
+}
+
+.ourProcess__step:nth-child(4) {
+  border-bottom-right-radius: 0;
+}
+
+.ourProcess__stepTitle {
+  font-size: 3.6rem;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.ourProcess__stepText {
+  font-size: 1.6rem;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.ourProcess__stepDescription {
+  margin-top: 1rem;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}

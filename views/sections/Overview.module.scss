@@ -1,0 +1,74 @@
+@use "../../scss/base/variables" as variables;
+@use "../../scss/base/colors" as colors;
+@use "../../scss/base/typography" as typography;
+@use "../../scss/mixins/typography" as typographyMixins;
+
+.overview {
+  font-family: "Inter", sans-serif;
+  background-color: colors.$bg-color-gray;
+  padding: variables.$spacing-section-center;
+  border-top-left-radius: variables.$rounded-section;
+  border-top-right-radius: variables.$rounded-section;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.overview__title {
+  @include typographyMixins.title;
+}
+
+.overview__checklist {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.overview__checklistItem {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.overview__cta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.overview__caption {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding-left: 2.8rem;
+  justify-content: center;
+
+  button {
+    width: max-content;
+  }
+}
+
+.overview__captionTitle {
+  @include typographyMixins.title;
+}
+
+.overview__captionText {
+  color: colors.$text-color-gray;
+
+  span {
+    color: colors.$text-color-black;
+    font-weight: 600;
+  }
+}
+
+.overview__images {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overview__images img {
+  width: 100%;
+  object-fit: cover;
+}

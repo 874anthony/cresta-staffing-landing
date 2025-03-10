@@ -4,7 +4,7 @@
 
 .footer {
   font-family: "Inter", sans-serif;
-  background-color: #f2f6fc;
+  background-color: colors.$bg-color-gray;
   padding-block: variables.$spacing-page-sections;
   padding-inline: variables.$spacing-page-center;
   display: flex;

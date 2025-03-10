@@ -1,0 +1,10 @@
+@use "../base/variables" as variables;
+@use "../base/colors" as colors;
+@use "../base/typography" as typography;
+
+@mixin title($size: typography.$font-size-xl, $color: colors.$color-primary) {
+  font-family: "Inter", sans-serif;
+  font-size: $size;
+  color: $color;
+  font-weight: 700;
+}

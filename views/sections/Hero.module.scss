@@ -1,5 +1,6 @@
-@use "../scss/base/variables" as variables;
-@use "../scss/base/colors" as colors;
+@use "../../scss/base/variables" as variables;
+@use "../../scss/base/colors" as colors;
+@use "../../scss/base/typography" as typography;
 
 .hero {
   padding: variables.$spacing-section-center;
@@ -19,7 +20,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.875rem;
+  font-size: typography.$font-size-sm;
   font-weight: 700;
   color: colors.$color-primary;
 
@@ -34,7 +35,7 @@
 }
 
 .hero__captionTitle {
-  font-size: 3rem;
+  font-size: typography.$font-size-xl;
   color: black;
   font-weight: 700;
   line-height: 1.3;
@@ -45,7 +46,7 @@
 }
 
 .hero__captionText {
-  font-size: 1.125rem;
+  font-size: typography.$font-size-lg;
   color: colors.$text-color-gray;
   font-weight: 400;
 }
