@@ -10,6 +10,12 @@
   padding-inline: variables.$spacing-page-center;
 }
 
+.logo {
+  width: 25%;
+  max-width: max-content;
+  cursor: pointer;
+}
+
 .nav {
   display: flex;
   gap: 1.2rem;

@@ -23,7 +23,9 @@ const ChevronDown = () => (
 export default function Navbar() {
   return (
     <header className={styles.header}>
-      <div className="cresta-logo">Logo goes here</div>
+      <div className={styles.logo}>
+        <img src="/assets/cresta_logo.png" alt="Cresta Logo" />
+      </div>
 
       <nav className={styles.nav}>
         <ul className={styles.nav__list}>

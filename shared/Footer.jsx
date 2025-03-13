@@ -53,7 +53,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__logo}>
-        <h1>Logo goes here</h1>
+        <img src="/assets/cresta_logo.png" alt="Cresta Logo" />
 
         <div className={styles.footer__cta}>
           <p>Let&apos;s talk today</p>
