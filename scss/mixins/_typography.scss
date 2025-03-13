@@ -8,3 +8,20 @@
   color: $color;
   font-weight: 700;
 }
+
+@mixin subCaption(
+  $size: typography.$font-size-lg,
+  $color: colors.$text-color-gray
+) {
+  font-family: "Inter", sans-serif;
+  font-size: $size;
+  color: $color;
+  font-weight: 500;
+}
+
+@mixin captionText($size: typography.$font-size-base, $color: #000) {
+  font-family: "Inter", sans-serif;
+  font-size: $size;
+  color: $color;
+  font-weight: 400;
+}

@@ -1,6 +1,7 @@
 @use "../../../scss/base/variables" as variables;
 @use "../../../scss/base/colors" as colors;
 @use "../../../scss/base/typography" as typography;
+@use "../../../scss/mixins/typography" as typographyMixins;
 
 .hero {
   padding: variables.$spacing-section-center;
@@ -47,8 +48,7 @@
 }
 
 .hero__captionText {
-  font-size: typography.$font-size-lg;
-  color: colors.$text-color-gray;
+  @include typographyMixins.subCaption;
   font-weight: 400;
 }
 

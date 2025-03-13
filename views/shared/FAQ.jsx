@@ -35,7 +35,7 @@ const ExpandableIcon = () => (
   </svg>
 );
 
-export default function ServicesFAQ() {
+export default function FAQ() {
   return (
     <section className={styles.faq}>
       <h3 className={styles.faqTitle}>Frequently Asked Questions</h3>

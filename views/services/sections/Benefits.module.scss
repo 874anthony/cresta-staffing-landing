@@ -9,8 +9,7 @@
 }
 
 .benefits__subCaption {
-  font-size: typography.$font-size-lg;
-  color: colors.$text-color-gray;
+  @include typographyMixins.subCaption;
 }
 
 .benefits__captionTitle {

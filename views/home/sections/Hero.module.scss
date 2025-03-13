@@ -50,9 +50,11 @@
   font-size: typography.$font-size-lg;
   color: colors.$text-color-gray;
   font-weight: 400;
+  width: 85%;
 }
 
 .hero__captionCTA {
+  margin-top: 0.5rem;
   display: flex;
   gap: 1rem;
   align-items: center;

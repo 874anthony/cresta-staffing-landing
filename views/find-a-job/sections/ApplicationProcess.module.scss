@@ -22,8 +22,7 @@
 }
 
 .appProcess__subCaption {
-  font-size: typography.$font-size-lg;
-  color: colors.$text-color-gray;
+  @include typographyMixins.subCaption;
 }
 
 .appProcess__captionTitle {
@@ -33,8 +32,7 @@
 
 .appProcess__captionText {
   margin-top: 0.875rem;
-  font-size: 1.2rem;
-  font-weight: 500;
+  @include typographyMixins.captionText;
 
   span {
     color: colors.$color-primary;

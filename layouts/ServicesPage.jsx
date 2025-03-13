@@ -8,7 +8,7 @@ import Testimonials from "@/views/shared/Testimonials";
 
 import styles from "./Services.module.scss";
 import Button from "@/components/Button";
-import ServicesFAQ from "@/views/services/sections/FAQ";
+import FAQ from "@/views/shared/FAQ";
 
 export default function ServicesPage() {
   return (
@@ -48,7 +48,7 @@ export default function ServicesPage() {
 
       <Testimonials title="Hear from our clients" />
 
-      <ServicesFAQ />
+      <FAQ />
     </main>
   );
 }

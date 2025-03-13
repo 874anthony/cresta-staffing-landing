@@ -47,8 +47,7 @@
 }
 
 .hero__captionText {
-  font-size: typography.$font-size-lg;
-  color: colors.$text-color-gray;
+  @include typography.subCaption;
   font-weight: 400;
 }
 

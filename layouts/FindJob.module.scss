@@ -1,6 +1,7 @@
 @use "../scss/base/variables" as variables;
 @use "../scss/base/colors" as colors;
 @use "../scss/base/typography" as typography;
+@use "../scss/utils/utils" as utils;
 @use "../scss/mixins/mixins" as mixins;
 @use "../scss/mixins/typography" as typographyMixins;
 
@@ -24,4 +25,4 @@
   width: 100%;
 }
 
-// ============== SEPARATOR JOB ALERT ==============
+// ============== WeeklyJobs STARTS FROM HERE ==============

@@ -66,6 +66,13 @@ export default function OurProcess() {
           <p className={styles.ourProcess__stepText}>
             Managing HR & monitoring for long-term success
           </p>
+
+          <p className={styles.ourProcess__stepDescription}>
+            Cresta takes care of all the arrangements, setting the stage for a
+            successful remote collaboration with your selected professional.
+            We'll maintain regular contact with both of you to provide ongoing
+            support and ensure a productive partnership
+          </p>
         </div>
       </div>
     </section>

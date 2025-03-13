@@ -1,0 +1,88 @@
+@use "../../../scss/base/variables" as variables;
+@use "../../../scss/base/colors" as colors;
+@use "../../../scss/base/typography" as typography;
+@use "../../../scss/utils/utils" as utils;
+@use "../../../scss/mixins/mixins" as mixins;
+@use "../../../scss/mixins/typography" as typographyMixins;
+
+.weekly__jobs {
+  @include mixins.centered-bg-gray-section($gap: 1.2rem);
+  border-top-left-radius: variables.$rounded-section;
+  border-top-right-radius: variables.$rounded-section;
+  border-bottom-right-radius: variables.$rounded-section;
+}
+
+.weekly__jobsTitle {
+  @include typographyMixins.title;
+}
+
+.weekly__subCaption {
+  @include typographyMixins.subCaption;
+}
+
+.weekly__jobsList {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.6rem;
+  padding-inline: 2rem;
+}
+
+.weekly__jobCard {
+  width: 100%;
+  padding: 1.5rem 3rem;
+
+  border-radius: variables.$rounded-lg;
+  border-top-right-radius: 0;
+
+  background-color: colors.$color-primary;
+  box-shadow: utils.$shadow-normal;
+}
+
+.weekly__jobCardTitle {
+  @include typographyMixins.title(
+    $size: 2rem,
+    $color: colors.$text-color-white
+  );
+}
+
+.weekly__jobCardSubtitle {
+  @include typographyMixins.subCaption(
+    $size: 1.275rem,
+    $color: colors.$text-color-white
+  );
+
+  margin-top: -1rem;
+  font-weight: 200;
+}
+
+.weekly__jobCardSubtitle + .weekly__jobCardSubtitle {
+  margin-left: 1rem;
+}
+
+.weekly__jobCardList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 1rem;
+
+  li {
+    font-size: typography.$font-size-md;
+    color: colors.$text-color-white;
+    font-weight: 200;
+  }
+}
+
+.weekly__jobCardFooter {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.weekly__jobCard:nth-child(2) {
+  background-color: #2e3191;
+
+  border-top-left-radius: 0;
+  border-top-right-radius: variables.$rounded-lg;
+}

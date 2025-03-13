@@ -1,0 +1,59 @@
+@use "../../../scss/base/variables" as variables;
+@use "../../../scss/base/colors" as colors;
+@use "../../../scss/base/typography" as typography;
+@use "../../../scss/mixins/mixins" as mixins;
+@use "../../../scss/mixins/typography" as typographyMixins;
+
+.benefits__titleContainer {
+  @include mixins.centered-bg-white-section($gap: 1.2rem);
+  padding-bottom: 0;
+}
+
+.benefits__subCaption {
+  @include typographyMixins.subCaption;
+}
+
+.benefits__captionTitle {
+  @include typographyMixins.title;
+}
+
+.benefits__list {
+  padding: 6rem 6rem;
+  padding-top: 0;
+
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  row-gap: 4rem;
+}
+
+.benefits__listItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: -1.5rem;
+}
+
+.benefits__itemImage {
+  width: 100%;
+  transform: translateY(-1.5rem);
+}
+
+.benefits__itemContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.benefits__itemTitle {
+  @include typographyMixins.title($size: 1.5rem);
+}
+
+.benefits__itemText {
+  @include typographyMixins.captionText(
+    $size: 1.2rem,
+    $color: colors.$text-color-gray-2
+  );
+  line-height: 1.4;
+  font-weight: 400;
+}

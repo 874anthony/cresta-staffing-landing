@@ -5,6 +5,10 @@ import JobAlert from "@/views/find-a-job/sections/JobAlert";
 import Button from "@/components/Button";
 
 import styles from "./FindJob.module.scss";
+import BenefitsJob from "@/views/find-a-job/sections/BenefitsJob";
+import WeeklyJobs from "@/views/find-a-job/sections/WeeklyJobs";
+import Testimonials from "@/views/shared/Testimonials";
+import FAQ from "@/views/shared/FAQ";
 
 export default function FindJobPage() {
   return (
@@ -37,6 +41,14 @@ export default function FindJobPage() {
       </section>
 
       <JobAlert />
+
+      <BenefitsJob />
+
+      <WeeklyJobs />
+
+      <Testimonials />
+
+      <FAQ />
     </main>
   );
 }

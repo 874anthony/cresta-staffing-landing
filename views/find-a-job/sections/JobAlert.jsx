@@ -20,7 +20,7 @@ const MailIcon = () => (
     width={28}
     height={28}
     viewBox="0 0 24 24"
-    strokewidth="1.5"
+    strokeWidth="1.5"
     stroke="currentColor"
     className={styles.input_icon}
   >
