@@ -1,14 +1,15 @@
 import HeroFindJob from "@/views/find-a-job/sections/HeroFindJob";
 import ApplicationProcess from "@/views/find-a-job/sections/ApplicationProcess";
 import JobAlert from "@/views/find-a-job/sections/JobAlert";
-
-import Button from "@/components/Button";
-
-import styles from "./FindJob.module.scss";
 import BenefitsJob from "@/views/find-a-job/sections/BenefitsJob";
 import WeeklyJobs from "@/views/find-a-job/sections/WeeklyJobs";
 import Testimonials from "@/views/shared/Testimonials";
 import FAQ from "@/views/shared/FAQ";
+import FindJobSeparator from "@/views/find-a-job/sections/FindJobSeparator";
+
+import Button from "@/components/Button";
+
+import styles from "./FindJob.module.scss";
 
 export default function FindJobPage() {
   return (
@@ -49,6 +50,8 @@ export default function FindJobPage() {
       <Testimonials />
 
       <FAQ />
+
+      <FindJobSeparator />
     </main>
   );
 }

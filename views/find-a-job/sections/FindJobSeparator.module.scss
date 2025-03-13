@@ -1,0 +1,29 @@
+@use "../../../scss/base/colors" as colors;
+@use "../../../scss/mixins/mixins" as mixins;
+@use "../../../scss/mixins/typography" as typographyMixins;
+
+.findJobSeparator {
+  @include mixins.centered-bg-primary-section($gap: 1.2rem);
+  padding-block: 3rem;
+}
+
+.findJobSeparatorTitle {
+  width: 50%;
+  text-align: center;
+  @include typographyMixins.title($size: 3rem);
+  color: colors.$text-color-white;
+  font-weight: 500;
+  line-height: 1.2;
+
+  span {
+    font-weight: 700;
+  }
+}
+
+.findJobSeparatorText {
+  color: colors.$text-color-white;
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-align: center;
+  margin-block: 1rem;
+}
