@@ -1,5 +1,5 @@
-import { OutlinedInput } from "@mui/material";
 import Button from "@/components/Button";
+import { OutlinedInput } from "@mui/material";
 
 import styles from "./Separator.module.scss";
 
@@ -43,11 +43,13 @@ const UserIcon = () => (
 
 export default function Separator() {
   return (
-    <section className={styles.aboutSeparator}>
-      <h4 className={styles.aboutSeparatorTitle}>Solve Your Challenges</h4>
-      <span className={styles.aboutSeparatorText}>With expert consulting</span>
+    <section className={styles.separator}>
+      <h4 className={styles.separatorTitle}>Stay ahead</h4>
+      <span className={styles.separatorText}>
+        subscribe for top construction insights and strategies!
+      </span>
 
-      <div className={styles.aboutSeparatorCTA}>
+      <div className={styles.separatorCTA}>
         <OutlinedInput
           id="name"
           type="name"
@@ -79,7 +81,7 @@ export default function Separator() {
         />
 
         <Button variant="secondary" size="large">
-          Book a consultation
+          Subscribe Now
         </Button>
       </div>
     </section>

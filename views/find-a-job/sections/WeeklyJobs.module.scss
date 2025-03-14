@@ -6,7 +6,7 @@
 @use "../../../scss/mixins/typography" as typographyMixins;
 
 .weekly__jobs {
-  @include mixins.centered-bg-gray-section($gap: 1.2rem);
+  @include mixins.centered-bg-gray-section($gap: 0.8rem, $padding: 4rem 12rem);
   border-top-left-radius: variables.$rounded-section;
   border-top-right-radius: variables.$rounded-section;
   border-bottom-right-radius: variables.$rounded-section;

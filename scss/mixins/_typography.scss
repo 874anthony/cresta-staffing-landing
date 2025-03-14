@@ -6,7 +6,8 @@
   font-family: "Inter", sans-serif;
   font-size: $size;
   color: $color;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -1px;
 }
 
 @mixin subCaption(
