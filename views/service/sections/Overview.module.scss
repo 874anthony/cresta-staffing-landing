@@ -1,0 +1,69 @@
+@use "../../../scss/base/variables" as variables;
+@use "../../../scss/base/colors" as colors;
+@use "../../../scss/base/typography" as typography;
+@use "../../../scss/mixins/mixins" as mixins;
+@use "../../../scss/mixins/typography" as typographyMixins;
+
+.overview {
+  @include mixins.centered-bg-gray-section;
+  border-top-left-radius: variables.$rounded-section;
+  border-top-right-radius: variables.$rounded-section;
+}
+
+.overview__title {
+  @include typographyMixins.title;
+}
+
+.overview__checklist {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.overview__checklistItem {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.overview__cta {
+  margin-top: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.overview__caption {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  justify-content: center;
+
+  button {
+    width: max-content;
+  }
+}
+
+.overview__captionTitle {
+  @include typographyMixins.title;
+}
+
+.overview__captionText {
+  color: colors.$text-color-gray;
+
+  span {
+    color: colors.$text-color-black;
+    font-weight: 600;
+  }
+}
+
+.overview__images {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overview__images img {
+  width: 80%;
+  object-fit: cover;
+}
