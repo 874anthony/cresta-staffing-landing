@@ -1,0 +1,127 @@
+@use "../../../scss/base/variables" as variables;
+@use "../../../scss/base/colors" as colors;
+@use "../../../scss/base/typography" as typography;
+@use "../../../scss/utils/utils" as utils;
+@use "../../../scss/mixins/mixins" as mixins;
+@use "../../../scss/mixins/typography" as typographyMixins;
+
+.faq {
+  margin-top: -2rem;
+  @include mixins.centered-bg-white-section($gap: 0.5rem);
+}
+
+.faqTitle {
+  @include typographyMixins.title;
+}
+
+.faqText {
+  font-size: typography.$font-size-lg;
+}
+
+.faqTitle,
+.faqText {
+  align-self: flex-start;
+}
+
+.faqList {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+}
+
+.faq__card {
+  flex: 1;
+  background: transparent;
+  border: 1px solid colors.$color-primary;
+  border-radius: variables.$rounded-sm;
+  padding: 0.8rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+    color: colors.$color-primary;
+  }
+
+  span {
+    font-size: typography.$font-size-lg;
+    font-weight: 700;
+  }
+
+  &.active,
+  &:hover {
+    background: colors.$color-primary;
+    color: colors.$text-color-white;
+
+    svg {
+      color: colors.$text-color-white;
+    }
+  }
+}
+
+.faq__questionsContainer {
+  align-self: self-start;
+  margin-top: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.faq__question {
+  display: flex;
+  gap: 1rem;
+
+  svg {
+    align-self: self-start;
+    width: 4rem;
+    height: 4rem;
+    color: colors.$color-primary;
+  }
+}
+
+.faq__questionContent {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 0.5rem;
+  width: 100%;
+
+  h6 {
+    font-size: 2.4rem;
+    color: colors.$color-primary;
+    font-weight: 700;
+  }
+
+  p {
+    color: colors.$text-color-gray;
+  }
+
+  border-bottom: 1px solid colors.$color-primary;
+  padding-bottom: 1.6rem;
+}
+
+.faq__CTA {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 1.6rem;
+
+  span {
+    font-weight: 500;
+  }
+}
+
+// TODO: CHANGE TO ACTIVE/INACTIVE
+.faq__question:nth-child(2) {
+  .faq__questionContent {
+    h6 {
+      color: colors.$text-color-black;
+    }
+  }
+}
