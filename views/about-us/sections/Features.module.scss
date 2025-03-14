@@ -1,0 +1,32 @@
+@use "../../../scss/base/variables" as variables;
+@use "../../../scss/base/colors" as colors;
+@use "../../../scss/base/typography" as typography;
+@use "../../../scss/mixins/mixins" as mixins;
+@use "../../../scss/mixins/typography" as typographyMixins;
+
+.features {
+  @include mixins.centered-bg-gray-section;
+  display: flex;
+  flex-direction: row;
+  border-top-left-radius: variables.$rounded-section;
+  border-top-right-radius: variables.$rounded-section;
+}
+
+.featureContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.featureIcon {
+  width: 20%;
+}
+
+.featureText {
+  font-size: 1.125rem;
+  font-weight: 700;
+  width: 80%;
+  text-align: center;
+}

@@ -25,3 +25,24 @@
   color: $color;
   font-weight: 400;
 }
+
+// SEPARATOR TITLES
+@mixin separatorTitle(
+  $size: typography.$font-size-xl,
+  $color: colors.$text-color-white
+) {
+  font-family: "Inter", sans-serif;
+  font-size: $size;
+  color: $color;
+  font-weight: 700;
+}
+
+@mixin separatorText(
+  $size: typography.$font-size-base,
+  $color: colors.$text-color-white
+) {
+  font-family: "Inter", sans-serif;
+  font-size: $size;
+  color: $color;
+  font-weight: 400;
+}

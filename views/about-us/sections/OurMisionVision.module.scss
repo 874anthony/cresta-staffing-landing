@@ -1,0 +1,58 @@
+@use "../../../scss/base/variables" as variables;
+@use "../../../scss/base/colors" as colors;
+@use "../../../scss/base/typography" as typography;
+@use "../../../scss/mixins/mixins" as mixins;
+@use "../../../scss/mixins/typography" as typographyMixins;
+
+.ourMissionAndVision {
+  @include mixins.centered-bg-white-section;
+}
+
+.ourMission,
+.ourVision {
+  display: flex;
+  gap: 1rem;
+}
+
+.ourMissionContent,
+.ourVisionContent {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.ourMissionSubCaption,
+.ourVisionSubCaption {
+  @include typographyMixins.subCaption;
+  color: colors.$text-color-gray;
+  font-weight: 400;
+}
+
+.ourMissionTitle,
+.ourVisionTitle {
+  @include typographyMixins.title;
+}
+
+.ourMissionText,
+.ourVisionText {
+  margin-top: 0.5rem;
+  font-size: 1.275rem;
+  color: colors.$text-color-gray;
+  font-weight: 500;
+}
+
+.ourMissionDescription,
+.ourVisionDescription {
+  width: 90%;
+  margin-top: 1.6rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.ourVision {
+  flex-direction: row-reverse;
+}
+
+.ourVisionContent {
+  align-items: flex-end;
+}

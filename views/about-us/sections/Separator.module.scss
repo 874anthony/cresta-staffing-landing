@@ -1,0 +1,30 @@
+@use "../../../scss/base/variables" as variables;
+@use "../../../scss/base/colors" as colors;
+@use "../../../scss/base/typography" as typography;
+@use "../../../scss/mixins/mixins" as mixins;
+@use "../../../scss/mixins/typography" as typographyMixins;
+
+.aboutSeparator {
+  @include mixins.centered-bg-primary-section($gap: 1rem, $padding: 4rem 12rem);
+  border-top-left-radius: variables.$rounded-section;
+  align-items: normal;
+}
+
+.aboutSeparatorTitle {
+  @include typographyMixins.separatorTitle;
+}
+
+.aboutSeparatorText {
+  @include typographyMixins.separatorText;
+}
+
+.aboutSeparatorCTA {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+
+  svg {
+    margin-right: 0.5rem;
+  }
+}

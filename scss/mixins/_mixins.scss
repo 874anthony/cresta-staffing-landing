@@ -3,26 +3,37 @@
 
 @mixin centered-bg-section {
   font-family: "Inter", sans-serif;
-  padding: variables.$spacing-section-center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-@mixin centered-bg-gray-section($gap: 2.2rem) {
+@mixin centered-bg-gray-section(
+  $gap: 2.2rem,
+  $padding: variables.$spacing-section-center
+) {
   @include centered-bg-section;
   background-color: colors.$bg-color-gray;
+  padding: $padding;
   gap: $gap;
 }
 
-@mixin centered-bg-primary-section($gap: 2.2rem) {
+@mixin centered-bg-primary-section(
+  $gap: 2.2rem,
+  $padding: variables.$spacing-section-center
+) {
   @include centered-bg-section;
   background-color: colors.$bg-color-primary;
+  padding: $padding;
   gap: $gap;
 }
 
-@mixin centered-bg-white-section($gap: 2.2rem) {
+@mixin centered-bg-white-section(
+  $gap: 2.2rem,
+  $padding: variables.$spacing-section-center
+) {
   @include centered-bg-section;
   background-color: colors.$bg-color-white;
+  padding: $padding;
   gap: $gap;
 }
