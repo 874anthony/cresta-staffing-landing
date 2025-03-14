@@ -2,7 +2,7 @@ import Button from "@/components/Button";
 
 import styles from "./Hero.module.scss";
 
-export default function Hero({ title, description, heroImage }) {
+export default function Hero({ title, description, heroImage, extraTest }) {
   return (
     <section className={styles.hero}>
       <div className={styles.hero__caption}>
@@ -11,6 +11,8 @@ export default function Hero({ title, description, heroImage }) {
         <h1 className={styles.hero__captionTitle}>{title}</h1>
 
         <p className={styles.hero__captionText}>{description}</p>
+
+        {extraTest && <p className={styles.hero__captionExtra}>{extraTest}</p>}
 
         <div className={styles.hero__captionCTA}>
           <Button variant="primary" size="large">

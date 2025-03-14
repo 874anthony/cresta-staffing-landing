@@ -48,6 +48,15 @@
   width: 85%;
 }
 
+.hero__captionExtra {
+  @include typographyMixins.subCaption;
+  font-size: typography.$font-size-md;
+  margin-top: 1rem;
+  margin-bottom: 0.1rem;
+  font-weight: 700;
+  width: 80%;
+}
+
 .hero__captionCTA {
   margin-top: 1rem;
   display: flex;

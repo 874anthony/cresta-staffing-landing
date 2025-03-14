@@ -14,6 +14,7 @@ export default function ServiceGeneric({
   overviewItems,
   overviewImage,
   overviewDescription,
+  extraTest,
 }) {
   return (
     <main>
@@ -21,6 +22,7 @@ export default function ServiceGeneric({
         title={title}
         description={description}
         heroImage={heroImage}
+        extraTest={extraTest}
       />
 
       <OverviewService
