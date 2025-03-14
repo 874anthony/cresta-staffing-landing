@@ -9,6 +9,15 @@
   @include mixins.centered-bg-white-section($gap: 1.2rem);
 }
 
+.faqGray {
+  @include mixins.centered-bg-gray-section($gap: 1.2rem);
+}
+
+.faqRounded {
+  border-top-left-radius: variables.$rounded-section;
+  border-top-right-radius: variables.$rounded-section;
+}
+
 .faqTitle {
   @include typographyMixins.title;
 }

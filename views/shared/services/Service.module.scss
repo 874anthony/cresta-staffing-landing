@@ -3,3 +3,9 @@
 @use "../../../scss/base/typography" as typography;
 @use "../../../scss/mixins/mixins" as mixins;
 @use "../../../scss/mixins/typography" as typographyMixins;
+
+.professionalServices {
+  @include mixins.centered-bg-white-section;
+  border-top-left-radius: variables.$rounded-section;
+  border-top-right-radius: variables.$rounded-section;
+}

@@ -35,9 +35,12 @@ const ExpandableIcon = () => (
   </svg>
 );
 
-export default function FAQ() {
+export default function FAQ({ bgColor = "gray", rounded = false }) {
   return (
-    <section className={styles.faq}>
+    <section
+      className={`${bgColor === "gray" ? styles.faqGray : styles.faq}
+      ${rounded ? styles.faqRounded : ""}`}
+    >
       <h3 className={styles.faqTitle}>Frequently Asked Questions</h3>
       <p className={styles.faqText}>
         Learn more about our services, and the benefits we provide.

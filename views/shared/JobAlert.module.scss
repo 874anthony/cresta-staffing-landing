@@ -1,15 +1,18 @@
-@use "../../../scss/base/variables" as variables;
-@use "../../../scss/base/colors" as colors;
-@use "../../../scss/base/typography" as typography;
-@use "../../../scss/mixins/mixins" as mixins;
-@use "../../../scss/mixins/typography" as typographyMixins;
+@use "../../scss/base/variables" as variables;
+@use "../../scss/base/colors" as colors;
+@use "../../scss/base/typography" as typography;
+@use "../../scss/mixins/mixins" as mixins;
+@use "../../scss/mixins/typography" as typographyMixins;
 
 .job__alert {
   font-family: "Inter", sans-serif;
   padding: variables.$spacing-section-center;
   background-color: colors.$bg-color-primary;
   color: colors.$text-color-white;
-  border-top-left-radius: variables.$rounded-lg;
+}
+
+.job__alertRounded {
+  border-top-right-radius: variables.$rounded-lg;
 }
 
 .job__alertTitle {

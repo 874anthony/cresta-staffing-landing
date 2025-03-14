@@ -1,17 +1,7 @@
-"use client";
-import { useState } from "react";
-
-import {
-  FormControl,
-  InputLabel,
-  MenuItem,
-  OutlinedInput,
-  Select,
-} from "@mui/material";
-
+import { OutlinedInput } from "@mui/material";
 import Button from "@/components/Button";
 
-import styles from "./JobAlert.module.scss";
+import styles from "./SeparatorChallenge.module.scss";
 
 const MailIcon = () => (
   <svg
@@ -51,31 +41,24 @@ const UserIcon = () => (
   </svg>
 );
 
-export default function JobAlert() {
-  const [day, setDay] = useState("");
-
-  const handleChange = (event) => {
-    setDay(event.target.value);
-  };
-
+export default function SeparatorChallenge() {
   return (
-    <section className={styles.job__alert}>
-      <h4 className={styles.job__alertTitle}>Create job alert</h4>
+    <section className={styles.aboutSeparator}>
+      <h4 className={styles.aboutSeparatorTitle}>Solve Your Challenges</h4>
+      <span className={styles.aboutSeparatorText}>With expert consulting</span>
 
-      <p className={styles.job__alertText}>
-        Stay up-to-date with new opportunities
-      </p>
-
-      <div className={styles.job__alertForm}>
+      <div className={styles.aboutSeparatorCTA}>
         <OutlinedInput
           id="name"
           type="name"
           placeholder="Enter your name"
           sx={{
+            // flex: 1,
             border: "1px solid #E5E5E5",
             borderRadius: "4px",
             color: "#fff",
             paddingLeft: "1rem",
+            borderRadius: "999rem",
           }}
           startAdornment={<UserIcon />}
         />
@@ -85,37 +68,18 @@ export default function JobAlert() {
           type="email"
           placeholder="Enter your email"
           sx={{
+            flex: 1,
             border: "1px solid #E5E5E5",
             borderRadius: "4px",
             color: "#fff",
             paddingLeft: "1rem",
+            borderRadius: "999rem",
           }}
           startAdornment={<MailIcon />}
         />
 
-        <FormControl>
-          <InputLabel id="daily-week-select-label">Daily/Week</InputLabel>
-          <Select
-            labelId="daily-week-select-label"
-            id="daily-week-select"
-            value={day}
-            label="Daily/Week"
-            onChange={handleChange}
-            sx={{
-              border: "1px solid #E5E5E5",
-              borderRadius: "4px",
-              color: "#fff",
-              width: "20rem",
-            }}
-          >
-            <MenuItem value={"monday"}>Monday</MenuItem>
-            <MenuItem value={"thursday"}>Thursday</MenuItem>
-            <MenuItem value={"wednesday"}>Wednesday</MenuItem>
-          </Select>
-        </FormControl>
-
         <Button variant="secondary" size="large">
-          Submit
+          Book a consultation
         </Button>
       </div>
     </section>
