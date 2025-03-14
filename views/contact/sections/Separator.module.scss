@@ -1,0 +1,51 @@
+@use "../../../scss/base/variables" as variables;
+@use "../../../scss/base/colors" as colors;
+@use "../../../scss/base/typography" as typography;
+@use "../../../scss/utils/utils" as utils;
+@use "../../../scss/mixins/mixins" as mixins;
+@use "../../../scss/mixins/typography" as typographyMixins;
+
+.separator {
+  @include mixins.centered-bg-primary-section(
+    $gap: 1.5rem,
+    $padding: 4rem 12rem
+  );
+  border-top-left-radius: variables.$rounded-section;
+  border-top-right-radius: variables.$rounded-section;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.separatorSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.separatorTitle {
+  @include typographyMixins.separatorTitle;
+  font-weight: 800;
+}
+
+.separatorText {
+  margin-top: -1rem;
+  @include typographyMixins.separatorText;
+  width: 60%;
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  gap: 1.5rem;
+  color: colors.$text-color-white;
+}
+
+// ============= TODO: See if it works with icons =============
+.separatorSection:nth-child(2) {
+  margin-top: -1rem;
+}
