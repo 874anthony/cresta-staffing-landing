@@ -5,8 +5,8 @@ import styles from "./Overview.module.scss";
 const CheckIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={32}
-    height={32}
+    width={38}
+    height={38}
     viewBox="0 0 24 24"
     fill="rgba(24, 99, 194, 255)"
     className="size-6"
@@ -48,9 +48,7 @@ export default function Overview() {
 
       <div className={styles.overview__cta}>
         <div className={styles.overview__images}>
-          <img src={"/assets/home/home_banner_slide_3.png"} alt="Slide 1" />
-
-          <img src={"/assets/home/home_banner_slide_6.png"} alt="Slide 2" />
+          <img src={"/assets/home/overview/overview.png"} alt="Slide 2" />
         </div>
 
         <div className={styles.overview__caption}>
@@ -68,7 +66,14 @@ export default function Overview() {
             helping you scale, cut costs, and boost efficiency.
           </p>
 
-          <Button variant="secondary" size="large">
+          <Button
+            variant="secondary"
+            size="large"
+            fontWeight="bold"
+            style={{
+              marginTop: "2rem",
+            }}
+          >
             Get Expert Consultation
           </Button>
         </div>

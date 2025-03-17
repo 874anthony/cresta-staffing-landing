@@ -1,6 +1,7 @@
 @use "../../scss/base/variables" as variables;
 @use "../../scss/base/colors" as colors;
 @use "../../scss/base/typography" as typography;
+@use "../../scss/mixins/mixins" as mixins;
 @use "../../scss/mixins/typography" as typographyMixins;
 
 .ourProcess {
@@ -16,19 +17,22 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  gap: 1rem;
 }
 
 .ourProcess__subCaption {
-  @include typographyMixins.subCaption;
+  @include typographyMixins.subCaption($weight: 400);
 }
 
 .ourProcess__captionTitle {
   margin-top: -0.5rem;
-  @include typographyMixins.title;
+  @include typographyMixins.title($color: colors.$color-primary);
 }
 
 .ourProcess__captionText {
   margin-top: 0.875rem;
+  font-size: typography.$font-size-lg;
+  color: colors.$text-color-dark-blue;
 }
 
 .ourProcess__steps {
@@ -38,11 +42,13 @@
   align-items: start;
 }
 
+// TODO: 23px font-size for cards
+
 .ourProcess__step {
+  @include mixins.bg-gradient-primary($direction: 190deg);
   font-family: "Inter", sans-serif;
   display: flex;
   flex-direction: column;
-  background-color: colors.$bg-color-primary;
   color: colors.$text-color-white;
   padding: 1.6rem 2rem;
   border-radius: variables.$rounded-lg;
@@ -54,7 +60,7 @@
 
   &:hover {
     background-color: colors.$bg-color-gray;
-    color: colors.$text-color-black;
+    color: colors.$text-color-dark-blue;
 
     svg {
       fill: colors.$color-primary;

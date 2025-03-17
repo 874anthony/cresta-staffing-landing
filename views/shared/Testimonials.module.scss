@@ -6,6 +6,7 @@
 
 .testimonials {
   @include mixins.centered-bg-white-section($gap: 0.5rem);
+  background-image: url("/assets/shared/testimonials/background.png");
 }
 
 .testimonials__subCaption {
@@ -13,11 +14,12 @@
 }
 
 .testimonials__captionTitle {
-  margin-top: -0.5rem;
-  @include typographyMixins.title;
+  margin-top: 0.5rem;
+  @include typographyMixins.title($color: colors.$color-primary);
 }
 
 .testimonials__list {
+  margin-top: 1rem;
   width: 100%;
   margin-top: 2rem;
   display: grid;

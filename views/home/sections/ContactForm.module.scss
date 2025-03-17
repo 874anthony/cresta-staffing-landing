@@ -5,10 +5,11 @@
 @use "../../../scss/mixins/typography" as typographyMixins;
 
 .contact__section {
+  @include mixins.bg-gradient-primary;
   @include mixins.centered-bg-primary-section($gap: 1.2rem);
+
   border-top-left-radius: variables.$rounded-section;
   border-top-right-radius: variables.$rounded-section;
-
   flex-direction: row;
 
   img {

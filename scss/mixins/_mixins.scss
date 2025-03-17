@@ -37,3 +37,12 @@
   padding: $padding;
   gap: $gap;
 }
+
+// Background gradients
+@mixin bg-gradient-primary(
+  $direction: to right,
+  $start-color: colors.$color-primary,
+  $end-color: colors.$color-tertiary
+) {
+  background-image: linear-gradient($direction, $start-color, $end-color);
+}

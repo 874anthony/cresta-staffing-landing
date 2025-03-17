@@ -81,8 +81,12 @@ export default function Navbar() {
         </ul>
 
         <div className={styles.nav__cta}>
-          <Button variant="secondary">Find a job</Button>
-          <Button variant="primary">Get Expert Consultation</Button>
+          <Button variant="secondary" fontWeight="bold">
+            Find a job
+          </Button>
+          <Button variant="primary" fontWeight="bold">
+            Get Expert Consultation
+          </Button>
         </div>
       </nav>
     </header>

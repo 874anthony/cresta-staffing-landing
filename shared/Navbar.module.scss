@@ -1,6 +1,7 @@
 @use "../scss/base/variables" as variables;
 @use "../scss/base/colors" as colors;
 @use "../scss/utils/utils" as utils;
+@use "../scss/base/typography" as typography;
 
 .header {
   display: flex;
@@ -18,13 +19,13 @@
 
 .nav {
   display: flex;
-  gap: 1.2rem;
+  gap: 1.6rem;
   font-family: "Inter", sans-serif;
-  font-size: 0.875rem;
+  font-size: typography.$font-size-md;
 
   &__list {
     display: flex;
-    gap: 1.1rem;
+    gap: 1.4rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -40,6 +41,8 @@
       display: flex;
       align-items: center;
       gap: 0.25rem;
+      font-weight: 500;
+      letter-spacing: -0.5px;
     }
 
     &:hover .nav__dropdown {
@@ -47,13 +50,17 @@
       transform: translateY(0);
       pointer-events: auto;
     }
+
+    svg {
+      margin-left: 0.25rem;
+    }
   }
 
   &__dropdown {
     position: absolute;
     top: calc(100% + 0.25rem);
     left: -2.5rem;
-    background: colors.$white;
+    background: colors.$bg-color-white;
     border-radius: variables.$rounded-sm;
     box-shadow: utils.$shadow-normal;
     list-style: none;
@@ -63,6 +70,7 @@
     transform: translateY(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
     pointer-events: none;
+    z-index: 10;
 
     li {
       padding: 8px 15px;

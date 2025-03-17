@@ -28,13 +28,53 @@ export default function HomePage() {
         <div className={styles.our__servicesList}>
           <div className={styles.service__card}>
             <div className={styles.service__cardContent}>
-              <h4 className={styles.service__cardTitle}>Consulting</h4>
+              <h2 className={styles.service__cardTitle}>3D Renderer</h2>
               <p className={styles.service__cardText}>
-                Our consulting services help you navigate the complexities of
-                business.
+                Skilled 3D renderers with technical and creative expertise.{" "}
               </p>
 
-              <Button variant="secondary">Learn more</Button>
+              <Button variant="secondary" rightArrow="true">
+                Learn more
+              </Button>
+            </div>
+          </div>
+
+          <div className={styles.service__card}>
+            <div className={styles.service__cardContent}>
+              <h2 className={styles.service__cardTitle}>BIM Modelling</h2>
+              <p className={styles.service__cardText}>
+                Skilled 3D renderers with technical and creative expertise.{" "}
+              </p>
+
+              <Button variant="secondary" rightArrow="true">
+                Learn more
+              </Button>
+            </div>
+          </div>
+
+          <div className={styles.service__card}>
+            <div className={styles.service__cardContent}>
+              <h2 className={styles.service__cardTitle}>3D Renderer</h2>
+              <p className={styles.service__cardText}>
+                Skilled 3D renderers with technical and creative expertise.{" "}
+              </p>
+
+              <Button variant="secondary" rightArrow="true">
+                Learn more
+              </Button>
+            </div>
+          </div>
+
+          <div className={styles.service__card}>
+            <div className={styles.service__cardContent}>
+              <h2 className={styles.service__cardTitle}>3D Renderer</h2>
+              <p className={styles.service__cardText}>
+                Skilled 3D renderers with technical and creative expertise.{" "}
+              </p>
+
+              <Button variant="secondary" rightArrow="true">
+                Learn more
+              </Button>
             </div>
           </div>
         </div>

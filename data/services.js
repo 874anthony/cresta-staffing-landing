@@ -83,9 +83,22 @@ export default {
     overviewDescription:
       "A talented 3D Renderer who has been carefully vetted and meets our outstanding industry standards. He/She is proficient in 3D modeling and animation, is fast, efficient and able to work with complex details.",
   },
-  //   drafter: {
-  //     title: 'Drafter',
-  //     description: 'We deliver accurate, code-compliant CAD drawings that align with your goals. Our skilled drafters seamlessly translate your specifications into detailed technical plans, ensuring every standard and regulation is met.',
-  //     extraTest: ''
-  //   }
+  drafter: {
+    title: "Drafter",
+    description:
+      "We deliver accurate, code-compliant CAD drawings that align with your goals. Our skilled drafters seamlessly translate your specifications into detailed technical plans, ensuring every standard and regulation is met.",
+    extraTest:
+      "Get precision and compliance—partner with our expert drafters today!",
+    heroImage: "/assets/service/drafter/hero.png",
+    overviewItems: [
+      "Efficiency & accuracy combined",
+      "Seamless collaboration",
+      "Expert CAD drafting solutions",
+      "Reliable, industrystandard drafting",
+      "Accurate, code-compliant CAD drawings",
+    ],
+    overviewImage: "/assets/service/drafter/overview.png",
+    overviewDescription:
+      "A professional drafter who has been carefully selected among hundreds of talented others, and has been put to the test expertly performing up to par with our superior standards.",
+  },
 };

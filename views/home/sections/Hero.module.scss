@@ -1,19 +1,22 @@
 @use "../../../scss/base/variables" as variables;
 @use "../../../scss/base/colors" as colors;
 @use "../../../scss/base/typography" as typography;
+@use "../../../scss/mixins/typography" as typographyMixins;
 
 .hero {
+  background-image: url("/assets/shared/hero/background.png");
   padding: variables.$spacing-section-center;
   margin-top: -3rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background-position: 100% 20%;
 }
 
 .hero__caption {
   font-family: "Inter", sans-serif;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.4rem;
   justify-content: center;
 }
 
@@ -21,9 +24,8 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: typography.$font-size-sm;
-  font-weight: 700;
-  color: colors.$color-primary;
+
+  @include typographyMixins.captionSubtitle;
 
   span:is(:first-of-type) {
     color: colors.$color-primary;
@@ -36,10 +38,7 @@
 }
 
 .hero__captionTitle {
-  font-size: typography.$font-size-xl;
-  color: black;
-  font-weight: 700;
-  line-height: 1.3;
+  @include typographyMixins.title;
 
   span {
     color: colors.$color-primary;
@@ -48,13 +47,14 @@
 
 .hero__captionText {
   font-size: typography.$font-size-lg;
-  color: colors.$text-color-gray;
+  color: colors.$text-color-dark-blue;
   font-weight: 400;
   width: 85%;
+  letter-spacing: -0.25px;
 }
 
 .hero__captionCTA {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -71,4 +71,12 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+
+  &:nth-child(1) {
+    transform: translateY(0.7rem);
+  }
+
+  &:nth-child(2) {
+    transform: translateY(-0.7rem);
+  }
 }

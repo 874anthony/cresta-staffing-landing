@@ -2,22 +2,37 @@
 @use "../base/colors" as colors;
 @use "../base/typography" as typography;
 
-@mixin title($size: typography.$font-size-xl, $color: colors.$color-primary) {
+@mixin captionSubtitle(
+  $size: typography.$font-size-md,
+  $color: colors.$color-primary
+) {
+  font-family: "Inter", sans-serif;
+  font-size: $size;
+  color: $color;
+  font-weight: 600;
+}
+
+@mixin title(
+  $size: typography.$font-size-xl,
+  $color: colors.$text-color-dark-blue
+) {
   font-family: "Inter", sans-serif;
   font-size: $size;
   color: $color;
   font-weight: 800;
   letter-spacing: -1px;
+  line-height: 56px;
 }
 
 @mixin subCaption(
   $size: typography.$font-size-lg,
-  $color: colors.$text-color-gray
+  $color: colors.$text-color-gray,
+  $weight: 500
 ) {
   font-family: "Inter", sans-serif;
   font-size: $size;
   color: $color;
-  font-weight: 500;
+  font-weight: $weight;
 }
 
 @mixin captionText($size: typography.$font-size-base, $color: #000) {

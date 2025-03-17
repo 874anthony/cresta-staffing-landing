@@ -16,7 +16,7 @@
 }
 
 .overview__title {
-  @include typographyMixins.title;
+  @include typographyMixins.title($color: colors.$color-primary);
 }
 
 .overview__checklist {
@@ -29,9 +29,16 @@
   display: flex;
   gap: 0.5rem;
   align-items: center;
+
+  p {
+    color: colors.$text-color-dark-blue;
+    font-weight: 600;
+    line-height: 19px;
+  }
 }
 
 .overview__cta {
+  margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -40,7 +47,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
-  padding-left: 2.8rem;
+  padding-left: 1.2rem;
   justify-content: center;
 
   button {
@@ -49,14 +56,13 @@
 }
 
 .overview__captionTitle {
-  @include typographyMixins.title;
+  @include typographyMixins.title($color: colors.$color-primary);
 }
 
 .overview__captionText {
-  color: colors.$text-color-gray;
+  color: colors.$text-color-dark-blue;
 
   span {
-    color: colors.$text-color-black;
     font-weight: 600;
   }
 }
@@ -69,6 +75,6 @@
 }
 
 .overview__images img {
-  width: 100%;
+  width: 85%;
   object-fit: cover;
 }
