@@ -98,7 +98,14 @@ export default function JobAlert({ roundedTopCorner = false }) {
         />
 
         <FormControl>
-          <InputLabel id="daily-week-select-label">Daily/Week</InputLabel>
+          <InputLabel
+            sx={{
+              color: "#fff",
+            }}
+            id="daily-week-select-label"
+          >
+            Daily/Week
+          </InputLabel>
           <Select
             labelId="daily-week-select-label"
             id="daily-week-select"

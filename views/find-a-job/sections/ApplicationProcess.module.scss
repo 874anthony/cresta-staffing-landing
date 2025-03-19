@@ -1,16 +1,11 @@
 @use "../../../scss/base/variables" as variables;
 @use "../../../scss/base/colors" as colors;
 @use "../../../scss/base/typography" as typography;
+@use "../../../scss/mixins/mixins" as mixins;
 @use "../../../scss/mixins/typography" as typographyMixins;
 
 .appProcess {
-  font-family: "Inter", sans-serif;
-  padding: variables.$spacing-section-center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2.2rem;
-  background-color: colors.$bg-color-gray;
+  @include mixins.centered-bg-gray-section;
   border-top-left-radius: variables.$rounded-section;
   border-top-right-radius: variables.$rounded-section;
 }
@@ -26,13 +21,16 @@
 }
 
 .appProcess__captionTitle {
-  margin-top: -0.5rem;
-  @include typographyMixins.title;
+  margin-top: 0.5rem;
+  @include typographyMixins.title($color: colors.$color-primary);
 }
 
 .appProcess__captionText {
-  margin-top: 0.875rem;
-  @include typographyMixins.captionText;
+  margin-top: 1rem;
+  @include typographyMixins.sectionCaptionText(
+    $weight: 500,
+    $size: typography.$font-size-base
+  );
 
   span {
     color: colors.$color-primary;

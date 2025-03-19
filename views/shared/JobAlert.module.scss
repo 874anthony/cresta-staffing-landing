@@ -5,6 +5,7 @@
 @use "../../scss/mixins/typography" as typographyMixins;
 
 .job__alert {
+  @include mixins.bg-gradient-primary;
   font-family: "Inter", sans-serif;
   padding: variables.$spacing-section-center;
   background-color: colors.$bg-color-primary;

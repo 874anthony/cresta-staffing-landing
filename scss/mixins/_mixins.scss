@@ -48,6 +48,13 @@
 }
 
 // =============== Hero section =================
+@mixin hero-container {
+  padding: variables.$spacing-section-center;
+  margin-top: -3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 @mixin hero-section-caption {
   font-family: "Inter", sans-serif;
   display: flex;

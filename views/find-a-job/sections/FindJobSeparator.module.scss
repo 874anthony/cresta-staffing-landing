@@ -4,6 +4,8 @@
 
 .findJobSeparator {
   @include mixins.centered-bg-primary-section($gap: 1.2rem);
+  @include mixins.bg-gradient-primary;
+
   padding-block: 3rem;
 }
 

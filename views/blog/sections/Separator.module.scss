@@ -6,6 +6,7 @@
 
 .separator {
   @include mixins.centered-bg-primary-section($gap: 1rem, $padding: 4rem 12rem);
+  @include mixins.bg-gradient-primary;
   border-top-left-radius: variables.$rounded-section;
   align-items: normal;
 }

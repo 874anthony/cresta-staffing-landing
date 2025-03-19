@@ -30,22 +30,20 @@
 
 .ourMissionTitle,
 .ourVisionTitle {
-  @include typographyMixins.title;
+  @include typographyMixins.title($color: colors.$color-primary);
 }
 
 .ourMissionText,
 .ourVisionText {
   margin-top: 0.5rem;
-  font-size: 1.275rem;
-  color: colors.$text-color-gray;
-  font-weight: 500;
+  @include typographyMixins.sectionCaptionText($color: colors.$text-color-gray);
 }
 
 .ourMissionDescription,
 .ourVisionDescription {
   width: 90%;
-  margin-top: 1.6rem;
-  font-size: 1.125rem;
+  margin-top: 1.8rem;
+  font-size: typography.$font-size-md;
   font-weight: 400;
 }
 

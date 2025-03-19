@@ -17,7 +17,7 @@ export default function HomePage() {
 
       <Separator />
 
-      <OurServicesHome />
+      <OurServicesHome backgroundLines="true" />
 
       <Testimonials />
 

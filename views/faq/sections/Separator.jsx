@@ -12,7 +12,14 @@ export default function Separator() {
         <span>free consultation here.</span>
       </p>
 
-      <Button variant="secondary" size="large">
+      <Button
+        variant="secondary"
+        size="large"
+        sx={{
+          fontWeight: "bold",
+          fontSize: "1.125rem",
+        }}
+      >
         Get Expert Consultation
       </Button>
     </section>

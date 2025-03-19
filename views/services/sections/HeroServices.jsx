@@ -25,15 +25,12 @@ export default function HeroServices() {
       </div>
 
       <div className={styles.hero__images}>
-        <img
-          src={"/assets/services/image_services_1.png"}
-          alt="AEC Staffing Agency"
-        />
-
+        <img src={"/assets/services/hero.png"} alt="AEC Staffing Agency" />
+        {/* 
         <img
           src={"/assets/services/image_services_2.png"}
           alt="AEC Staffing Agency"
-        />
+        /> */}
       </div>
     </section>
   );

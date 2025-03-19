@@ -80,7 +80,13 @@ export default function Separator() {
           startAdornment={<MailIcon />}
         />
 
-        <Button variant="secondary" size="large">
+        <Button
+          variant="secondary"
+          size="large"
+          sx={{
+            fontWeight: "bold",
+          }}
+        >
           Subscribe Now
         </Button>
       </div>

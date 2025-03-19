@@ -8,10 +8,18 @@
   @include mixins.centered-bg-gray-section($gap: 1.2rem);
 }
 
+.our__servicesWhite {
+  @include mixins.centered-bg-white-section($gap: 1.2rem);
+}
+
 .our__servicesBackgroundLines {
   background-image: url("/assets/home/our-services/background.png");
   background-size: cover;
   background-position: center;
+}
+
+.our__servicesSubCaption {
+  @include typographyMixins.subCaption($weight: 400);
 }
 
 .our__servicesTitle {

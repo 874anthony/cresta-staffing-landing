@@ -10,11 +10,15 @@
 }
 
 .benefits__subCaption {
-  @include typographyMixins.subCaption;
+  @include typographyMixins.subCaption($weight: 400);
 }
 
 .benefits__captionTitle {
-  @include typographyMixins.title;
+  @include typographyMixins.title($color: colors.$color-primary);
+}
+
+.benefits__captionText {
+  @include typographyMixins.sectionCaptionText;
 }
 
 .benefits__list {
@@ -47,7 +51,7 @@
 }
 
 .benefits__itemTitle {
-  @include typographyMixins.title($size: 1.6rem);
+  @include typographyMixins.title($size: 1.6rem, $color: colors.$color-primary);
   font-weight: 700;
   line-height: 1.2;
 }
@@ -55,7 +59,7 @@
 .benefits__itemText {
   @include typographyMixins.captionText(
     $size: typography.$font-size-md,
-    $color: colors.$text-color-gray-2
+    $color: colors.$text-color-dark-blue
   );
   line-height: 1.4;
   font-weight: 400;

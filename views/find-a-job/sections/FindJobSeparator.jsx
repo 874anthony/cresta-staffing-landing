@@ -18,6 +18,7 @@ export default function FindJobSeparator() {
         size="large"
         style={{
           fontWeight: "bold",
+          fontSize: "1.25rem",
         }}
       >
         Let&apos;s get started

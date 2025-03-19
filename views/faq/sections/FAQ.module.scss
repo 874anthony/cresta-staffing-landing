@@ -11,11 +11,13 @@
 }
 
 .faqTitle {
-  @include typographyMixins.title;
+  @include typographyMixins.title($color: colors.$color-primary);
 }
 
 .faqText {
-  font-size: typography.$font-size-lg;
+  margin-top: 0.2rem;
+  font-size: 1.4rem;
+  color: colors.$text-color-dark-blue;
 }
 
 .faqTitle,

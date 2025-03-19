@@ -13,11 +13,11 @@
 }
 
 .weekly__jobsTitle {
-  @include typographyMixins.title;
+  @include typographyMixins.title($color: colors.$color-primary);
 }
 
 .weekly__subCaption {
-  @include typographyMixins.subCaption;
+  @include typographyMixins.sectionCaptionText;
 }
 
 .weekly__jobsList {

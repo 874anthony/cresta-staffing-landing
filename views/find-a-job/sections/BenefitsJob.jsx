@@ -20,7 +20,7 @@ export default function BenefitsJob() {
         <div className={styles.benefits__listItem}>
           <img
             className={styles.benefits__itemImage}
-            src="/assets/jobs/find_job_ilustration_1.png"
+            src="/assets/jobs/images/find_job_ilustration_1.png"
             alt="benefits_1"
           />
 
@@ -37,7 +37,7 @@ export default function BenefitsJob() {
         <div className={styles.benefits__listItem}>
           <img
             className={styles.benefits__itemImage}
-            src="/assets/jobs/find_job_ilustration_2.png"
+            src="/assets/jobs/images/find_job_ilustration_2.png"
             alt="benefits_2"
           />
 
@@ -56,7 +56,7 @@ export default function BenefitsJob() {
         <div className={styles.benefits__listItem}>
           <img
             className={styles.benefits__itemImage}
-            src="/assets/jobs/find_job_ilustration_3.png"
+            src="/assets/jobs/images/find_job_ilustration_3.png"
             alt="benefits_3"
           />
 
@@ -75,7 +75,7 @@ export default function BenefitsJob() {
         <div className={styles.benefits__listItem}>
           <img
             className={styles.benefits__itemImage}
-            src="/assets/jobs/find_job_ilustration_4.png"
+            src="/assets/jobs/images/find_job_ilustration_4.png"
             alt="benefits_4"
           />
 

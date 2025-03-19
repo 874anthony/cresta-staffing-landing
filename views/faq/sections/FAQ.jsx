@@ -1,5 +1,3 @@
-import Button from "@/components/Button";
-
 import styles from "./FAQ.module.scss";
 
 const ChevronRight = () => (
