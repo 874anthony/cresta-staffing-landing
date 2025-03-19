@@ -35,11 +35,15 @@
   font-weight: $weight;
 }
 
-@mixin captionText($size: typography.$font-size-base, $color: #000) {
+@mixin captionText(
+  $size: typography.$font-size-lg,
+  $color: colors.$text-color-dark-blue,
+  $weight: 400
+) {
   font-family: "Inter", sans-serif;
   font-size: $size;
   color: $color;
-  font-weight: 400;
+  font-weight: $weight;
 }
 
 // SEPARATOR TITLES

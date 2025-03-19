@@ -31,8 +31,7 @@
 
 .ourProcess__captionText {
   margin-top: 0.875rem;
-  font-size: typography.$font-size-lg;
-  color: colors.$text-color-dark-blue;
+  @include typographyMixins.captionText;
 }
 
 .ourProcess__steps {

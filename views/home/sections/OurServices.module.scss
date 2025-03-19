@@ -1,19 +1,19 @@
-@use "../scss/base/variables" as variables;
-@use "../scss/base/colors" as colors;
-@use "../scss/base/typography" as typography;
-@use "../scss/mixins/mixins" as mixins;
-@use "../scss/mixins/typography" as typographyMixins;
+@use "../../../scss/base/variables" as variables;
+@use "../../../scss/base/colors" as colors;
+@use "../../../scss/base/typography" as typography;
+@use "../../../scss/mixins/mixins" as mixins;
+@use "../../../scss/mixins/typography" as typographyMixins;
 
 .our__services {
   @include mixins.centered-bg-gray-section($gap: 1.2rem);
 }
 
 .our__servicesTitle {
-  @include typographyMixins.title;
+  @include typographyMixins.title($color: colors.$color-primary);
 }
 
 .our__servicesText {
-  font-size: typography.$font-size-lg;
+  @include typographyMixins.captionText;
 }
 
 .our__servicesList {
