@@ -4,12 +4,13 @@
 
 @mixin captionSubtitle(
   $size: typography.$font-size-md,
-  $color: colors.$color-primary
+  $color: colors.$text-color-gray,
+  $weight: 400
 ) {
   font-family: "Inter", sans-serif;
   font-size: $size;
   color: $color;
-  font-weight: 600;
+  font-weight: $weight;
 }
 
 @mixin title(
@@ -36,6 +37,19 @@
 }
 
 @mixin captionText(
+  $size: typography.$font-size-lg,
+  $color: colors.$text-color-dark-blue,
+  $weight: 400
+) {
+  font-family: "Inter", sans-serif;
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+  width: 85%;
+  letter-spacing: -0.25px;
+}
+
+@mixin sectionCaptionText(
   $size: typography.$font-size-lg,
   $color: colors.$text-color-dark-blue,
   $weight: 400

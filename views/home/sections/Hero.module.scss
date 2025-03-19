@@ -1,6 +1,7 @@
 @use "../../../scss/base/variables" as variables;
 @use "../../../scss/base/colors" as colors;
 @use "../../../scss/base/typography" as typography;
+@use "../../../scss/mixins/mixins" as mixins;
 @use "../../../scss/mixins/typography" as typographyMixins;
 @use "../../../scss/mixins/animations" as animations;
 
@@ -14,11 +15,7 @@
 }
 
 .hero__caption {
-  font-family: "Inter", sans-serif;
-  display: flex;
-  flex-direction: column;
-  gap: 1.4rem;
-  justify-content: center;
+  @include mixins.hero-section-caption;
 }
 
 .hero__captionSubtitle {
@@ -26,7 +23,10 @@
   align-items: center;
   gap: 0.5rem;
 
-  @include typographyMixins.captionSubtitle;
+  @include typographyMixins.captionSubtitle(
+    $color: colors.$color-primary,
+    $weight: 600
+  );
 
   span:is(:first-of-type) {
     color: colors.$color-primary;
@@ -47,11 +47,7 @@
 }
 
 .hero__captionText {
-  font-size: typography.$font-size-lg;
-  color: colors.$text-color-dark-blue;
-  font-weight: 400;
-  width: 85%;
-  letter-spacing: -0.25px;
+  @include typographyMixins.captionText;
 }
 
 .hero__captionCTA {
@@ -102,32 +98,3 @@
 .bottom.active {
   @include animations.tilt-in-right-1;
 }
-
-// .hero__images {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .hero__images img {
-//   width: 100%;
-//   height: auto;
-//   object-fit: cover;
-
-//   &:nth-child(1) {
-//     -webkit-animation: tilt-in-left-1 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-//       both;
-//     animation: tilt-in-left-1 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-
-//     // transform: translateY(0.7rem);
-//   }
-
-//   &:nth-child(2) {
-//     -webkit-animation: tilt-in-right-1 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-//       both;
-//     animation: tilt-in-right-1 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-
-//     // transform: translateY(-0.7rem);
-//   }
-// }

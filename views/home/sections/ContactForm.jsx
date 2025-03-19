@@ -5,7 +5,7 @@ import styles from "./ContactForm.module.scss";
 export default function ContactForm() {
   return (
     <section className={styles.contact__section}>
-      <img src="/assets/home/home_banner_slide_1.png" alt="Contact Us Image" />
+      <img src="/assets/home/contact/contact-us.png" alt="Contact Us Image" />
 
       <div className={styles.contact__container}>
         <div className={styles.contact__text}>

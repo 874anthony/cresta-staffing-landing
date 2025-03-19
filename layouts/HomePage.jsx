@@ -4,7 +4,7 @@ import Overview from "@/views/home/sections/Overview";
 import Separator from "@/views/shared/Separator";
 import Testimonials from "@/views/shared/Testimonials";
 import ContactForm from "@/views/home/sections/ContactForm";
-import OurServicesHome from "@/views/home/sections/OurServices";
+import OurServicesHome from "@/views/shared/OurServices";
 
 export default function HomePage() {
   return (

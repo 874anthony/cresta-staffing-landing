@@ -75,3 +75,32 @@
     opacity: 1;
   }
 }
+
+// MARQUEE ANIMATION
+@mixin scroll-left-to-right {
+  -webkit-animation: scroll-left-to-right 10s linear infinite;
+  animation: scroll-left-to-right 10s linear infinite;
+}
+
+@mixin scroll-right-to-left {
+  -webkit-animation: scroll-right-to-left 10s linear infinite;
+  animation: scroll-right-to-left 10s linear infinite;
+}
+
+@keyframes scroll-left-to-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes scroll-right-to-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -3,6 +3,7 @@
 @use "../../../scss/base/typography" as typography;
 @use "../../../scss/mixins/mixins" as mixins;
 @use "../../../scss/mixins/typography" as typographyMixins;
+@use "../../../scss/mixins/animations" as animations;
 
 .software__used {
   @include mixins.centered-bg-white-section($gap: 1.2rem);
@@ -10,20 +11,40 @@
 }
 
 .software__usedTitle {
-  @include typographyMixins.title;
+  @include typographyMixins.title($color: colors.$color-primary);
 }
 
 .software__usedText {
-  width: 80%;
-  font-size: typography.$font-size-lg;
+  @include typographyMixins.sectionCaptionText;
+  width: 60%;
 }
 
 .software__usedList {
+  background-color: colors.$bg-color-white;
   margin-top: 1.2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 6rem;
+}
+
+.software__firstRow,
+.software__secondRow {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1.2rem;
   width: 100%;
+}
+
+// Animation for left-to-right
+.software__firstRow {
+  @include animations.scroll-left-to-right;
+}
+
+// Animation for right-to-left
+.software__secondRow {
+  @include animations.scroll-right-to-left;
 }
 
 .software__usedItem {
@@ -35,8 +56,7 @@
   align-items: center;
 
   img {
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 100%;
     object-fit: contain;
   }
 }

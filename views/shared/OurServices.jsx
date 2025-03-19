@@ -2,13 +2,19 @@ import Button from "@/components/Button";
 
 import styles from "./OurServices.module.scss";
 
-export default function OurServices() {
+export default function OurServices({
+  title = "Our professional services",
+  description = "Expert solutions tailored for you",
+  backgroundLines = false,
+}) {
   return (
-    <section className={styles.our__services}>
-      <h3 className={styles.our__servicesTitle}>Our professional services</h3>
-      <p className={styles.our__servicesText}>
-        Expert solutions tailored for you
-      </p>
+    <section
+      className={`${styles.our__services}
+      ${backgroundLines ? styles.our__servicesBackgroundLines : ""}
+    `}
+    >
+      <h3 className={styles.our__servicesTitle}>{title}</h3>
+      <p className={styles.our__servicesText}>{description}</p>
 
       <div className={styles.our__servicesList}>
         <div className={styles.service__card}>

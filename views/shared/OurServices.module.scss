@@ -1,11 +1,17 @@
-@use "../../../scss/base/variables" as variables;
-@use "../../../scss/base/colors" as colors;
-@use "../../../scss/base/typography" as typography;
-@use "../../../scss/mixins/mixins" as mixins;
-@use "../../../scss/mixins/typography" as typographyMixins;
+@use "../../scss/base/variables" as variables;
+@use "../../scss/base/colors" as colors;
+@use "../../scss/base/typography" as typography;
+@use "../../scss/mixins/mixins" as mixins;
+@use "../../scss/mixins/typography" as typographyMixins;
 
 .our__services {
   @include mixins.centered-bg-gray-section($gap: 1.2rem);
+}
+
+.our__servicesBackgroundLines {
+  background-image: url("/assets/home/our-services/background.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .our__servicesTitle {
@@ -13,7 +19,7 @@
 }
 
 .our__servicesText {
-  @include typographyMixins.captionText;
+  @include typographyMixins.sectionCaptionText;
 }
 
 .our__servicesList {

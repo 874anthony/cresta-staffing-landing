@@ -31,7 +31,7 @@
 
 .ourProcess__captionText {
   margin-top: 0.875rem;
-  @include typographyMixins.captionText;
+  @include typographyMixins.sectionCaptionText;
 }
 
 .ourProcess__steps {

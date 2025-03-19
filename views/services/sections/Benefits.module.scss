@@ -14,7 +14,7 @@
 
 .benefits__captionTitle {
   margin-top: -1.5rem;
-  @include typographyMixins.title;
+  @include typographyMixins.title($color: colors.$color-primary);
 }
 
 .benefits__list {

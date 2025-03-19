@@ -5,27 +5,11 @@
 @use "../../scss/mixins/typography" as typographyMixins;
 
 .cta__separator {
-  @include mixins.bg-gradient-primary;
-  font-family: "Inter", sans-serif;
-  padding: variables.$spacing-section-center;
-  padding-block: 6rem;
-  padding-inline: 0rem;
-  color: colors.$text-color-white;
-  border-top-left-radius: variables.$rounded-lg;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
+  @include mixins.ctaSeparator;
 }
 
 .cta__separatorTitle {
-  display: inline;
-  font-size: 2.1rem;
-  font-weight: 500;
-  width: 50%;
-  letter-spacing: -0.5px;
-  line-height: 38px;
-  text-align: left;
+  @include mixins.ctaSeparatorTitle;
 
   span {
     font-weight: 700;

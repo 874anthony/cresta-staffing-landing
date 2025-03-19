@@ -2,26 +2,14 @@
 @use "../../../scss/base/colors" as colors;
 @use "../../../scss/base/typography" as typography;
 @use "../../../scss/mixins/typography" as typographyMixins;
+@use "../../../scss/mixins/mixins" as mixins;
 
 .cta__separator {
-  font-family: "Inter", sans-serif;
-  padding: variables.$spacing-section-center;
-  padding-block: 3rem;
-  background-color: colors.$bg-color-primary;
-  color: colors.$text-color-white;
-  border-top-left-radius: variables.$rounded-lg;
-  display: flex;
-  gap: 2.4rem;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  @include mixins.ctaSeparator;
 }
 
 .cta__separatorTitle {
-  display: inline;
-  font-size: 2rem;
-  font-weight: 500;
-  width: 50%;
+  @include mixins.ctaSeparatorTitle;
 
   span {
     font-weight: 700;

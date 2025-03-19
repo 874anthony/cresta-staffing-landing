@@ -10,7 +10,14 @@ export default function SeparatorServices() {
         <span>construction professionals.</span>
       </h4>
 
-      <Button variant="secondary" size="large">
+      <Button
+        variant="secondary"
+        size="large"
+        fontWeight="bold"
+        style={{
+          fontSize: "1.275rem",
+        }}
+      >
         Get Expert Consultation
       </Button>
     </section>
