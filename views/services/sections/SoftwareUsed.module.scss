@@ -31,10 +31,13 @@
 
 .software__firstRow,
 .software__secondRow {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  // display: grid;
+  // grid-template-columns: repeat(5, 1fr);
+  // width: 100%;
+
+  display: flex;
   gap: 1.2rem;
-  width: 100%;
+  width: max-content;
 }
 
 // Animation for left-to-right
@@ -44,6 +47,7 @@
 
 // Animation for right-to-left
 .software__secondRow {
+  // animation-delay: -15s;
   @include animations.scroll-right-to-left;
 }
 
@@ -56,7 +60,7 @@
   align-items: center;
 
   img {
-    width: 100%;
+    width: 85%;
     object-fit: contain;
   }
 }

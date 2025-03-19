@@ -8,7 +8,12 @@ export default function Testimonials({ title = "Real Stories, Real Results" }) {
 
       <div className={styles.testimonials__list}>
         <div className={styles.testimonials__card}>
-          <span className={styles.testimonials__cardQuote}>&ldquo;</span>
+          <img
+            src="/assets/home/testimonials/icon_testimonials.png"
+            alt="Icon"
+            className={styles.testimonials__cardQuote}
+          />
+
           <p className={styles.testimonials__cardText}>
             The supportive and energetic environment makes me feel truly valued.
             From day one, Iʼve been encouraged to share ideas, take initiative,
@@ -32,7 +37,12 @@ export default function Testimonials({ title = "Real Stories, Real Results" }) {
         </div>
 
         <div className={styles.testimonials__card}>
-          <span className={styles.testimonials__cardQuote}>&ldquo;</span>
+          <img
+            src="/assets/home/testimonials/icon_testimonials.png"
+            alt="Icon"
+            className={styles.testimonials__cardQuote}
+          />
+
           <p className={styles.testimonials__cardText}>
             What I love most about working at Cresta is having a supportive team
             that helps me grow. They are always willing to teach me everything I
@@ -56,7 +66,12 @@ export default function Testimonials({ title = "Real Stories, Real Results" }) {
         </div>
 
         <div className={styles.testimonials__card}>
-          <span className={styles.testimonials__cardQuote}>&ldquo;</span>
+          <img
+            src="/assets/home/testimonials/icon_testimonials.png"
+            alt="Icon"
+            className={styles.testimonials__cardQuote}
+          />
+
           <p className={styles.testimonials__cardText}>
             The supportive and energetic environment makes me feel truly valued.
             From day one, Iʼve been encouraged to share ideas, take initiative,

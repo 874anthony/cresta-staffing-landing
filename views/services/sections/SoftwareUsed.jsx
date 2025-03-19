@@ -27,27 +27,31 @@ export default function SoftwareUsed() {
 
       <div className={styles.software__usedList}>
         <div className={styles.software__firstRow}>
-          {servicesImages.slice(0, 5).map((image, index) => (
-            <div key={index} className={styles.software__usedItem}>
-              <img
-                src={`/assets/services/icons/${image}`}
-                alt={image.replace("_", " ").replace(".png", "")}
-                className={styles.software__usedImage}
-              />
-            </div>
-          ))}
+          {[...servicesImages.slice(0, 5), ...servicesImages.slice(0, 5)].map(
+            (image, index) => (
+              <div key={index} className={styles.software__usedItem}>
+                <img
+                  src={`/assets/services/icons/${image}`}
+                  alt={image.replace("_", " ").replace(".png", "")}
+                  className={styles.software__usedImage}
+                />
+              </div>
+            )
+          )}
         </div>
 
         <div className={styles.software__secondRow}>
-          {servicesImages.slice(5).map((image, index) => (
-            <div key={index} className={styles.software__usedItem}>
-              <img
-                src={`/assets/services/icons/${image}`}
-                alt={image.replace("_", " ").replace(".png", "")}
-                className={styles.software__usedImage}
-              />
-            </div>
-          ))}
+          {[...servicesImages.slice(5), ...servicesImages.slice(5)].map(
+            (image, index) => (
+              <div key={index} className={styles.software__usedItem}>
+                <img
+                  src={`/assets/services/icons/${image}`}
+                  alt={image.replace("_", " ").replace(".png", "")}
+                  className={styles.software__usedImage}
+                />
+              </div>
+            )
+          )}
         </div>
       </div>
     </>
