@@ -103,7 +103,14 @@ export default function OurServices({
                   <div className={styles.service__cardContent}>
                     <h2 className={styles.service__cardTitle}>{card.title}</h2>
                     <p className={styles.service__cardText}>{card.text}</p>
-                    <Button variant="secondary" rightArrow="true">
+                    <Button
+                      variant="secondary"
+                      rightArrow="true"
+                      style={{
+                        zIndex: 4,
+                      }}
+                      onClick={() => console.log("Learn more clicked")}
+                    >
                       Learn more
                     </Button>
                   </div>

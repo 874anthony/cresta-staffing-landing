@@ -9,6 +9,11 @@
   font-weight: 500;
   border: 0;
   cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   &.btn_primary {
     background: colors.$color-primary;

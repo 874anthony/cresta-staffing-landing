@@ -22,7 +22,7 @@ export default function Hero() {
     const intervalId = setInterval(() => {
       setTopIndex((prev) => (prev + 1) % topImages.length);
       setBottomIndex((prev) => (prev + 1) % bottomImages.length);
-    }, 3000);
+    }, 6000);
 
     return () => clearInterval(intervalId);
   }, [topImages.length, bottomImages.length]);
