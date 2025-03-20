@@ -30,16 +30,49 @@
   @include typographyMixins.sectionCaptionText;
 }
 
-.our__servicesList {
+// ==================== CAROUSEL STARTS FROM HERE ====================
+.carouselContainer {
+  overflow: hidden;
+  position: relative;
   margin-top: 2rem;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 200%; // Adjust this if the number of slides changes (100% * total slides)
+}
+
+.carouselSlide {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 1rem;
+  gap: 1rem;
   width: 100%;
 }
 
-// ==================== CARD COMPONENT STARTS FROM HERE ====================
+/* Dots styling */
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
 
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.active {
+  background-color: colors.$color-primary;
+}
+
+// ==================== CARD COMPONENT STARTS FROM HERE ====================
 .service__card {
   position: relative;
   display: flex;
