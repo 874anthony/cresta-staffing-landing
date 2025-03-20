@@ -50,6 +50,7 @@
 // =============== Hero section =================
 @mixin hero-container {
   padding: variables.$spacing-section-center;
+  padding-bottom: 14rem;
   margin-top: -3rem;
   display: grid;
   grid-template-columns: 1fr 1fr;

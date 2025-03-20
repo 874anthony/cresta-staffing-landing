@@ -7,11 +7,7 @@
 
 .hero {
   background-image: url("/assets/shared/hero/background.png");
-  padding: variables.$spacing-section-center;
-  margin-top: -3rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-position: 100% 20%;
+  @include mixins.hero-container;
 }
 
 .hero__caption {

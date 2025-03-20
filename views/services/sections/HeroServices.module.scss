@@ -6,10 +6,7 @@
 @use "../../../scss/mixins/animations" as animations;
 
 .hero {
-  padding: variables.$spacing-section-center;
-  margin-top: -5rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  @include mixins.hero-container;
 }
 
 .hero__caption {
