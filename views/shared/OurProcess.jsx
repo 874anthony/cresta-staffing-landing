@@ -25,7 +25,6 @@ export default function OurProcess() {
   const [activeStep, setActiveStep] = useState(0);
   const totalSteps = 4;
 
-  // Optionally, define your steps as an array to map over them:
   const stepsData = [
     {
       title: "01",

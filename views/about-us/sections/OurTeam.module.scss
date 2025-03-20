@@ -126,13 +126,15 @@
     background-position: 35% 70%;
   }
 
-  // &:nth-child(2)::before {
-  //   background-image: url("/assets/home/our-services/img_bim_service.jpg");
-  // }
+  &:nth-child(2)::before {
+    background-image: url("/assets/about/team/juan-mercado-toloza.jpg");
+    background-position: 35% 70%;
+  }
 
-  // &:nth-child(3)::before {
-  //   background-image: url("/assets/home/our-services/img_renderer_service.jpg");
-  // }
+  &:nth-child(3)::before {
+    background-image: url("/assets/about/team/juan-mercado-toloza.jpg");
+    background-position: 35% 70%;
+  }
 }
 
 .member__cardContent {

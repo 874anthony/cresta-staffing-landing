@@ -1,4 +1,8 @@
+"use client";
+import { useState } from "react";
+
 import Button from "@/components/Button";
+
 import styles from "./ApplicationProcess.module.scss";
 
 const ZoomIcon = () => (
@@ -21,6 +25,66 @@ const ZoomIcon = () => (
 );
 
 export default function ApplicationProcess() {
+  // activeStep is 0-indexed: 0 means no step active or starting state.
+  const [activeStep, setActiveStep] = useState(0);
+  const totalSteps = 6;
+
+  const stepsData = [
+    {
+      title: "01",
+      text: "Find your perfect fit & apply",
+      description:
+        "We pre-screen candidates to ensure you see only the most qualified...",
+      icon: <ZoomIcon />,
+    },
+    {
+      title: "02",
+      text: "Letʼs connect!",
+      description:
+        "We pre-screen candidates to ensure you see only the most qualified, saving you valuable time. Each professional is carefully vetted for the precise skills, experience, and expertise you require.",
+      icon: <ZoomIcon />,
+    },
+    {
+      title: "03",
+      text: "Showcase you skills (test project)",
+      description:
+        "We pre-screen candidates to ensure you see only the most qualified, saving you valuable time. Each professional is carefully vetted for the precise skills, experience, and expertise you require.",
+      icon: <ZoomIcon />,
+    },
+    {
+      title: "04",
+      text: "Meet the team: Interview & portfolio",
+      description:
+        "Cresta takes care of all the arrangements, setting the stage for a successful...",
+      icon: <ZoomIcon />,
+    },
+    {
+      title: "05",
+      text: "Meet the team: Client interview",
+      description:
+        "Cresta takes care of all the arrangements, setting the stage for a successful...",
+      icon: <ZoomIcon />,
+    },
+    {
+      title: "06",
+      text: "Welcome aboard!",
+      description:
+        "Cresta takes care of all the arrangements, setting the stage for a successful...",
+      icon: <ZoomIcon />,
+    },
+  ];
+
+  const handleMouseEnter = (index) => {
+    setActiveStep(index + 1); // Now, first card sets activeStep to 1.
+  };
+
+  const handleMouseLeave = () => {
+    setActiveStep(0);
+  };
+
+  const lineFill =
+    activeStep > 0 ? ((activeStep - 1) / (totalSteps - 1)) * 100 : 0;
+
   return (
     <section className={styles.appProcess}>
       <div className={styles.appProcess__caption}>
@@ -31,7 +95,65 @@ export default function ApplicationProcess() {
         </p>
       </div>
 
+      {/* Stepper line */}
+      <div className={styles.stepper}>
+        {/* Filled progress line */}
+        <div
+          className={styles.stepperLine}
+          style={{
+            width: `${lineFill}%`,
+          }}
+        ></div>
+
+        {/* 4 Dots for the steps */}
+        {Array.from({ length: totalSteps }).map((_, index) => (
+          <span
+            key={index}
+            className={`${styles.stepperDot} ${
+              index < activeStep ? styles.activeDot : ""
+            }`}
+            // Distribute dots evenly from 0% to 100% along the line:
+            style={{ left: `${(index / (totalSteps - 1)) * 100}%` }}
+          ></span>
+        ))}
+      </div>
+
+      {/* Steps */}
       <div className={styles.appProcess__steps}>
+        {stepsData.map((step, index) => (
+          <div
+            className={styles.appProcess__step}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div className={styles.appProcess__stepHeader}>
+              {step.icon}
+              <h5 className={styles.appProcess__stepTitle}>{step.title}</h5>
+              <p className={styles.appProcess__stepText}>{step.text}</p>
+            </div>
+            <div className={styles.appProcess__stepDescription}>
+              {step.description}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <Button
+        variant="secondary"
+        size="large"
+        style={{
+          marginTop: "2rem",
+          padding: "1rem 6rem",
+        }}
+      >
+        Apply Now
+      </Button>
+    </section>
+  );
+}
+
+{
+  /* <div className={styles.appProcess__steps}>
         <div className={styles.appProcess__step}>
           <ZoomIcon />
           <h5 className={styles.appProcess__stepTitle}>01</h5>
@@ -85,18 +207,5 @@ export default function ApplicationProcess() {
             Managing HR & monitoring for long-term success
           </p>
         </div>
-      </div>
-
-      <Button
-        variant="secondary"
-        size="large"
-        style={{
-          marginTop: "2rem",
-          padding: "1rem 6rem",
-        }}
-      >
-        Apply Now
-      </Button>
-    </section>
-  );
+      </div> */
 }
