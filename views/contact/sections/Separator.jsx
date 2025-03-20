@@ -1,6 +1,8 @@
 import Button from "@/components/Button";
 
 import styles from "./Separator.module.scss";
+import { LinkedinIcon } from "@/components/icons/socials/LinkedinIcon";
+import { InstagramIcon } from "@/components/icons/socials/InstagramIcon";
 
 export default function Separator() {
   return (
@@ -23,8 +25,12 @@ export default function Separator() {
         </p>
 
         <div className={styles.socials}>
-          <span className={styles.socialsItem}>LinkedIn</span>
-          <span className={styles.socialsItem}>Instagram</span>
+          <a className={styles.socialsItem}>
+            <LinkedinIcon />
+          </a>
+          <a className={styles.socialsItem}>
+            <InstagramIcon />
+          </a>
         </div>
       </div>
     </section>

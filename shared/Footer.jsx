@@ -1,5 +1,7 @@
 import Button from "@/components/Button";
 import styles from "./Footer.module.scss";
+import { LinkedinIcon } from "@/components/icons/socials/LinkedinIcon";
+import { InstagramIcon } from "@/components/icons/socials/InstagramIcon";
 
 const PhoneIcon = () => (
   <svg
@@ -143,10 +145,14 @@ export default function Footer() {
           className={`${styles.footer__navLinkList} ${styles.footer__social}`}
         >
           <li>
-            <a href="#">LinkedIn</a>
+            <a href="#">
+              <LinkedinIcon />
+            </a>
           </li>
           <li>
-            <a href="#">Instagram</a>
+            <a href="#">
+              <InstagramIcon />
+            </a>
           </li>
         </ul>
       </div>

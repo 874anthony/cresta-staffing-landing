@@ -56,9 +56,9 @@
 .hero__images {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; // places topImages at the top and bottomImages at the bottom
+  // justify-content: space-between; // places topImages at the top and bottomImages at the bottom
   height: 450px;
-  gap: 0.8rem;
+  // gap: .5rem;
 }
 
 .topImages,

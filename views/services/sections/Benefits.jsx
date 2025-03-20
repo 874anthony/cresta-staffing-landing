@@ -3,8 +3,8 @@ import styles from "./Benefits.module.scss";
 const CheckIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={36}
-    height={36}
+    width={42}
+    height={42}
     viewBox="0 0 24 24"
     className="size-6"
   >

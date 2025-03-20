@@ -42,8 +42,19 @@
 
 .socials {
   display: flex;
-  gap: 1.5rem;
+  gap: 0.6rem;
   color: colors.$text-color-white;
+
+  a {
+    width: 3rem;
+    fill: colors.$text-color-white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }
 
 // ============= TODO: See if it works with icons =============
