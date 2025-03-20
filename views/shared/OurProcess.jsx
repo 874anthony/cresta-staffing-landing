@@ -37,11 +37,15 @@ export default function OurProcess() {
     {
       title: "02",
       text: "The right specialist for you",
+      description:
+        "We pre-screen candidates to ensure you see only the most qualified, saving you valuable time. Each professional is carefully vetted for the precise skills, experience, and expertise you require.",
       icon: <ProfileIcon />,
     },
     {
       title: "03",
       text: "Aligning goals & communication",
+      description:
+        "We pre-screen candidates to ensure you see only the most qualified, saving you valuable time. Each professional is carefully vetted for the precise skills, experience, and expertise you require.",
       icon: <ProfileIcon />,
     },
     {
@@ -65,59 +69,60 @@ export default function OurProcess() {
     activeStep > 0 ? ((activeStep - 1) / (totalSteps - 1)) * 100 : 0;
 
   return (
-    <section className={styles.ourProcess}>
-      <div className={styles.ourProcess__caption}>
-        <span className={styles.ourProcess__subCaption}>How to hire?</span>
-        <h2 className={styles.ourProcess__captionTitle}>Our process</h2>
-        <p className={styles.ourProcess__captionText}>
-          Accessing a qualified professional has never been easier. Find out how
-          today!
-        </p>
-      </div>
+    <>
+      <section className={styles.ourProcess}>
+        <div className={styles.ourProcess__caption}>
+          <span className={styles.ourProcess__subCaption}>How to hire?</span>
+          <h2 className={styles.ourProcess__captionTitle}>Our process</h2>
+          <p className={styles.ourProcess__captionText}>
+            Accessing a qualified professional has never been easier. Find out
+            how today!
+          </p>
+        </div>
 
-      {/* Stepper line */}
-      <div className={styles.stepper}>
-        {/* Filled progress line */}
-        <div
-          className={styles.stepperLine}
-          style={{
-            width: `${lineFill}%`,
-          }}
-        ></div>
+        {/* Stepper line */}
+        <div className={styles.stepper}>
+          {/* Filled progress line */}
+          <div
+            className={styles.stepperLine}
+            style={{
+              width: `${lineFill}%`,
+            }}
+          ></div>
 
-        {/* 4 Dots for the steps */}
-        {Array.from({ length: totalSteps }).map((_, index) => (
-          <span
-            key={index}
-            className={`${styles.stepperDot} ${
-              index < activeStep ? styles.activeDot : ""
-            }`}
-            // Distribute dots evenly from 0% to 100% along the line:
-            style={{ left: `${(index / (totalSteps - 1)) * 100}%` }}
-          ></span>
-        ))}
-      </div>
+          {/* 4 Dots for the steps */}
+          {Array.from({ length: totalSteps }).map((_, index) => (
+            <span
+              key={index}
+              className={`${styles.stepperDot} ${
+                index < activeStep ? styles.activeDot : ""
+              }`}
+              // Distribute dots evenly from 0% to 100% along the line:
+              style={{ left: `${(index / (totalSteps - 1)) * 100}%` }}
+            ></span>
+          ))}
+        </div>
+      </section>
 
       {/* Steps */}
       <div className={styles.ourProcess__steps}>
         {stepsData.map((step, index) => (
           <div
-            key={index}
             className={styles.ourProcess__step}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
-            {step.icon}
-            <h5 className={styles.ourProcess__stepTitle}>{step.title}</h5>
-            <p className={styles.ourProcess__stepText}>{step.text}</p>
-            {step.description && (
-              <p className={styles.ourProcess__stepDescription}>
-                {step.description}
-              </p>
-            )}
+            <div className={styles.ourProcess__stepHeader}>
+              {step.icon}
+              <h5 className={styles.ourProcess__stepTitle}>{step.title}</h5>
+              <p className={styles.ourProcess__stepText}>{step.text}</p>
+            </div>
+            <div className={styles.ourProcess__stepDescription}>
+              {step.description}
+            </div>
           </div>
         ))}
       </div>
-    </section>
+    </>
   );
 }

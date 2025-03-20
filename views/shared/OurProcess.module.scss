@@ -7,6 +7,7 @@
 .ourProcess {
   font-family: "Inter", sans-serif;
   padding: variables.$spacing-section-center;
+  padding-bottom: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,6 +36,8 @@
 }
 
 .ourProcess__steps {
+  padding-inline: 8rem;
+  padding-bottom: 6rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.1rem;
@@ -44,7 +47,7 @@
 /* Stepper container */
 .stepper {
   position: relative;
-  width: 100%;
+  width: 80%;
   height: 4px;
   background-color: #e0e0e0;
   margin: 20px 0;
@@ -86,13 +89,23 @@
   padding: 1.6rem 2rem;
   border-radius: variables.$rounded-lg;
   transition: background-color 0.3s ease, color 0.3s ease;
+  overflow: hidden; // ensures smooth transitions when content expands
+
+  // Set a base height so they all look the same when not hovered
+  min-height: 300px; // adjust this value as needed
+
+  .ourProcess__stepHeader {
+    // Fix the height so that even if title/text spans different lines,
+    // every header occupies the same space.
+    min-height: 250px; // Adjust this value based on your design
+  }
 
   svg {
     margin-left: auto;
   }
 
   &:hover {
-    background-color: colors.$bg-color-gray;
+    background: colors.$bg-color-gray;
     color: colors.$text-color-dark-blue;
 
     svg {
@@ -107,7 +120,7 @@
       font-size: typography.$font-size-sm;
       color: colors.$text-color-gray;
       opacity: 1;
-      max-height: fit-content; // Adjust as needed
+      max-height: 200px; // Adjust this value based on your design
     }
   }
 }

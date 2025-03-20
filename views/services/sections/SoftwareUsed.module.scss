@@ -21,7 +21,7 @@
 
 .software__usedList {
   background-color: colors.$bg-color-white;
-  margin-top: 1.2rem;
+  margin-top: -1.2rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -47,7 +47,6 @@
 
 // Animation for right-to-left
 .software__secondRow {
-  // animation-delay: -15s;
   @include animations.scroll-right-to-left;
 }
 
@@ -60,7 +59,7 @@
   align-items: center;
 
   img {
-    width: 85%;
+    width: 8rem;
     object-fit: contain;
   }
 }
