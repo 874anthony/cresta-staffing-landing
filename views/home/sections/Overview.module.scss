@@ -17,6 +17,7 @@
 
 .overview__title {
   @include typographyMixins.title($color: colors.$color-primary);
+  margin-bottom: 1rem;
 }
 
 .overview__checklist {

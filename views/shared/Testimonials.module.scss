@@ -49,7 +49,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: auto;
 
   img {
     width: 3rem;
@@ -59,13 +59,19 @@
   }
 }
 
+.testimonials__card:nth-child(1) {
+  .testimonials__cardAuthor {
+    margin-top: 2rem;
+  }
+}
+
 .testimonials__cardAuthorName {
   font-weight: 700;
   color: colors.$color-primary;
-  font-size: typography.$font-size-lg;
+  font-size: 1.4rem;
 }
 
 .testimonials__cardAuthorPosition {
-  font-size: typography.$font-size-sm;
+  font-size: typography.$font-size-md;
   color: colors.$text-color-gray;
 }

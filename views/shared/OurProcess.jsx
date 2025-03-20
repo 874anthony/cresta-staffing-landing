@@ -1,24 +1,12 @@
 "use client";
 import { useState } from "react";
 
-import styles from "./OurProcess.module.scss";
+import { ProfileIcon } from "@/components/icons/ProfileIcon";
+import { CheckZoomIcon } from "@/components/icons/CheckZoomIcon";
+import { PrecisionIcon } from "@/components/icons/PrecisionIcon";
+import { CheckmarkIcon } from "@/components/icons/CheckmarkIcon";
 
-const ProfileIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={36}
-    height={36}
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    className="size-6"
-  >
-    <path
-      fillRule="evenodd"
-      d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-      clipRule="evenodd"
-    />
-  </svg>
-);
+import styles from "./OurProcess.module.scss";
 
 export default function OurProcess() {
   // activeStep is 0-indexed: 0 means no step active or starting state.
@@ -30,7 +18,7 @@ export default function OurProcess() {
       title: "01",
       text: "Clear needs, perfect match, all in one call",
       description:
-        "We pre-screen candidates to ensure you see only the most qualified...",
+        "Our process starts with a deep dive into your specific needs, ensuring we identify the right skills, experience, and cultural fit. Once aligned, you'll receive a tailored job description, and our consultants will guide you every step of the way.",
       icon: <ProfileIcon />,
     },
     {
@@ -38,21 +26,21 @@ export default function OurProcess() {
       text: "The right specialist for you",
       description:
         "We pre-screen candidates to ensure you see only the most qualified, saving you valuable time. Each professional is carefully vetted for the precise skills, experience, and expertise you require.",
-      icon: <ProfileIcon />,
+      icon: <CheckZoomIcon />,
     },
     {
       title: "03",
       text: "Aligning goals & communication",
       description:
-        "We pre-screen candidates to ensure you see only the most qualified, saving you valuable time. Each professional is carefully vetted for the precise skills, experience, and expertise you require.",
-      icon: <ProfileIcon />,
+        "Once you've found the perfect fit, we facilitate a successful onboarding, including a kickoff meeting to connect, set goals, align communication, and ensure a seamless transition.",
+      icon: <PrecisionIcon />,
     },
     {
       title: "04",
       text: "Managing HR & monitoring for long-term success",
       description:
-        "Cresta takes care of all the arrangements, setting the stage for a successful...",
-      icon: <ProfileIcon />,
+        "Cresta takes care of all the arrangements, setting the stage for a successful remote collaboration with your selected professional. We'll maintain regular contact with both of you to provide ongoing support and ensure a productive partnership.",
+      icon: <CheckmarkIcon />,
     },
   ];
 

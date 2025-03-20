@@ -13,7 +13,7 @@
 }
 
 .our__servicesBackgroundLines {
-  background-image: url("/assets/home/our-services/background.png");
+  background-image: url("/assets/shared/our-services/background.png");
   background-size: cover;
   background-position: center;
 }
@@ -138,20 +138,68 @@
       variables.$card-effect;
   }
 
-  &:nth-child(1)::before {
-    background-image: url("/assets/home/our-services/img_renderer_service.jpg");
+  // &:nth-child(1)::before {
+  //   background-image: url("/assets/shared/our-services/drafter_1.jpg");
+  // }
+
+  // &:nth-child(2)::before {
+  //   background-image: url("/assets/shared/our-services/3d_renderer_1.jpg");
+  // }
+
+  // &:nth-child(3)::before {
+  //   background-image: url("/assets/shared/our-services/bim_1.jpg");
+  // }
+
+  // &:nth-child(4)::before {
+  //   background-image: url("/assets/shared/our-services/project_manager_1.jpg");
+  // }
+
+  // &:nth-child(5)::before {
+  //   background-image: url("/assets/shared/our-services/design_drafter_1.jpg");
+  // }
+
+  // &:nth-child(6)::before {
+  //   background-image: url("/assets/shared/our-services/estimator_1.jpg");
+  // }
+}
+
+.carouselSlide:nth-child(1) {
+  .service__card:nth-child(1) {
+    &::before {
+      background-image: url("/assets/shared/our-services/drafter_1.jpg");
+    }
   }
 
-  &:nth-child(2)::before {
-    background-image: url("/assets/home/our-services/img_bim_service.jpg");
+  .service__card:nth-child(2) {
+    &::before {
+      background-image: url("/assets/shared/our-services/3d_renderer_1.jpg");
+    }
   }
 
-  &:nth-child(3)::before {
-    background-image: url("/assets/home/our-services/img_renderer_service.jpg");
+  .service__card:nth-child(3) {
+    &::before {
+      background-image: url("/assets/shared/our-services/bim_1.jpg");
+    }
   }
 
-  &:nth-child(4)::before {
-    background-image: url("/assets/home/our-services/img_renderer_service.jpg");
+  .service__card:nth-child(4) {
+    &::before {
+      background-image: url("/assets/shared/our-services/project_manager_1.jpg");
+    }
+  }
+}
+
+.carouselSlide:nth-child(2) {
+  .service__card:nth-child(1) {
+    &::before {
+      background-image: url("/assets/shared/our-services/design_drafter_1.jpg");
+    }
+  }
+
+  .service__card:nth-child(2) {
+    &::before {
+      background-image: url("/assets/shared/our-services/estimator_1.jpg");
+    }
   }
 }
 
@@ -186,6 +234,22 @@
     }
   }
 
+  .carouselSlide:nth-child(1) {
+    .service__card:nth-child(4) {
+      .service__cardContent {
+        transform: translateY(calc(100% - 6.5rem));
+      }
+    }
+  }
+
+  .carouselSlide:nth-child(2) {
+    .service__card:nth-child(1) {
+      .service__cardContent {
+        transform: translateY(calc(100% - 6rem));
+      }
+    }
+  }
+
   .service__card:hover,
   .service__card:focus-within {
     align-items: center;
@@ -206,6 +270,24 @@
         transform: translateY(0);
         transition-delay: calc(variables.$card-effect-duration / 8);
       }
+    }
+  }
+}
+
+.carouselSlide:nth-child(1) {
+  .service__card:nth-child(4):hover,
+  .service__card:nth-child(4):focus-within {
+    .service__cardContent {
+      transform: translateY(calc(100% - 9.7rem));
+    }
+  }
+}
+
+.carouselSlide:nth-child(2) {
+  .service__card:nth-child(1):hover,
+  .service__card:nth-child(1):focus-within {
+    .service__cardContent {
+      transform: translateY(calc(100% - 7.5rem));
     }
   }
 }

@@ -15,46 +15,30 @@ export default function OurServices({
   const slides = [
     [
       {
-        title: "3D Renderer",
+        title: "Drafter",
         text: "Skilled 3D renderers with technical and creative expertise.",
-        bgImage: "/assets/home/our-services/img_renderer_service.jpg",
-      },
-      {
-        title: "BIM Modelling",
-        text: "Skilled 3D renderers with technical and creative expertise.",
-        bgImage: "/assets/home/our-services/img_bim_service.jpg",
       },
       {
         title: "3D Renderer",
         text: "Skilled 3D renderers with technical and creative expertise.",
-        bgImage: "/assets/home/our-services/img_renderer_service.jpg",
       },
       {
-        title: "3D Renderer",
+        title: "BIM Modeling",
         text: "Skilled 3D renderers with technical and creative expertise.",
-        bgImage: "/assets/home/our-services/img_renderer_service.jpg",
+      },
+      {
+        title: "Construction Project Manager",
+        text: "Skilled 3D renderers with technical and creative expertise.",
       },
     ],
     [
       {
-        title: "Extra Service",
+        title: "Design Drafter & Documentation",
         text: "This is the remaining service.",
-        bgImage: "/assets/home/our-services/img_renderer_service.jpg",
       },
       {
-        title: "BIM Modelling",
+        title: "Estimator",
         text: "Skilled 3D renderers with technical and creative expertise.",
-        bgImage: "/assets/home/our-services/img_bim_service.jpg",
-      },
-      {
-        title: "3D Renderer",
-        text: "Skilled 3D renderers with technical and creative expertise.",
-        bgImage: "/assets/home/our-services/img_renderer_service.jpg",
-      },
-      {
-        title: "3D Renderer",
-        text: "Skilled 3D renderers with technical and creative expertise.",
-        bgImage: "/assets/home/our-services/img_renderer_service.jpg",
       },
     ],
   ];
@@ -92,14 +76,7 @@ export default function OurServices({
           {slides.map((slide, slideIndex) => (
             <div key={slideIndex} className={styles.carouselSlide}>
               {slide.map((card, cardIndex) => (
-                <div
-                  key={cardIndex}
-                  className={styles.service__card}
-                  style={{
-                    // Using inline style to set the background image for the card
-                    backgroundImage: `url(${card.bgImage})`,
-                  }}
-                >
+                <div key={cardIndex} className={styles.service__card}>
                   <div className={styles.service__cardContent}>
                     <h2 className={styles.service__cardTitle}>{card.title}</h2>
                     <p className={styles.service__cardText}>{card.text}</p>
