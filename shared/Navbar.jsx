@@ -1,3 +1,9 @@
+"use client";
+
+import { useCallback } from "react";
+import NextLink from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+
 import Button from "@/components/Button";
 import styles from "./Navbar.module.scss";
 
@@ -21,9 +27,39 @@ const ChevronDown = () => (
 );
 
 export default function Navbar() {
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const navigationData = [
+    {
+      title: "3D Renderer",
+      slug: "3d-renderer",
+    },
+    {
+      title: "Estimator",
+      slug: "estimator",
+    },
+    {
+      title: "BIM Modelling",
+      slug: "bim",
+    },
+    {
+      title: "Construction Project Manager",
+      slug: "construction",
+    },
+    {
+      title: "Design Drafter & Documentation",
+      slug: "drafter-documentation",
+    },
+    {
+      title: "Drafter",
+      slug: "drafter",
+    },
+  ];
+
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
+      <div className={styles.logo} onClick={() => router.push("/")}>
         <img src="/assets/cresta_logo.png" alt="Cresta Logo" />
       </div>
 
@@ -38,15 +74,13 @@ export default function Navbar() {
             </a>
 
             <ul className={styles.nav__dropdown}>
-              <li>
-                <a href="#">Service 1</a>
-              </li>
-              <li>
-                <a href="#">Service 2</a>
-              </li>
-              <li>
-                <a href="#">Service 3</a>
-              </li>
+              {navigationData.map((item) => (
+                <li key={item.slug}>
+                  <NextLink href={`/services/${item.slug}`}>
+                    {item.title}
+                  </NextLink>
+                </li>
+              ))}
             </ul>
           </li>
 
@@ -72,11 +106,11 @@ export default function Navbar() {
           </li>
 
           <li className={styles.nav__item}>
-            <a href="#">Blog</a>
+            <NextLink href="/blog">Blog</NextLink>
           </li>
 
           <li className={styles.nav__item}>
-            <a href="#">FAQ</a>
+            <NextLink href="/faq">FAQ</NextLink>
           </li>
         </ul>
 
@@ -84,7 +118,13 @@ export default function Navbar() {
           <Button variant="secondary" fontWeight="bold">
             Find a job
           </Button>
-          <Button variant="primary" fontWeight="bold">
+          <Button
+            variant="primary"
+            fontWeight="bold"
+            onClick={() => {
+              router.push("/contact");
+            }}
+          >
             Get Expert Consultation
           </Button>
         </div>

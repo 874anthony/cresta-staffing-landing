@@ -40,6 +40,14 @@ export default function OurServices({
         title: "Estimator",
         text: "Skilled 3D renderers with technical and creative expertise.",
       },
+      {
+        title: "Estimator",
+        text: "Skilled 3D renderers with technical and creative expertise.",
+      },
+      {
+        title: "Estimator",
+        text: "Skilled 3D renderers with technical and creative expertise.",
+      },
     ],
   ];
 

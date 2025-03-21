@@ -5,52 +5,36 @@
 @use "../../../scss/mixins/typography" as typographyMixins;
 
 .hero {
-  padding: variables.$spacing-section-center;
-  margin-top: -3rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  @include mixins.hero-container;
 }
 
 .hero__caption {
-  font-family: "Inter", sans-serif;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  justify-content: center;
+  @include mixins.hero-section-caption;
 }
 
 .hero__captionSubtitle {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: typography.$font-size-sm;
-  font-weight: 400;
-  color: colors.$text-color-gray;
 
-  span:is(:first-of-type) {
-    color: colors.$color-primary;
-  }
-
-  span {
-    color: colors.$text-color-gray;
-    font-weight: 400;
-  }
+  @include typographyMixins.captionSubtitle(
+    $color: colors.$text-color-gray,
+    $weight: 400
+  );
 }
 
 .hero__captionTitle {
-  @include typographyMixins.title;
-  font-weight: 800;
+  @include typographyMixins.title($color: colors.$color-primary);
 }
 
 .hero__captionText {
-  @include typographyMixins.subCaption;
-  font-weight: 400;
-  width: 85%;
+  @include typographyMixins.captionText;
 }
 
 .hero__captionExtra {
   @include typographyMixins.subCaption;
   font-size: typography.$font-size-md;
+  color: colors.$text-color-dark-blue;
   margin-top: 1rem;
   margin-bottom: 0.1rem;
   font-weight: 700;

@@ -201,6 +201,18 @@
       background-image: url("/assets/shared/our-services/estimator_1.jpg");
     }
   }
+
+  .service__card:nth-child(3) {
+    &::before {
+      background-image: url("/assets/shared/our-services/estimator_1.jpg");
+    }
+  }
+
+  .service__card:nth-child(4) {
+    &::before {
+      background-image: url("/assets/shared/our-services/estimator_1.jpg");
+    }
+  }
 }
 
 .service__cardContent {

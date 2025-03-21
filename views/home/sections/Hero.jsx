@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 
 import Button from "@/components/Button";
 import styles from "./Hero.module.scss";
@@ -16,6 +17,9 @@ const bottomImages = [
 export default function Hero() {
   const [topIndex, setTopIndex] = useState(0);
   const [bottomIndex, setBottomIndex] = useState(0);
+
+  const smoothScroll = useSmoothScroll();
+  const homeExpertConsultation = "home-expert-consultation";
 
   useEffect(() => {
     // Set up a timer to update the active index every 3 seconds
@@ -44,7 +48,11 @@ export default function Hero() {
         </p>
 
         <div className={styles.hero__captionCTA}>
-          <Button variant="primary" size="large">
+          <Button
+            variant="primary"
+            size="large"
+            onClick={() => smoothScroll(homeExpertConsultation)}
+          >
             Get Expert Consultation
           </Button>
           <Button variant="secondary" size="large">

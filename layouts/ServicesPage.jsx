@@ -2,7 +2,7 @@ import HeroServices from "@/views/services/sections/HeroServices";
 import OurServicesServices from "@/views/shared/OurServices";
 import OurProcess from "@/views/shared/OurProcess";
 import Separator from "@/views/shared/Separator";
-import SoftwareUsed from "@/views/services/sections/SoftwareUsed";
+import SoftwareUsed from "@/views/shared/SoftwareUsed";
 import Benefits from "@/views/services/sections/Benefits";
 import SeparatorServices from "@/views/services/sections/SeparatorServices";
 import Testimonials from "@/views/shared/Testimonials";

@@ -3,8 +3,8 @@ import styles from "./Overview.module.scss";
 const CheckIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={32}
-    height={32}
+    width={38}
+    height={38}
     viewBox="0 0 24 24"
     fill="rgba(24, 99, 194, 255)"
     className="size-6"

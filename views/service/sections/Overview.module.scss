@@ -11,7 +11,8 @@
 }
 
 .overview__title {
-  @include typographyMixins.title;
+  @include typographyMixins.title($color: colors.$color-primary);
+  margin-bottom: 1rem;
 }
 
 .overview__checklist {
@@ -44,11 +45,12 @@
 }
 
 .overview__captionTitle {
-  @include typographyMixins.title;
+  @include typographyMixins.title($color: colors.$color-primary);
 }
 
 .overview__captionText {
-  color: colors.$text-color-gray;
+  color: colors.$text-color-dark-blue;
+  font-weight: 500;
 
   span {
     color: colors.$text-color-dark-blue;

@@ -1,9 +1,9 @@
-@use "../../../scss/base/variables" as variables;
-@use "../../../scss/base/colors" as colors;
-@use "../../../scss/base/typography" as typography;
-@use "../../../scss/mixins/mixins" as mixins;
-@use "../../../scss/mixins/typography" as typographyMixins;
-@use "../../../scss/mixins/animations" as animations;
+@use "../../scss/base/variables" as variables;
+@use "../../scss/base/colors" as colors;
+@use "../../scss/base/typography" as typography;
+@use "../../scss/mixins/mixins" as mixins;
+@use "../../scss/mixins/typography" as typographyMixins;
+@use "../../scss/mixins/animations" as animations;
 
 .software__used {
   @include mixins.centered-bg-white-section($gap: 1.2rem);

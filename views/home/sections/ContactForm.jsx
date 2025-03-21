@@ -4,7 +4,7 @@ import styles from "./ContactForm.module.scss";
 
 export default function ContactForm() {
   return (
-    <section className={styles.contact__section}>
+    <section id="home-expert-consultation" className={styles.contact__section}>
       <img src="/assets/home/contact/contact-us.png" alt="Contact Us Image" />
 
       <div className={styles.contact__container}>

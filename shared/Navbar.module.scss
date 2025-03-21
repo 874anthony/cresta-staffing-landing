@@ -43,9 +43,12 @@
       gap: 0.25rem;
       font-weight: 500;
       letter-spacing: -0.5px;
+      transition: color 0.3s ease;
+      cursor: pointer;
     }
 
-    &:hover .nav__dropdown {
+    &:hover .nav__dropdown,
+    &:hover .nav__dropdown:hover {
       opacity: 1;
       transform: translateY(0);
       pointer-events: auto;
@@ -58,17 +61,18 @@
 
   &__dropdown {
     position: absolute;
-    top: calc(100% + 0.25rem);
+    top: calc(100% - 0.15rem);
     left: -2.5rem;
     background: colors.$bg-color-white;
     border-radius: variables.$rounded-sm;
     box-shadow: utils.$shadow-normal;
     list-style: none;
     padding: 10px 0;
-    min-width: 150px;
+    padding-right: 32px;
+    min-width: 250px;
     opacity: 0;
     transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease 0.2s, transform 0.3s ease;
     pointer-events: none;
     z-index: 10;
 
