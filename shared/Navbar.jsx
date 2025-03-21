@@ -66,12 +66,12 @@ export default function Navbar() {
       <nav className={styles.nav}>
         <ul className={styles.nav__list}>
           <li className={styles.nav__item}>
-            <a href="#">
+            <NextLink href="/services">
               Services{" "}
               <span>
                 <ChevronDown />
               </span>
-            </a>
+            </NextLink>
 
             <ul className={styles.nav__dropdown}>
               {navigationData.map((item) => (
@@ -85,12 +85,12 @@ export default function Navbar() {
           </li>
 
           <li className={styles.nav__item}>
-            <a href="#">
+            <NextLink href="/about-us">
               About{" "}
               <span>
                 <ChevronDown />
               </span>
-            </a>
+            </NextLink>
 
             <ul className={styles.nav__dropdown}>
               <li>
@@ -115,7 +115,13 @@ export default function Navbar() {
         </ul>
 
         <div className={styles.nav__cta}>
-          <Button variant="secondary" fontWeight="bold">
+          <Button
+            variant="secondary"
+            fontWeight="bold"
+            onClick={() => {
+              router.push("/find-a-job");
+            }}
+          >
             Find a job
           </Button>
           <Button

@@ -25,6 +25,12 @@
   display: flex;
   gap: 0.5rem;
   align-items: center;
+
+  p {
+    color: colors.$text-color-dark-blue;
+    font-weight: 600;
+    line-height: 19px;
+  }
 }
 
 .overview__cta {

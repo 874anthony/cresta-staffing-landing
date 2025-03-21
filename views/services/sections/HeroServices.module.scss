@@ -50,10 +50,11 @@
   // height: 65%; // Check this
 
   &:nth-child(1) {
-    @include animations.slide-in-left;
+    // @include animations.slide-in-left-1;
+    // @include animations.tilt-in-left-1;
   }
 
   &:nth-child(2) {
-    @include animations.tilt-in-right-1;
+    // @include animations.tilt-in-right-1;
   }
 }

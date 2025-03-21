@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 
 import Button from "@/components/Button";
@@ -15,6 +16,7 @@ const bottomImages = [
 ];
 
 export default function Hero() {
+  const router = useRouter();
   const [topIndex, setTopIndex] = useState(0);
   const [bottomIndex, setBottomIndex] = useState(0);
 
@@ -55,7 +57,11 @@ export default function Hero() {
           >
             Get Expert Consultation
           </Button>
-          <Button variant="secondary" size="large">
+          <Button
+            variant="secondary"
+            size="large"
+            onClick={() => router.push("/find-a-job")}
+          >
             Find a job
           </Button>
         </div>
