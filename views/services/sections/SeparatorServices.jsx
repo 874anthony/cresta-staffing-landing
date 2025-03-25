@@ -1,8 +1,13 @@
+"use client";
+import useIsMobile from "@/hooks/useIsMobile";
+
 import Button from "@/components/Button";
 
 import styles from "./SeparatorServices.module.scss";
 
 export default function SeparatorServices() {
+  const isMobile = useIsMobile(475);
+
   return (
     <section className={styles.cta__separator}>
       <h4 className={styles.cta__separatorTitle}>
@@ -15,7 +20,7 @@ export default function SeparatorServices() {
         size="large"
         fontWeight="bold"
         style={{
-          fontSize: "1.275rem",
+          fontSize: isMobile ? "0.875rem" : "1.275rem",
         }}
       >
         Get Expert Consultation

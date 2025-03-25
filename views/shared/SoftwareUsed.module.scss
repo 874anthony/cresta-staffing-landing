@@ -63,3 +63,34 @@
     object-fit: contain;
   }
 }
+
+// ==================== MEDIA QUERIES ====================
+
+@media screen and (max-width: 475px) {
+  .software__used {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    padding-inline: 1.5rem;
+  }
+
+  .software__usedTitle {
+    font-size: 1.5rem;
+  }
+
+  .software__usedText {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .software__usedList {
+    padding-block: 3rem;
+    gap: 1rem;
+  }
+
+  .software__usedItem {
+    img {
+      width: 6rem;
+      object-fit: contain;
+    }
+  }
+}

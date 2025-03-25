@@ -37,6 +37,7 @@ export default function ServicesPage() {
       <OurServicesServices
         title="Our Expertise"
         description="Gain access to elite remote engineers and architects without the time-consuming search."
+        mobileCorners="true"
       />
 
       <OurProcess />

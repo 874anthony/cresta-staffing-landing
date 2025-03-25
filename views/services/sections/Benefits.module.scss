@@ -72,3 +72,43 @@
 .benefits__item:nth-child(4) {
   border-bottom-right-radius: 0;
 }
+
+// ===================== MEDIA QUERIES =====================
+@media screen and (max-width: 475px) {
+  .benefits {
+    padding: 3rem 1.5rem;
+  }
+
+  .benefits__subCaption {
+    font-size: 1rem;
+  }
+
+  .benefits__captionTitle {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .benefits__list {
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  .benefits__item {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.2rem;
+  }
+
+  .benefits__item:nth-child(1),
+  .benefits__item:nth-child(3) {
+    transform: translateY(0);
+  }
+
+  .benefits__itemTitle {
+    font-size: 1rem;
+  }
+
+  .benefits__itemText {
+    font-size: 0.75rem;
+  }
+}

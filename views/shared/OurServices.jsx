@@ -11,6 +11,7 @@ export default function OurServices({
   subCaption = "",
   backgroundColor = "",
   backgroundLines = false,
+  mobileCorners = false,
 }) {
   const initialSlides = [
     [
@@ -77,7 +78,8 @@ export default function OurServices({
         backgroundColor && backgroundColor === "white"
           ? styles.our__servicesWhite
           : ""
-      }`}
+      }
+      ${mobileCorners ? styles.our__servicesMobileCorners : ""}`}
     >
       {subCaption && (
         <p className={styles.our__servicesSubCaption}>{subCaption}</p>

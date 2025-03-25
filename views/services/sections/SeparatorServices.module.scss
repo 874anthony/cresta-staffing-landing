@@ -15,3 +15,19 @@
     font-weight: 700;
   }
 }
+
+@media screen and (max-width: 475px) {
+  .cta__separator {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  .cta__separatorTitle {
+    line-height: 1.5;
+    width: 100%;
+    font-size: 1.125rem;
+    text-align: center;
+  }
+}
