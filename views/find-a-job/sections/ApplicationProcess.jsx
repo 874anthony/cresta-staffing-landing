@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
+import useIsMobile from "@/hooks/useIsMobile";
 
 import Button from "@/components/Button";
-
 import styles from "./ApplicationProcess.module.scss";
 
 const ZoomIcon = () => (
@@ -25,6 +25,9 @@ const ZoomIcon = () => (
 );
 
 export default function ApplicationProcess() {
+  const isMobile = useIsMobile(475);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   // activeStep is 0-indexed: 0 means no step active or starting state.
   const [activeStep, setActiveStep] = useState(0);
   const totalSteps = 6;
@@ -74,6 +77,8 @@ export default function ApplicationProcess() {
     },
   ];
 
+  const slides = stepsData.map((step) => [step]);
+
   const handleMouseEnter = (index) => {
     setActiveStep(index + 1); // Now, first card sets activeStep to 1.
   };
@@ -85,6 +90,10 @@ export default function ApplicationProcess() {
   const lineFill =
     activeStep > 0 ? ((activeStep - 1) / (totalSteps - 1)) * 100 : 0;
 
+  const handleDotClick = (index) => {
+    setCurrentSlide(index);
+  };
+
   return (
     <section className={styles.appProcess}>
       <div className={styles.appProcess__caption}>
@@ -95,49 +104,103 @@ export default function ApplicationProcess() {
         </p>
       </div>
 
-      {/* Stepper line */}
-      <div className={styles.stepper}>
-        {/* Filled progress line */}
-        <div
-          className={styles.stepperLine}
-          style={{
-            width: `${lineFill}%`,
-          }}
-        ></div>
+      {!isMobile && (
+        <>
+          {/* Stepper line */}
+          <div className={styles.stepper}>
+            {/* Filled progress line */}
+            <div
+              className={styles.stepperLine}
+              style={{
+                width: `${lineFill}%`,
+              }}
+            ></div>
 
-        {/* 4 Dots for the steps */}
-        {Array.from({ length: totalSteps }).map((_, index) => (
-          <span
-            key={index}
-            className={`${styles.stepperDot} ${
-              index < activeStep ? styles.activeDot : ""
-            }`}
-            // Distribute dots evenly from 0% to 100% along the line:
-            style={{ left: `${(index / (totalSteps - 1)) * 100}%` }}
-          ></span>
-        ))}
-      </div>
+            {/* 4 Dots for the steps */}
+            {Array.from({ length: totalSteps }).map((_, index) => (
+              <span
+                key={index}
+                className={`${styles.stepperDot} ${
+                  index < activeStep ? styles.activeDot : ""
+                }`}
+                // Distribute dots evenly from 0% to 100% along the line:
+                style={{ left: `${(index / (totalSteps - 1)) * 100}%` }}
+              ></span>
+            ))}
+          </div>
 
-      {/* Steps */}
-      <div className={styles.appProcess__steps}>
-        {stepsData.map((step, index) => (
-          <div
-            key={index}
-            className={styles.appProcess__step}
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={handleMouseLeave}
-          >
-            <div className={styles.appProcess__stepHeader}>
-              {step.icon}
-              <h5 className={styles.appProcess__stepTitle}>{step.title}</h5>
-              <p className={styles.appProcess__stepText}>{step.text}</p>
-            </div>
-            <div className={styles.appProcess__stepDescription}>
-              {step.description}
+          {/* Steps */}
+          <div className={styles.appProcess__steps}>
+            {stepsData.map((step, index) => (
+              <div
+                key={index}
+                className={styles.appProcess__step}
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={handleMouseLeave}
+              >
+                <div className={styles.appProcess__stepHeader}>
+                  {step.icon}
+                  <h5 className={styles.appProcess__stepTitle}>{step.title}</h5>
+                  <p className={styles.appProcess__stepText}>{step.text}</p>
+                </div>
+                <div className={styles.appProcess__stepDescription}>
+                  {step.description}
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+
+      {isMobile && (
+        <div className={styles.containerMobile}>
+          {/* Carousel Container */}
+          <div className={styles.carouselContainer}>
+            <div
+              className={styles.carouselTrack}
+              style={{
+                transform: `translateX(-${
+                  currentSlide * (100 / slides.length)
+                }%)`,
+              }}
+            >
+              {slides.map((slide, slideIndex) => (
+                <div key={slideIndex} className={styles.carouselSlide}>
+                  {slide.map((step, stepIndex) => (
+                    <div key={stepIndex} className={styles.appProcess__step}>
+                      <div className={styles.appProcess__stepHeader}>
+                        {step.icon}
+                        <h5 className={styles.appProcess__stepTitle}>
+                          {step.title}
+                        </h5>
+                        <p className={styles.appProcess__stepText}>
+                          {step.text}
+                        </p>
+                      </div>
+                      <div className={styles.appProcess__stepDescription}>
+                        {step.description}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ))}
             </div>
           </div>
-        ))}
-      </div>
+
+          {/* Dots Navigation */}
+          <div className={styles.carouselDots}>
+            {slides.map((_, index) => (
+              <span
+                key={index}
+                className={`${styles.dot} ${
+                  currentSlide === index ? styles.active : ""
+                }`}
+                onClick={() => handleDotClick(index)}
+              ></span>
+            ))}
+          </div>
+        </div>
+      )}
 
       <Button
         variant="secondary"
@@ -151,62 +214,4 @@ export default function ApplicationProcess() {
       </Button>
     </section>
   );
-}
-
-{
-  /* <div className={styles.appProcess__steps}>
-        <div className={styles.appProcess__step}>
-          <ZoomIcon />
-          <h5 className={styles.appProcess__stepTitle}>01</h5>
-          <p className={styles.appProcess__stepText}>
-            Clear needs, perfect match, all in one call
-          </p>
-
-          <p className={styles.appProcess__stepDescription}>
-            We pre-screen candidates to ensure you see only the most qualified,
-            saving you valuable time. Each professional is carefully vetted for
-            the precise skills, experience, and expertise you require.
-          </p>
-        </div>
-
-        <div className={styles.appProcess__step}>
-          <ZoomIcon />
-          <h5 className={styles.appProcess__stepTitle}>02</h5>
-          <p className={styles.appProcess__stepText}>
-            The right specialist for you
-          </p>
-        </div>
-
-        <div className={styles.appProcess__step}>
-          <ZoomIcon />
-          <h5 className={styles.appProcess__stepTitle}>03</h5>
-          <p className={styles.appProcess__stepText}>
-            Aligning goals & communication
-          </p>
-        </div>
-
-        <div className={styles.appProcess__step}>
-          <ZoomIcon />
-          <h5 className={styles.appProcess__stepTitle}>04</h5>
-          <p className={styles.appProcess__stepText}>
-            Managing HR & monitoring for long-term success
-          </p>
-        </div>
-
-        <div className={styles.appProcess__step}>
-          <ZoomIcon />
-          <h5 className={styles.appProcess__stepTitle}>04</h5>
-          <p className={styles.appProcess__stepText}>
-            Meet the team: Client interview
-          </p>
-        </div>
-
-        <div className={styles.appProcess__step}>
-          <ZoomIcon />
-          <h5 className={styles.appProcess__stepTitle}>04</h5>
-          <p className={styles.appProcess__stepText}>
-            Managing HR & monitoring for long-term success
-          </p>
-        </div>
-      </div> */
 }

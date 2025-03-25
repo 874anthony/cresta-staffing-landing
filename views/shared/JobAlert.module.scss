@@ -38,3 +38,29 @@
 .input_icon {
   margin-right: 0.5rem;
 }
+
+// ======================= MEDIA QUERIES =======================
+@media screen and (max-width: 475px) {
+  .job__alert {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .job__alertTitle {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .job__alertText {
+    font-size: 1.125rem;
+    text-align: center;
+  }
+
+  .job__alertForm {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+}

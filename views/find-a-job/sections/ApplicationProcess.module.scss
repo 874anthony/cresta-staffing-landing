@@ -94,7 +94,7 @@
   // Set a base height so they all look the same when not hovered
   min-height: 300px; // adjust this value as needed
 
-  .ourProcess__stepHeader {
+  .appProcess__stepHeader {
     // Fix the height so that even if title/text spans different lines,
     // every header occupies the same space.
     min-height: 250px; // Adjust this value based on your design
@@ -152,4 +152,93 @@
   max-height: 0;
   overflow: hidden;
   transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+// ======================== CAROUSEL STARTS HERE ========================
+.carouselContainer {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 800%; // Adjust this if the number of slides changes (100% * total slides)
+}
+
+.carouselSlide {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Dots styling */
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.active {
+  background-color: colors.$color-primary;
+}
+
+// ======================== MEDIA QUERIES ========================
+@media screen and (max-width: 475px) {
+  .appProcess {
+    padding-inline: 2.4rem;
+    padding-block: 3rem;
+    padding-bottom: 4rem;
+    border-top-left-radius: variables.$rounded-lg;
+    border-top-right-radius: variables.$rounded-lg;
+  }
+
+  .appProcess__step {
+    min-height: 80px;
+    padding: 1rem 1.5rem;
+
+    border-radius: variables.$rounded-lg !important;
+
+    .appProcess__stepHeader {
+      min-height: 40px;
+    }
+
+    background: #fff;
+    color: colors.$text-color-dark-blue;
+
+    svg {
+      fill: colors.$color-primary;
+    }
+
+    .appProcess__stepTitle {
+      font-size: 2rem;
+      color: colors.$color-primary;
+    }
+
+    .appProcess__stepText {
+      font-size: 0.8rem;
+    }
+
+    .appProcess__stepDescription {
+      font-size: 0.75rem;
+      color: colors.$text-color-gray;
+      opacity: 1;
+      overflow: initial;
+      max-height: 200px;
+      margin-top: 0.875rem;
+    }
+  }
 }
