@@ -122,3 +122,64 @@
     color: colors.$color-primary;
   }
 }
+
+// ======================== MEDIA QUERIES ========================
+@media screen and (max-width: 475px) {
+  .footer {
+    padding-inline: 1.5rem;
+  }
+
+  .footer__logo {
+    flex-direction: column;
+    gap: 2rem;
+    // align-items: flex-start;
+
+    img {
+      align-self: flex-start;
+      width: 60%;
+    }
+  }
+
+  .footer__nav {
+    grid-template-columns: 1fr;
+
+    h3,
+    ul {
+      margin-left: 0 !important;
+    }
+
+    .footer__navLinkList li a {
+      color: colors.$text-color-dark-blue !important;
+    }
+
+    .footer__navLinkList:nth-of-type(1) {
+      grid-row: 2 / 3;
+    }
+
+    .footer__navLinkList:nth-of-type(2) {
+      grid-row: 4 / 5;
+    }
+
+    .footer__navLinkList:nth-of-type(3) {
+      grid-row: 6 / 7;
+    }
+  }
+
+  .footer__terms__content {
+    flex-direction: column-reverse;
+    align-items: normal;
+    gap: 1rem;
+
+    p {
+      font-size: 0.75rem;
+      letter-spacing: -0.5px;
+      font-weight: 400;
+      color: colors.$text-color-dark-blue;
+    }
+
+    .footer__terms__links {
+      justify-content: space-between;
+      font-weight: 500;
+    }
+  }
+}

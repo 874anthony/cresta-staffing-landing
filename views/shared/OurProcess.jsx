@@ -146,7 +146,9 @@ export default function OurProcess() {
           <div
             className={styles.carouselTrack}
             style={{
-              transform: `translateX(-${currentSlide * 50}%)`,
+              transform: `translateX(-${
+                currentSlide * (100 / slides.length)
+              }%)`,
             }}
           >
             {slides.map((slide, slideIndex) => (

@@ -157,9 +157,9 @@
 }
 
 // ==================== CAROUSEL STARTS FROM HERE ====================
-// .carouselContainer {
-//   display: none;
-// }
+.carouselContainer {
+  display: none;
+}
 
 .carouselTrack {
   display: flex;
@@ -176,10 +176,7 @@
 
 /* Dots styling */
 .carouselDots {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 2rem;
+  display: none;
 }
 
 .dot {
@@ -212,8 +209,17 @@
   }
 
   .carouselContainer {
+    display: block;
     overflow: hidden;
     position: relative;
+  }
+
+  /* Dots styling */
+  .carouselDots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
   }
 
   .carouselDots {

@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import useIsMobile from "@/hooks/useIsMobile";
 
 import styles from "./Testimonials.module.scss";
 
@@ -7,7 +8,7 @@ export default function Testimonials({
   title = "Real Stories, Real Results",
   testimonials = [],
 }) {
-  const isMobile = window && window.screen.width <= 475;
+  const isMobile = useIsMobile(475);
 
   const slides = testimonials.flat().map((item) => [item]);
 
