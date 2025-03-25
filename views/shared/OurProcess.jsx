@@ -9,6 +9,30 @@ import { CheckmarkIcon } from "@/components/icons/CheckmarkIcon";
 import styles from "./OurProcess.module.scss";
 
 export default function OurProcess() {
+  const slides = [
+    [
+      {
+        title: "01",
+        text: "Clear needs, perfect match, all in one call",
+        description:
+          "Our process starts with a deep dive into your specific needs, ensuring we identify the right skills, experience, and cultural fit. Once aligned, you'll receive a tailored job description, and our consultants will guide you every step of the way.",
+        icon: <ProfileIcon />,
+      },
+    ],
+    [
+      {
+        title: "02",
+        text: "The right specialist for you",
+        description:
+          "We pre-screen candidates to ensure you see only the most qualified, saving you valuable time. Each professional is carefully vetted for the precise skills, experience, and expertise you require.",
+        icon: <CheckZoomIcon />,
+      },
+    ],
+  ];
+
+  // Carousel state
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   // activeStep is 0-indexed: 0 means no step active or starting state.
   const [activeStep, setActiveStep] = useState(0);
   const totalSteps = 4;
@@ -54,6 +78,10 @@ export default function OurProcess() {
 
   const lineFill =
     activeStep > 0 ? ((activeStep - 1) / (totalSteps - 1)) * 100 : 0;
+
+  const handleDotClick = (index) => {
+    setCurrentSlide(index);
+  };
 
   return (
     <>
@@ -110,6 +138,50 @@ export default function OurProcess() {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className={styles.containerMobile}>
+        {/* Carousel Container */}
+        <div className={styles.carouselContainer}>
+          <div
+            className={styles.carouselTrack}
+            style={{
+              transform: `translateX(-${currentSlide * 50}%)`,
+            }}
+          >
+            {slides.map((slide, slideIndex) => (
+              <div key={slideIndex} className={styles.carouselSlide}>
+                {slide.map((step, stepIndex) => (
+                  <div key={stepIndex} className={styles.ourProcess__step}>
+                    <div className={styles.ourProcess__stepHeader}>
+                      {step.icon}
+                      <h5 className={styles.ourProcess__stepTitle}>
+                        {step.title}
+                      </h5>
+                      <p className={styles.ourProcess__stepText}>{step.text}</p>
+                    </div>
+                    <div className={styles.ourProcess__stepDescription}>
+                      {step.description}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Dots Navigation */}
+        <div className={styles.carouselDots}>
+          {slides.map((_, index) => (
+            <span
+              key={index}
+              className={`${styles.dot} ${
+                currentSlide === index ? styles.active : ""
+              }`}
+              onClick={() => handleDotClick(index)}
+            ></span>
+          ))}
+        </div>
       </div>
     </>
   );

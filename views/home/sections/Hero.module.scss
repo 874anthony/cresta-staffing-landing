@@ -95,3 +95,18 @@
 .bottom.active {
   @include animations.slide-in-right;
 }
+
+// ========== MEDIA QUERIES ==========
+@media screen and (max-width: 475px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-inline: 1.5rem;
+  }
+
+  .top.active,
+  .bottom.active {
+    animation: none;
+  }
+}

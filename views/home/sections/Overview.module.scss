@@ -79,3 +79,28 @@
   width: 85%;
   object-fit: cover;
 }
+
+@media screen and (max-width: 475px) {
+  .overview {
+    padding-inline: 1.5rem;
+  }
+
+  .overview__title {
+    font-size: 1.6rem;
+  }
+
+  .overview__checklist {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .overview__cta {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .overview__captionTitle {
+    font-size: 1.6rem;
+  }
+}

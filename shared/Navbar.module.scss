@@ -97,3 +97,18 @@
     gap: 0.875rem;
   }
 }
+
+// Media queries
+@media (max-width: 475px) {
+  .header {
+    padding-inline: 2rem;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  .nav {
+    display: none;
+  }
+}

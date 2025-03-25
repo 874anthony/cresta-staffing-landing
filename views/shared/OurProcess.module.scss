@@ -155,3 +155,100 @@
   overflow: hidden;
   transition: opacity 0.3s ease, max-height 0.3s ease;
 }
+
+// ==================== CAROUSEL STARTS FROM HERE ====================
+// .carouselContainer {
+//   display: none;
+// }
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 200%; // Adjust this if the number of slides changes (100% * total slides)
+}
+
+.carouselSlide {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Dots styling */
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.active {
+  background-color: colors.$color-primary;
+}
+
+// =================== MEDIA QUERIES ===================
+
+@media screen and (max-width: 475px) {
+  .ourProcess {
+    padding-inline: 1.5rem;
+  }
+
+  .stepper {
+    display: none;
+  }
+
+  .containerMobile {
+    padding-inline: 1.5rem;
+  }
+
+  .carouselContainer {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .carouselDots {
+    margin-bottom: 2rem;
+  }
+
+  .ourProcess__steps {
+    display: none;
+  }
+
+  .ourProcess__step {
+    min-height: 80px;
+
+    .ourProcess__stepHeader {
+      min-height: 40px;
+    }
+
+    background: colors.$bg-color-gray;
+    color: colors.$text-color-dark-blue;
+
+    svg {
+      fill: colors.$color-primary;
+    }
+
+    .ourProcess__stepTitle {
+      color: colors.$color-primary;
+    }
+
+    .ourProcess__stepDescription {
+      font-size: typography.$font-size-sm;
+      color: colors.$text-color-gray;
+      opacity: 1;
+      overflow: initial;
+      max-height: 200px;
+      margin-top: 1.5rem;
+    }
+  }
+}
