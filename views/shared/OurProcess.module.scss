@@ -198,6 +198,24 @@
 @media screen and (max-width: 475px) {
   .ourProcess {
     padding-inline: 1.5rem;
+    padding-block: 3rem;
+  }
+
+  .ourProcess__caption {
+    gap: 0.5rem;
+  }
+
+  .ourProcess__subCaption {
+    font-size: 1.2rem;
+  }
+
+  .ourProcess__captionTitle {
+    font-size: 2.2rem;
+  }
+
+  .ourProcess__captionText {
+    margin-top: 0;
+    font-size: 1rem;
   }
 
   .stepper {

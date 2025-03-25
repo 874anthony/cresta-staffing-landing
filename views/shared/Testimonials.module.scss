@@ -121,10 +121,15 @@
   .testimonials {
     padding-inline: 1.5rem;
     gap: 0.5rem;
+    padding-block: 3rem;
+  }
+
+  .testimonials__subCaption {
+    font-size: 1rem;
   }
 
   .testimonials__captionTitle {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .containerMobile {

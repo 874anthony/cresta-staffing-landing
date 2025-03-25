@@ -103,4 +103,20 @@
   .contact__form {
     grid-template-columns: 1fr;
   }
+
+  .contact__formGroup {
+    input {
+      padding: 0.6rem !important;
+      font-size: typography.$font-size-sm;
+    }
+
+    label {
+      font-size: typography.$font-size-sm;
+    }
+
+    textarea {
+      padding: 0.6rem !important;
+      font-size: typography.$font-size-sm;
+    }
+  }
 }

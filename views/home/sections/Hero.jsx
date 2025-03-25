@@ -24,6 +24,8 @@ export default function Hero() {
   const homeExpertConsultation = "home-expert-consultation";
 
   useEffect(() => {
+    if (window.screen.width <= 475) return;
+
     // Set up a timer to update the active index every 3 seconds
     const intervalId = setInterval(() => {
       setTopIndex((prev) => (prev + 1) % topImages.length);

@@ -1,6 +1,8 @@
-import Button from "@/components/Button";
+"use client";
 
+import Button from "@/components/Button";
 import styles from "./Overview.module.scss";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const CheckIcon = () => (
   <svg
@@ -20,6 +22,8 @@ const CheckIcon = () => (
 );
 
 export default function Overview() {
+  const isMobile = useIsMobile(475);
+
   return (
     <section className={styles.overview}>
       <h2 className={styles.overview__title}>Find your perfect match, fast.</h2>
@@ -72,6 +76,7 @@ export default function Overview() {
             fontWeight="bold"
             style={{
               marginTop: "2rem",
+              alignSelf: isMobile ? "center" : "",
             }}
           >
             Get Expert Consultation
