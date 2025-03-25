@@ -140,16 +140,32 @@
     }
   }
 
+  .footer__cta {
+    p {
+      font-size: 1rem;
+    }
+  }
+
   .footer__nav {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
 
     h3,
     ul {
       margin-left: 0 !important;
     }
 
+    h3 {
+      font-size: 1.2rem;
+
+      &:not(:first-of-type) {
+        margin-top: 1.5rem;
+      }
+    }
+
     .footer__navLinkList li a {
       color: colors.$text-color-dark-blue !important;
+      font-size: 0.875rem;
     }
 
     .footer__navLinkList:nth-of-type(1) {
@@ -163,6 +179,10 @@
     .footer__navLinkList:nth-of-type(3) {
       grid-row: 6 / 7;
     }
+  }
+
+  .footer__terms {
+    height: 280px;
   }
 
   .footer__terms__content {

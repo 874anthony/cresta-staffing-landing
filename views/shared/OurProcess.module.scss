@@ -197,7 +197,7 @@
 
 @media screen and (max-width: 475px) {
   .ourProcess {
-    padding-inline: 1.5rem;
+    padding-inline: 2.4rem;
     padding-block: 3rem;
   }
 
@@ -251,6 +251,14 @@
   .ourProcess__step {
     min-height: 80px;
 
+    &:first-child {
+      border-bottom-left-radius: variables.$rounded-lg;
+    }
+
+    &:last-child {
+      border-bottom-right-radius: variables.$rounded-lg;
+    }
+
     .ourProcess__stepHeader {
       min-height: 40px;
     }
@@ -263,16 +271,21 @@
     }
 
     .ourProcess__stepTitle {
+      font-size: 2rem;
       color: colors.$color-primary;
     }
 
+    .ourProcess__stepText {
+      font-size: 0.8rem;
+    }
+
     .ourProcess__stepDescription {
-      font-size: typography.$font-size-sm;
+      font-size: 0.75rem;
       color: colors.$text-color-gray;
       opacity: 1;
       overflow: initial;
       max-height: 200px;
-      margin-top: 1.5rem;
+      margin-top: 0.875rem;
     }
   }
 }

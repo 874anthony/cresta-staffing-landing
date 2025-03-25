@@ -1,3 +1,6 @@
+"use client";
+import useIsMobile from "@/hooks/useIsMobile";
+
 import Button from "@/components/Button";
 import styles from "./Footer.module.scss";
 import { LinkedinIcon } from "@/components/icons/socials/LinkedinIcon";
@@ -52,6 +55,8 @@ const LocationIcon = () => (
 );
 
 export default function Footer() {
+  const isMobile = useIsMobile();
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__logo}>
@@ -60,7 +65,14 @@ export default function Footer() {
         <div className={styles.footer__cta}>
           <p>Let&apos;s talk today</p>
 
-          <Button variant="primary" size="large">
+          <Button
+            variant="primary"
+            size="large"
+            style={{
+              fontSize: isMobile ? "0.85rem" : "1.125rem",
+              padding: isMobile ? "0.5rem 1.6rem" : "0.75rem 1.5rem",
+            }}
+          >
             Hire top talent
           </Button>
         </div>

@@ -313,6 +313,7 @@
   }
 }
 
+// ==================== MEDIA QUERIES ====================
 @media screen and (max-width: 475px) {
   .our__services {
     padding-block: 2rem;
@@ -321,7 +322,11 @@
   }
 
   .our__servicesTitle {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .our__servicesText {
+    font-size: 1rem;
   }
 
   .carouselTrack {

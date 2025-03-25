@@ -89,7 +89,10 @@
   }
 
   .overview__title {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 0;
   }
 
   .overview__checklist {
@@ -111,6 +114,7 @@
   }
 
   .overview__captionTitle {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
   }
 }

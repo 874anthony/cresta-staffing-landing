@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
+import useIsMobile from "@/hooks/useIsMobile";
 
 import Button from "@/components/Button";
 import styles from "./Hero.module.scss";
@@ -16,6 +17,8 @@ const bottomImages = [
 ];
 
 export default function Hero() {
+  const isMobile = useIsMobile(475);
+
   const router = useRouter();
   const [topIndex, setTopIndex] = useState(0);
   const [bottomIndex, setBottomIndex] = useState(0);
@@ -55,6 +58,10 @@ export default function Hero() {
           <Button
             variant="primary"
             size="large"
+            style={{
+              fontSize: isMobile ? "0.75rem" : "1.125rem",
+              padding: isMobile ? ".6rem 1.8rem" : "0.75rem 1.5rem",
+            }}
             onClick={() => smoothScroll(homeExpertConsultation)}
           >
             Get Expert Consultation
@@ -62,6 +69,10 @@ export default function Hero() {
           <Button
             variant="secondary"
             size="large"
+            style={{
+              fontSize: isMobile ? "0.75rem" : "1.125rem",
+              padding: isMobile ? ".6rem 1.8rem" : "0.75rem 1.5rem",
+            }}
             onClick={() => router.push("/find-a-job")}
           >
             Find a job

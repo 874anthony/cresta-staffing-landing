@@ -125,16 +125,17 @@
   }
 
   .testimonials__subCaption {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 
   .testimonials__captionTitle {
-    font-size: 1.8rem;
+    margin-top: 0;
+    font-size: 1.5rem;
   }
 
   .containerMobile {
-    margin-top: 1rem;
-    padding-inline: 1.5rem !important;
+    margin-top: 0.5rem;
+    padding-inline: 3rem !important;
   }
 
   .carouselContainer {
@@ -171,10 +172,10 @@
   }
 
   .testimonials__cardAuthorName {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 
   .testimonials__cardAuthorPosition {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 }

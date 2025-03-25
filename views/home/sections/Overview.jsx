@@ -77,6 +77,7 @@ export default function Overview() {
             style={{
               marginTop: "2rem",
               alignSelf: isMobile ? "center" : "",
+              fontSize: isMobile ? "0.875rem" : "",
             }}
           >
             Get Expert Consultation

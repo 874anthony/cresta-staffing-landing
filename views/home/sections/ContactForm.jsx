@@ -1,8 +1,12 @@
-import Button from "@/components/Button";
+"use client";
+import useIsMobile from "@/hooks/useIsMobile";
 
+import Button from "@/components/Button";
 import styles from "./ContactForm.module.scss";
 
 export default function ContactForm() {
+  const isMobile = useIsMobile(475);
+
   return (
     <section id="home-expert-consultation" className={styles.contact__section}>
       <img src="/assets/home/contact/contact-us.png" alt="Contact Us Image" />
@@ -48,7 +52,13 @@ export default function ContactForm() {
               <label htmlFor="terms">I agree to the Privacy Policy</label>
             </div>
 
-            <Button variant="secondary" type="submit">
+            <Button
+              variant="secondary"
+              type="submit"
+              style={{
+                fontSize: isMobile ? "0.75rem" : "1.125rem",
+              }}
+            >
               Submit
             </Button>
           </div>
