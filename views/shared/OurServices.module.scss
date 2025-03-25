@@ -312,3 +312,87 @@
     transition-duration: 0s;
   }
 }
+
+@media screen and (max-width: 475px) {
+  .our__services {
+    padding-block: 2rem;
+    padding-inline: 2rem;
+    gap: 0.5rem;
+  }
+
+  .our__servicesTitle {
+    font-size: 2rem;
+  }
+
+  .carouselTrack {
+    width: 800%;
+  }
+
+  .carouselSlide {
+    grid-template-columns: 1fr;
+  }
+
+  .carouselSlide:nth-child(1) {
+    .service__card {
+      &::before {
+        background-image: url("/assets/shared/our-services/drafter_1.jpg");
+      }
+    }
+  }
+
+  .carouselSlide:nth-child(2) {
+    .service__card {
+      &::before {
+        background-image: url("/assets/shared/our-services/3d_renderer_1.jpg");
+      }
+    }
+  }
+
+  .carouselSlide:nth-child(3) {
+    .service__card {
+      &::before {
+        background-image: url("/assets/shared/our-services/bim_1.jpg");
+      }
+    }
+  }
+
+  .carouselSlide:nth-child(4) {
+    .service__card {
+      &::before {
+        background-image: url("/assets/shared/our-services/project_manager_1.jpg");
+      }
+    }
+  }
+
+  .carouselSlide:nth-child(5) {
+    .service__card {
+      &::before {
+        background-image: url("/assets/shared/our-services/design_drafter_1.jpg");
+      }
+    }
+  }
+
+  .carouselSlide:nth-child(6) {
+    .service__card {
+      &::before {
+        background-image: url("/assets/shared/our-services/estimator_1.jpg");
+      }
+    }
+  }
+
+  .carouselSlide:nth-child(7) {
+    .service__card {
+      &::before {
+        background-image: url("/assets/shared/our-services/estimator_1.jpg");
+      }
+    }
+  }
+
+  .carouselSlide:nth-child(8) {
+    .service__card {
+      &::before {
+        background-image: url("/assets/shared/our-services/estimator_1.jpg");
+      }
+    }
+  }
+}

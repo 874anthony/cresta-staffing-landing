@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Button from "@/components/Button";
 
@@ -12,7 +12,7 @@ export default function OurServices({
   backgroundColor = "",
   backgroundLines = false,
 }) {
-  const slides = [
+  const initialSlides = [
     [
       {
         title: "Drafter",
@@ -51,6 +51,18 @@ export default function OurServices({
     ],
   ];
 
+  const [slides, setSlides] = useState(initialSlides);
+  const totalSlides = slides.length;
+
+  useEffect(() => {
+    const { width } = window.screen;
+
+    if (width <= 475) {
+      const slidesMobile = slides.flat().map((item) => [item]);
+      setSlides(slidesMobile);
+    }
+  }, []);
+
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const handleDotClick = (index) => {
@@ -78,7 +90,7 @@ export default function OurServices({
         <div
           className={styles.carouselTrack}
           style={{
-            transform: `translateX(-${currentSlide * 50}%)`,
+            transform: `translateX(-${currentSlide * (100 / totalSlides)}%)`,
           }}
         >
           {slides.map((slide, slideIndex) => (

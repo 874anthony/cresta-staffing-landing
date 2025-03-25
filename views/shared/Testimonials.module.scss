@@ -75,3 +75,101 @@
   font-size: typography.$font-size-md;
   color: colors.$text-color-gray;
 }
+
+// ==================== CAROUSEL STARTS FROM HERE ====================
+// .carouselContainer {
+//   display: none;
+// }
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 300%; // Adjust this if the number of slides changes (100% * total slides)
+}
+
+.carouselSlide {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Dots styling */
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.active {
+  background-color: colors.$color-primary;
+}
+
+// =================== MEDIA QUERIES ===================
+@media screen and (max-width: 475px) {
+  .testimonials {
+    padding-inline: 1.5rem;
+    gap: 0.5rem;
+  }
+
+  .testimonials__captionTitle {
+    font-size: 1.5rem;
+  }
+
+  .containerMobile {
+    margin-top: 1rem;
+    padding-inline: 1.5rem !important;
+  }
+
+  .carouselContainer {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .carouselDots {
+    margin-bottom: 2rem;
+  }
+
+  .testimonials__card {
+    // width: 100%;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .testimonials__cardQuote {
+    width: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .testimonials__cardText {
+    font-size: 0.8rem;
+  }
+
+  .testimonials__cardAuthor {
+    gap: 0.5rem;
+  }
+
+  .testimonials__cardAvatar {
+    width: 3rem !important;
+    height: 3rem !important;
+    object-fit: cover;
+  }
+
+  .testimonials__cardAuthorName {
+    font-size: 1rem;
+  }
+
+  .testimonials__cardAuthorPosition {
+    font-size: 0.8rem;
+  }
+}
