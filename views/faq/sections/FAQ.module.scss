@@ -10,6 +10,36 @@
   @include mixins.centered-bg-white-section($gap: 0.5rem);
 }
 
+.faq__typeSelector {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq__typeSelectorButtons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.faq__typeSelectorButton {
+  background: transparent;
+  border: 1px solid colors.$color-primary;
+  padding: 0.4rem 1.2rem;
+  border-radius: variables.$rounded-sm;
+  font-size: typography.$font-size-sm;
+  font-weight: 500;
+  color: colors.$text-color-dark-blue;
+  cursor: pointer;
+
+  &.active,
+  &:hover {
+    background: colors.$color-primary;
+    color: colors.$text-color-white;
+  }
+}
+
 .faqTitle {
   @include typographyMixins.title($color: colors.$color-primary);
 }
@@ -60,6 +90,7 @@
   &:hover {
     background: colors.$color-primary;
     color: colors.$text-color-white;
+    cursor: pointer;
 
     svg {
       color: colors.$text-color-white;
@@ -68,6 +99,7 @@
 }
 
 .faq__questionsContainer {
+  width: 100%;
   align-self: self-start;
   margin-top: 2.4rem;
   display: flex;
@@ -77,13 +109,15 @@
 
 .faq__question {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 
   svg {
+    margin-top: 0.9rem;
     align-self: self-start;
-    width: 4rem;
-    height: 4rem;
-    color: colors.$color-primary;
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: colors.$faq-icon-color;
+    cursor: pointer;
   }
 }
 
@@ -101,29 +135,54 @@
   }
 
   p {
+    opacity: 0;
+    max-height: 0px;
     color: colors.$text-color-gray;
   }
 
-  border-bottom: 1px solid colors.$color-primary;
+  border-bottom: 1px solid colors.$faq-icon-color;
   padding-bottom: 1.6rem;
 }
 
-.faq__CTA {
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
-  margin-top: 1.6rem;
+.faq__question.active {
+  .faq__questionContent {
+    h6 {
+      color: colors.$color-primary;
+      transition: color 0.2s ease;
+    }
 
-  span {
-    font-weight: 500;
+    p {
+      opacity: 1;
+      max-height: max-content;
+      transition: opacity 0.2s ease;
+    }
   }
 }
 
-// TODO: CHANGE TO ACTIVE/INACTIVE
-.faq__question:nth-child(2) {
-  .faq__questionContent {
-    h6 {
-      color: colors.$text-color-dark-blue;
-    }
+.faq__questionText {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.loadingSpinner {
+  width: 3rem;
+  height: 3rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

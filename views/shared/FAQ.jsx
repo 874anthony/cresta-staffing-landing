@@ -67,7 +67,9 @@ export default function FAQ({ bgColor = "gray", rounded = false }) {
         {sectionKeys.map((section) => (
           <div
             key={section}
-            className={styles.faq__card}
+            className={`
+              ${styles.faq__card}
+              ${selectedSection === section ? styles.active : ""}`}
             onClick={() => handleSectionClick(section)}
           >
             <span className={styles.faq__cardTitle}>{section}</span>
@@ -98,9 +100,7 @@ export default function FAQ({ bgColor = "gray", rounded = false }) {
                 >
                   {item.question}
                 </h6>
-                {isActive && (
-                  <p className={styles.faq__questionText}>{item.answer}</p>
-                )}
+                <p className={styles.faq__questionText}>{item.answer}</p>
               </div>
             </div>
           );

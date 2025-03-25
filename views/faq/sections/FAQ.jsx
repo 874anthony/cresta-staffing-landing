@@ -1,3 +1,9 @@
+"use client";
+import { useEffect, useState } from "react";
+
+import { FaqIconClosed, FaqIconOpen } from "@/components/icons/faq/FaqIcons";
+import { faqGeneralData } from "@/data/faqGeneral";
+
 import styles from "./FAQ.module.scss";
 
 const ChevronRight = () => (
@@ -17,83 +23,122 @@ const ChevronRight = () => (
   </svg>
 );
 
-const ExpandableIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    strokeWidth="1.5"
-    stroke="currentColor"
-    className="size-6"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"
-    />
-  </svg>
-);
-
-const faqCategories = [
-  "About Cresta",
-  "Working with CRESTA",
-  "Hiring a remote team",
-  "About Cresta Hiring",
-  "Job Application",
-  "Offer & Onboarding",
-  "Interview & Feedback",
-];
-
 export default function FAQ() {
+  const [faqType, setFaqType] = useState("client");
+
+  // Track which section is selected; default to the first one
+  const sectionKeys = Object.keys(faqGeneralData[faqType]);
+  const [selectedSection, setSelectedSection] = useState(sectionKeys[0]);
+
+  // Track which question is open; you can use null for closed or store an index/id.
+  const [activeQuestions, setActiveQuestions] = useState([]);
+
+  useEffect(() => {
+    console.log("faqType", faqType);
+    // Reset active questions when the faqType changes.
+
+    const newSectionKeys = Object.keys(faqGeneralData[faqType]);
+    console.log("newSectionKeys", newSectionKeys);
+
+    setSelectedSection(newSectionKeys[0]);
+    setActiveQuestions([]);
+  }, [faqType]);
+
+  // Change section and close any open question.
+  const handleSectionClick = (section) => {
+    setSelectedSection(section);
+    setActiveQuestions([]); // reset active questions when section changes
+  };
+
+  // Toggle open/close state for a question.
+  const toggleQuestion = (index) => {
+    setActiveQuestions((prevActive) =>
+      prevActive.includes(index)
+        ? prevActive.filter((i) => i !== index)
+        : [...prevActive, index]
+    );
+  };
+
+  if (!faqGeneralData[faqType][selectedSection]) {
+    return (
+      <section className={styles.loading}>
+        <p className={styles.loadingText}>{`Loading ${faqType} FAQs...`}</p>
+
+        <div className={styles.loadingSpinner}></div>
+      </section>
+    );
+  }
+
   return (
     <section className={styles.faq}>
-      <h3 className={styles.faqTitle}>Frequently Asked Questions</h3>
+      {/* FAQ Type Selector */}
+      <div className={styles.faq__typeSelector}>
+        <h3 className={styles.faqTitle}>Frequently Asked Questions</h3>
+
+        <div className={styles.faq__typeSelectorButtons}>
+          <button
+            className={`
+              ${styles.faq__typeSelectorButton}
+              ${faqType === "client" ? styles.active : ""}`}
+            onClick={() => setFaqType("client")}
+          >
+            Client FAQs
+          </button>
+          <button
+            className={`
+              ${styles.faq__typeSelectorButton}
+              ${faqType === "jobseeker" ? styles.active : ""}`}
+            onClick={() => setFaqType("jobseeker")}
+          >
+            Job seekers FAQs
+          </button>
+        </div>
+      </div>
+
       <p className={styles.faqText}>
         Learn more about our services, and the benefits we provide.
       </p>
 
+      {/* FAQ Section List */}
       <div className={styles.faqList}>
-        {faqCategories.map((category, index) => (
+        {sectionKeys.map((section) => (
           <div
-            className={`${styles.faq__card} ${
-              index === 0 ? styles.active : ""
-            }`}
-            key={index}
+            key={section}
+            className={`
+              ${styles.faq__card}
+              ${selectedSection === section ? styles.active : ""}`}
+            onClick={() => handleSectionClick(section)}
           >
-            <span className={styles.faq__cardTitle}>{category}</span>
-
+            <span className={styles.faq__cardTitle}>{section}</span>
             <ChevronRight />
           </div>
         ))}
       </div>
 
+      {/* Questions Container */}
       <div className={styles.faq__questionsContainer}>
-        <div className={styles.faq__question}>
-          <ExpandableIcon />
+        {faqGeneralData[faqType][selectedSection].map((item, index) => {
+          const isActive = activeQuestions.includes(index);
 
-          <div className={styles.faq__questionContent}>
-            <h6 className={styles.faq__questionTitle}>
-              What is a BPO company?
-            </h6>
+          return (
+            <div
+              key={index}
+              className={`${styles.faq__question} ${
+                isActive ? styles.active : ""
+              }`}
+              onClick={() => toggleQuestion(index)}
+            >
+              {isActive ? <FaqIconOpen /> : <FaqIconClosed />}
+              <div className={styles.faq__questionContent}>
+                <h6 className={`${styles.faq__questionTitle}`}>
+                  {item.question}
+                </h6>
 
-            <p className={styles.faq__questionText}>
-              A BPO (Business Process Outsourcing) company is a firm that
-              handles business operations and tasks for other companies. These
-              tasks can include customer service, HR, accounting, IT support,
-              and more. BPOs help businesses reduce costs and improve efficiency
-              by outsourcing non-core functions to specialized service
-              providers.
-            </p>
-          </div>
-        </div>
-
-        <div className={styles.faq__question}>
-          <ExpandableIcon />
-
-          <div className={styles.faq__questionContent}>
-            <h6 className={styles.faq__questionTitle}>Why choose CRESTA?</h6>
-          </div>
-        </div>
+                <p className={styles.faq__questionText}>{item.answer}</p>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

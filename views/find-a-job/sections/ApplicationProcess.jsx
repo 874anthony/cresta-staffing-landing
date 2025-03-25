@@ -122,6 +122,7 @@ export default function ApplicationProcess() {
       <div className={styles.appProcess__steps}>
         {stepsData.map((step, index) => (
           <div
+            key={index}
             className={styles.appProcess__step}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
