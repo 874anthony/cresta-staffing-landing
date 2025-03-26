@@ -1,8 +1,13 @@
+"use client";
+import useIsMobile from "@/hooks/useIsMobile";
+
 import Button from "@/components/Button";
 
 import styles from "./FindJobSeparator.module.scss";
 
 export default function FindJobSeparator() {
+  const isMobile = useIsMobile(475);
+
   return (
     <section className={styles.findJobSeparator}>
       <h4 className={styles.findJobSeparatorTitle}>
@@ -18,7 +23,7 @@ export default function FindJobSeparator() {
         size="large"
         style={{
           fontWeight: "bold",
-          fontSize: "1.25rem",
+          fontSize: isMobile ? "0.875rem" : "1.275rem",
         }}
       >
         Let&apos;s get started

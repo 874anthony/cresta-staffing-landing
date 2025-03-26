@@ -86,3 +86,95 @@
   border-top-left-radius: 0;
   border-top-right-radius: variables.$rounded-lg;
 }
+
+// ======================== CAROUSEL STARTS HERE ========================
+.carouselContainer {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 200%; // Adjust this if the number of slides changes (100% * total slides)
+}
+
+.carouselSlide {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Dots styling */
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.active {
+  background-color: colors.$color-primary;
+}
+
+// ======================== MEDIA QUERIES ========================
+
+@media screen and (max-width: 475px) {
+  .weekly__jobs {
+    padding: 3rem;
+    border-top-left-radius: variables.$rounded-lg;
+    border-top-right-radius: variables.$rounded-lg;
+    border-bottom-right-radius: 0;
+  }
+
+  .weekly__jobsTitle {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  .weekly__subCaption {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .containerMobile {
+    margin-top: 1rem;
+  }
+
+  .weekly__jobCard {
+    padding-block: 1.6rem;
+    padding-inline: 2rem;
+    border-radius: variables.$rounded-lg;
+  }
+
+  .weekly__jobCardTitle {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .weekly__jobCardSubtitle {
+    font-size: 1rem;
+  }
+
+  .weekly__jobCardSubtitle + .weekly__jobCardSubtitle {
+    margin-left: 0.25rem;
+  }
+
+  .weekly__jobCardList {
+    li {
+      font-size: 0.875rem;
+    }
+  }
+}

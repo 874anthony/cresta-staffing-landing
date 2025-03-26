@@ -64,3 +64,100 @@
   line-height: 1.4;
   font-weight: 400;
 }
+
+// ======================== CAROUSEL STARTS HERE ========================
+.carouselContainer {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 400%; // Adjust this if the number of slides changes (100% * total slides)
+}
+
+.carouselSlide {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Dots styling */
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.active {
+  background-color: colors.$color-primary;
+}
+
+// ======================== MEDIA QUERIES ========================
+
+@media screen and (max-width: 475px) {
+  .benefitsContainer {
+    padding: 3rem;
+  }
+
+  .benefits__titleContainer {
+    padding-block: 0;
+    padding-inline: 3rem;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .benefits__subCaption {
+    font-size: 0.875rem;
+  }
+
+  .benefits__captionTitle {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  .benefits__captionText {
+    font-size: 1rem;
+  }
+
+  .containerMobile {
+    margin-top: 3rem;
+  }
+
+  .benefits__listItem {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits__itemImage {
+    justify-self: center;
+    width: 80%;
+    transform: translateY(0);
+  }
+
+  .benefits__itemContent {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .benefits__itemTitle {
+    font-size: 1.2rem;
+  }
+
+  .benefits__itemText {
+    font-size: 0.875rem;
+  }
+}

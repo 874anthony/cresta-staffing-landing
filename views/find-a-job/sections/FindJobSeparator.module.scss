@@ -29,3 +29,25 @@
   text-align: center;
   margin-block: 1rem;
 }
+
+// ======================= MEDIA QUERIES =======================
+@media screen and (max-width: 475px) {
+  .findJobSeparator {
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  .findJobSeparatorTitle {
+    width: 100%;
+    line-height: 1.5;
+    font-size: 1.5rem;
+  }
+
+  .findJobSeparatorText {
+    font-size: 1.125rem;
+    padding-inline: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
