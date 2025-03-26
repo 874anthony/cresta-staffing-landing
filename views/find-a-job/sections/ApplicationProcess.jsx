@@ -207,7 +207,8 @@ export default function ApplicationProcess() {
         size="large"
         style={{
           marginTop: "2rem",
-          padding: "1rem 6rem",
+          fontSize: isMobile ? "0.875rem" : "1.275rem",
+          padding: isMobile ? "0.6rem 2.4rem" : "1rem 6rem",
         }}
       >
         Apply Now

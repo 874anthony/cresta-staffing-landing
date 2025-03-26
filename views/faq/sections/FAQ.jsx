@@ -128,7 +128,7 @@ export default function FAQ() {
               }`}
               onClick={() => toggleQuestion(index)}
             >
-              {isActive ? <FaqIconOpen /> : <FaqIconClosed />}
+              {isActive ? <FaqIconClosed /> : <FaqIconOpen />}
               <div className={styles.faq__questionContent}>
                 <h6 className={`${styles.faq__questionTitle}`}>
                   {item.question}

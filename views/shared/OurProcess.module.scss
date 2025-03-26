@@ -164,7 +164,7 @@
 .carouselTrack {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 200%; // Adjust this if the number of slides changes (100% * total slides)
+  width: 400%; // Adjust this if the number of slides changes (100% * total slides)
 }
 
 .carouselSlide {
@@ -198,7 +198,7 @@
   .ourProcess {
     padding-inline: 2.4rem;
     padding-block: 3rem;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
   }
 
   .ourProcess__caption {
@@ -206,7 +206,7 @@
   }
 
   .ourProcess__subCaption {
-    font-size: 1.2rem;
+    font-size: 0.875rem;
   }
 
   .ourProcess__captionTitle {
@@ -271,16 +271,16 @@
     }
 
     .ourProcess__stepTitle {
-      font-size: 2rem;
+      font-size: 3rem;
       color: colors.$color-primary;
     }
 
     .ourProcess__stepText {
-      font-size: 0.8rem;
+      font-size: 1rem;
     }
 
     .ourProcess__stepDescription {
-      font-size: 0.75rem;
+      font-size: 0.875rem;
       color: colors.$text-color-gray;
       opacity: 1;
       overflow: initial;

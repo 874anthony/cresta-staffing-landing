@@ -98,9 +98,22 @@
     gap: 1.5rem;
   }
 
+  .overview__checklistItem {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+
+    svg {
+      width: 45%;
+    }
+  }
+
   .overview__cta {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .overview__images img {
+    width: 100%;
   }
 
   .overview__caption {
@@ -111,7 +124,7 @@
   }
 
   .overview__captionTitle {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     line-height: 1.5;
   }
 }

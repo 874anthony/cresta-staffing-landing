@@ -206,6 +206,22 @@
     border-top-right-radius: variables.$rounded-lg;
   }
 
+  .appProcess__subCaption {
+    font-size: 0.875rem;
+  }
+
+  .appProcess__captionTitle {
+    margin-top: 0;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .appProcess__captionText {
+    margin-top: 0;
+    font-size: 1rem;
+    text-align: center;
+  }
+
   .appProcess__step {
     min-height: 80px;
     padding: 1rem 1.5rem;
@@ -224,16 +240,16 @@
     }
 
     .appProcess__stepTitle {
-      font-size: 2rem;
+      font-size: 3rem;
       color: colors.$color-primary;
     }
 
     .appProcess__stepText {
-      font-size: 0.8rem;
+      font-size: 1rem;
     }
 
     .appProcess__stepDescription {
-      font-size: 0.75rem;
+      font-size: 0.875rem;
       color: colors.$text-color-gray;
       opacity: 1;
       overflow: initial;

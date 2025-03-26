@@ -11,6 +11,7 @@ const topImages = [
   "/assets/home/home_banner_slide_1.png",
   "/assets/home/home_banner_slide_3.png",
 ];
+
 const bottomImages = [
   "/assets/home/home_banner_slide_4.png",
   "/assets/home/home_banner_slide_6.png",

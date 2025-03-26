@@ -120,7 +120,7 @@
 @media screen and (max-width: 475px) {
   .testimonials {
     padding-inline: 1.5rem;
-    gap: 0.5rem;
+    gap: 0;
     padding-block: 3rem;
   }
 
@@ -141,6 +141,7 @@
   .carouselContainer {
     overflow: hidden;
     position: relative;
+    margin-top: 0.5rem;
   }
 
   .carouselDots {
