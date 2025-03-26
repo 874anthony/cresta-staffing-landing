@@ -75,3 +75,43 @@
   width: 80%;
   object-fit: cover;
 }
+
+// ======================= MEDIA QUERIES =======================
+@media screen and (max-width: 475px) {
+  .overview {
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    padding-inline: 3rem;
+    padding-block: 3rem;
+  }
+
+  .overview__title {
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+
+  .overview__checklist {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .overview__cta {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .overview__caption {
+    gap: 1rem;
+    padding-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .overview__captionTitle {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+}

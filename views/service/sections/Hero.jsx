@@ -1,8 +1,13 @@
+"use client";
+import useIsMobile from "@/hooks/useIsMobile";
+
 import Button from "@/components/Button";
 
 import styles from "./Hero.module.scss";
 
 export default function Hero({ title, description, heroImage, extraTest }) {
+  const isMobile = useIsMobile(475);
+
   return (
     <section className={styles.hero}>
       <div className={styles.hero__caption}>
@@ -15,11 +20,25 @@ export default function Hero({ title, description, heroImage, extraTest }) {
         {extraTest && <p className={styles.hero__captionExtra}>{extraTest}</p>}
 
         <div className={styles.hero__captionCTA}>
-          <Button variant="primary" size="large">
+          <Button
+            variant="primary"
+            size="large"
+            style={{
+              fontSize: isMobile ? "0.875rem" : "1.275rem",
+              padding: isMobile ? "0.6rem 1.4rem" : "0.6rem 2.4rem",
+            }}
+          >
             Get Expert Consultation
           </Button>
 
-          <Button variant="secondary" size="large">
+          <Button
+            variant="secondary"
+            size="large"
+            style={{
+              fontSize: isMobile ? "0.875rem" : "1.275rem",
+              padding: isMobile ? "0.6rem 1.4rem" : "0.6rem 2.4rem",
+            }}
+          >
             Find a job
           </Button>
         </div>

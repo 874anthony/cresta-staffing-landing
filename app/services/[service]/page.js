@@ -3,8 +3,8 @@ import { notFound } from "next/navigation";
 
 import services from "@/data/services";
 
-export default function Service({ params }) {
-  const { service } = params;
+export default async function Service({ params }) {
+  const { service } = await params;
   const serviceData = services[service];
 
   if (!serviceData) return notFound(); // Handles unknown services gracefully
