@@ -1,8 +1,13 @@
+"use client";
+import useIsMobile from "@/hooks/useIsMobile";
+
 import Button from "@/components/Button";
 
 import styles from "./Hero.module.scss";
 
 export default function Hero() {
+  const isMobile = useIsMobile(475);
+
   return (
     <section className={styles.hero}>
       <div className={styles.hero__caption}>
@@ -19,8 +24,9 @@ export default function Hero() {
           variant="primary"
           size="large"
           style={{
-            marginBlock: "1.6rem",
-            alignSelf: "flex-start",
+            marginBlock: isMobile ? "1rem" : "1.6rem",
+            alignSelf: isMobile ? "center" : "flex-start",
+            fontSize: isMobile ? ".875rem" : "1rem",
           }}
         >
           Solve challenges now

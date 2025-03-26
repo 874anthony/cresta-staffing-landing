@@ -1,8 +1,13 @@
+"use client";
+import useIsMobile from "@/hooks/useIsMobile";
+
 import Button from "@/components/Button";
 
 import styles from "./Separator.module.scss";
 
 export default function Separator() {
+  const isMobile = useIsMobile(475);
+
   return (
     <section className={styles.separator}>
       <h4 className={styles.separatorTitle}>Get in touch with us today</h4>
@@ -15,9 +20,9 @@ export default function Separator() {
       <Button
         variant="secondary"
         size="large"
-        sx={{
-          fontWeight: "bold",
-          fontSize: "1.125rem",
+        style={{
+          fontWeight: isMobile ? "500" : "bold",
+          fontSize: isMobile ? ".875rem" : "1.125rem",
         }}
       >
         Get Expert Consultation

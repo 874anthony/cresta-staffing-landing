@@ -1,3 +1,6 @@
+"use client";
+import useIsMobile from "@/hooks/useIsMobile";
+
 import Button from "@/components/Button";
 
 import styles from "./Separator.module.scss";
@@ -5,6 +8,8 @@ import { LinkedinIcon } from "@/components/icons/socials/LinkedinIcon";
 import { InstagramIcon } from "@/components/icons/socials/InstagramIcon";
 
 export default function Separator() {
+  const isMobile = useIsMobile(475);
+
   return (
     <section className={styles.separator}>
       <div className={styles.separatorSection}>
@@ -13,7 +18,13 @@ export default function Separator() {
           For questions about our services, talent pool, or process, contact us.
         </p>
 
-        <Button variant="secondary" size="large">
+        <Button
+          variant="secondary"
+          size="large"
+          style={{
+            fontSize: isMobile ? "0.875rem" : "1.25rem",
+          }}
+        >
           office@crestastaffing.com
         </Button>
       </div>

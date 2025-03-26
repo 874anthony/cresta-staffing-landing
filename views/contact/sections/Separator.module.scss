@@ -61,3 +61,43 @@
 .separatorSection:nth-child(2) {
   margin-top: -1rem;
 }
+
+// ======================= MEDIA QUERIES =======================
+@media screen and (max-width: 475px) {
+  .separator {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    padding: 2rem 1.8rem;
+    // border-top-left-radius: variables.$rounded-lg;
+    // border-top-right-radius: variables.$rounded-lg;
+
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .separatorSection {
+    gap: 1rem;
+  }
+
+  .separatorTitle {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .separatorText {
+    font-size: 0.875rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .socials {
+    gap: 0.2rem;
+  }
+
+  .socialsItem {
+    svg {
+      width: 2.5rem;
+    }
+  }
+}
