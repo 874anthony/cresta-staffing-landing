@@ -1,3 +1,6 @@
+"use client";
+import useIsMobile from "@/hooks/useIsMobile";
+
 import Button from "@/components/Button";
 import { OutlinedInput } from "@mui/material";
 
@@ -42,11 +45,13 @@ const UserIcon = () => (
 );
 
 export default function Separator() {
+  const isMobile = useIsMobile(475);
+
   return (
     <section className={styles.separator}>
       <h4 className={styles.separatorTitle}>Stay ahead</h4>
       <span className={styles.separatorText}>
-        subscribe for top construction insights and strategies!
+        Subscribe for top construction insights and strategies!
       </span>
 
       <div className={styles.separatorCTA}>
@@ -83,8 +88,9 @@ export default function Separator() {
         <Button
           variant="secondary"
           size="large"
-          sx={{
-            fontWeight: "bold",
+          style={{
+            fontWeight: isMobile ? 600 : "bold",
+            fontSize: isMobile ? "0.8rem" : "1.275rem",
           }}
         >
           Subscribe Now

@@ -31,3 +31,31 @@
     margin-right: 0.5rem;
   }
 }
+
+// ======================= MEDIA QUERIES =======================
+@media screen and (max-width: 475px) {
+  .aboutSeparator {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    border-top-left-radius: 0;
+  }
+
+  .aboutSeparatorTitle {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .aboutSeparatorText {
+    font-size: 1.125rem;
+    text-align: center;
+  }
+
+  .aboutSeparatorCTA {
+    margin-top: 0;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+  }
+}

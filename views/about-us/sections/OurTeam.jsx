@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import useIsMobile from "@/hooks/useIsMobile";
 
 import styles from "./OurTeam.module.scss";
 
@@ -22,26 +23,29 @@ const ChevronRight = () => (
   </svg>
 );
 
+const members = [
+  [
+    {
+      name: "Juan Mercado Toloza",
+      position: "Hiring Manager",
+      email: "juan.m@crestastaffing.com",
+    },
+    {
+      name: "Juan Mercado Toloza",
+      position: "Hiring Manager",
+      email: "juan.m@crestastaffing.com",
+    },
+    {
+      name: "Juan Mercado Toloza",
+      position: "Hiring Manager",
+      email: "juan.m@crestastaffing.com",
+    },
+  ],
+];
+
 export default function OurTeam() {
-  const slides = [
-    [
-      {
-        name: "Juan Mercado Toloza",
-        position: "Hiring Manager",
-        email: "juan.m@crestastaffing.com",
-      },
-      {
-        name: "Juan Mercado Toloza",
-        position: "Hiring Manager",
-        email: "juan.m@crestastaffing.com",
-      },
-      {
-        name: "Juan Mercado Toloza",
-        position: "Hiring Manager",
-        email: "juan.m@crestastaffing.com",
-      },
-    ],
-  ];
+  const isMobile = useIsMobile(475);
+  const slides = isMobile ? members.flat().map((member) => [member]) : members;
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -60,7 +64,7 @@ export default function OurTeam() {
         <div
           className={styles.carouselTrack}
           style={{
-            transform: `translateX(-${currentSlide * 50}%)`,
+            transform: `translateX(-${currentSlide * (100 / slides.length)}%)`,
           }}
         >
           {slides.map((slide, slideIndex) => (

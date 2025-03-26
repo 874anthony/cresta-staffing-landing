@@ -59,3 +59,49 @@
 
   @include animations.tilt-in-right-2;
 }
+
+// ========== MEDIA QUERIES ==========
+@media screen and (max-width: 475px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-top: 5rem;
+    padding-inline: 1.5rem;
+    padding-bottom: 8rem;
+  }
+
+  .hero__caption {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero__captionSubtitle {
+    font-size: 0.875rem;
+    gap: 0.5rem;
+  }
+
+  .hero__captionTitle {
+    font-size: 2.4rem;
+    line-height: 1.3;
+  }
+
+  .hero__captionText {
+    font-size: 1rem;
+  }
+
+  .hero__captionDescription {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .hero__captionCTA {
+    gap: 1rem;
+  }
+
+  .hero__images {
+    img {
+      animation: none;
+    }
+  }
+}

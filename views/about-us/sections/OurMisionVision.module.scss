@@ -54,3 +54,47 @@
 .ourVisionContent {
   align-items: flex-end;
 }
+
+// ========================== MEDIA QUERIES ========================== //
+@media screen and (max-width: 475px) {
+  .ourMissionAndVision {
+    padding: 3rem;
+  }
+
+  .ourMission,
+  .ourVision {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .ourMissionContent,
+  .ourVisionContent {
+    margin-top: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ourMissionSubCaption,
+  .ourVisionSubCaption {
+    font-size: 0.875rem;
+  }
+
+  .ourMissionTitle,
+  .ourVisionTitle {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .ourMissionText,
+  .ourVisionText {
+    margin-top: 0;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .ourMissionDescription,
+  .ourVisionDescription {
+    margin-top: 1.2rem;
+    font-size: 0.875rem;
+  }
+}

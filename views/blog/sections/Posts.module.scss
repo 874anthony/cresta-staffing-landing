@@ -100,3 +100,44 @@
   text-underline-offset: 0.3rem;
   cursor: pointer;
 }
+
+// ======================== MEDIA QUERIES ========================
+@media screen and (max-width: 475px) {
+  .blog {
+    padding: 3rem;
+    padding-top: 0;
+  }
+
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .category {
+    padding: 0.8rem 1.6rem;
+    font-size: typography.$font-size-sm;
+  }
+
+  .posts {
+    padding: 3rem;
+    grid-template-columns: 1fr;
+    border-top-left-radius: 0;
+  }
+
+  .postContent {
+    gap: 0.8rem;
+    margin-top: 0;
+  }
+
+  .postTitle {
+    font-size: 1.1rem;
+  }
+
+  .postDescription {
+    font-size: typography.$font-size-xs;
+  }
+
+  .postLink {
+    font-size: 0.55rem !important;
+  }
+}
