@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useSwipeable } from "react-swipeable";
 import useIsMobile from "@/hooks/useIsMobile";
 
 import Button from "@/components/Button";
@@ -32,6 +33,21 @@ export default function WeeklyJobs() {
   const isMobile = useIsMobile(475);
   const slides = jobs.map((benefit) => [benefit]);
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (currentSlide < slides.length - 1) {
+        setCurrentSlide(currentSlide + 1);
+      }
+    },
+    onSwipedRight: () => {
+      if (currentSlide > 0) {
+        setCurrentSlide(currentSlide - 1);
+      }
+    },
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true, // optional: allows swipe detection with a mouse
+  });
 
   const handleDotClick = (index) => {
     setCurrentSlide(index);
@@ -85,7 +101,7 @@ export default function WeeklyJobs() {
       )}
 
       {isMobile && (
-        <div className={styles.containerMobile}>
+        <div className={styles.containerMobile} {...swipeHandlers}>
           {/* Carousel Container */}
           <div className={styles.carouselContainer}>
             <div

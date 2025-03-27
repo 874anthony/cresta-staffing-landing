@@ -1,15 +1,22 @@
+"use client";
+import MotionSection from "@/components/MotionSection";
+
 import HeroBlog from "@/views/blog/sections/Hero";
 import Posts from "@/views/blog/sections/Posts";
 import SeparatorBlog from "@/views/blog/sections/Separator";
 
 export default function BlogPage() {
   return (
-    <main>
+    <main style={{ overflowX: "hidden" }}>
       <HeroBlog />
 
-      <Posts />
+      <MotionSection>
+        <Posts />
+      </MotionSection>
 
-      <SeparatorBlog />
+      <MotionSection delay={0.3}>
+        <SeparatorBlog />
+      </MotionSection>
     </main>
   );
 }

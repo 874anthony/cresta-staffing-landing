@@ -1,3 +1,6 @@
+"use client";
+import MotionSection from "@/components/MotionSection";
+
 import HeroServices from "@/views/services/sections/HeroServices";
 import OurServicesServices from "@/views/shared/OurServices";
 import OurProcess from "@/views/shared/OurProcess";
@@ -31,28 +34,47 @@ export default function ServicesPage() {
   ];
 
   return (
-    <main>
+    <main style={{ overflowX: "hidden" }}>
       <HeroServices />
 
-      <OurServicesServices
-        title="Our Expertise"
-        description="Gain access to elite remote engineers and architects without the time-consuming search."
-        mobileCorners="true"
-      />
+      <MotionSection>
+        <OurServicesServices
+          title="Our Expertise"
+          description="Gain access to elite remote engineers and architects without the time-consuming search."
+          mobileCorners="true"
+        />
+      </MotionSection>
 
-      <OurProcess />
+      <MotionSection>
+        <OurProcess />
+      </MotionSection>
 
-      <Separator />
+      <MotionSection delay={0.3}>
+        <Separator />
+      </MotionSection>
 
-      <SoftwareUsed />
+      <MotionSection>
+        <SoftwareUsed />
+      </MotionSection>
 
-      <Benefits />
+      <MotionSection>
+        <Benefits />
+      </MotionSection>
 
-      <SeparatorServices />
+      <MotionSection delay={0.3}>
+        <SeparatorServices />
+      </MotionSection>
 
-      <Testimonials title="Hear from our clients" testimonials={testimonials} />
+      <MotionSection>
+        <Testimonials
+          title="Hear from our clients"
+          testimonials={testimonials}
+        />
+      </MotionSection>
 
-      <FAQ />
+      <MotionSection>
+        <FAQ />
+      </MotionSection>
     </main>
   );
 }

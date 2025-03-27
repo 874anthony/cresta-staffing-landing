@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useSwipeable } from "react-swipeable";
 
 import Button from "@/components/Button";
 
@@ -53,6 +54,8 @@ export default function OurServices({
   ];
 
   const [slides, setSlides] = useState(initialSlides);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   const totalSlides = slides.length;
 
   useEffect(() => {
@@ -64,7 +67,20 @@ export default function OurServices({
     }
   }, []);
 
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (currentSlide < slides.length - 1) {
+        setCurrentSlide(currentSlide + 1);
+      }
+    },
+    onSwipedRight: () => {
+      if (currentSlide > 0) {
+        setCurrentSlide(currentSlide - 1);
+      }
+    },
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true, // optional: allows swipe detection with a mouse
+  });
 
   const handleDotClick = (index) => {
     setCurrentSlide(index);
@@ -88,7 +104,8 @@ export default function OurServices({
       <p className={styles.our__servicesText}>{description}</p>
 
       {/* Carousel Container */}
-      <div className={styles.carouselContainer}>
+      <div className={styles.carouselContainer} {...swipeHandlers}>
+        {/* Carousel Track */}
         <div
           className={styles.carouselTrack}
           style={{

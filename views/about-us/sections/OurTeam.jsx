@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useSwipeable } from "react-swipeable";
 import useIsMobile from "@/hooks/useIsMobile";
 
 import styles from "./OurTeam.module.scss";
@@ -49,6 +50,21 @@ export default function OurTeam() {
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (currentSlide < slides.length - 1) {
+        setCurrentSlide(currentSlide + 1);
+      }
+    },
+    onSwipedRight: () => {
+      if (currentSlide > 0) {
+        setCurrentSlide(currentSlide - 1);
+      }
+    },
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true, // optional: allows swipe detection with a mouse
+  });
+
   const handleDotClick = (index) => {
     setCurrentSlide(index);
   };
@@ -60,7 +76,8 @@ export default function OurTeam() {
         Meet the professionals you can collaborate with.
       </p>
 
-      <div className={styles.carouselContainer}>
+      <div className={styles.carouselContainer} {...swipeHandlers}>
+        {/* Carousel Track */}
         <div
           className={styles.carouselTrack}
           style={{

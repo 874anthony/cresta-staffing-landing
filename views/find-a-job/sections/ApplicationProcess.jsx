@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useSwipeable } from "react-swipeable";
 import useIsMobile from "@/hooks/useIsMobile";
 
 import Button from "@/components/Button";
@@ -24,6 +25,51 @@ const ZoomIcon = () => (
   </svg>
 );
 
+const stepsData = [
+  {
+    title: "01",
+    text: "Find your perfect fit & apply",
+    description:
+      "We pre-screen candidates to ensure you see only the most qualified...",
+    icon: <ZoomIcon />,
+  },
+  {
+    title: "02",
+    text: "Letʼs connect!",
+    description:
+      "We pre-screen candidates to ensure you see only the most qualified, saving you valuable time. Each professional is carefully vetted for the precise skills, experience, and expertise you require.",
+    icon: <ZoomIcon />,
+  },
+  {
+    title: "03",
+    text: "Showcase you skills (test project)",
+    description:
+      "We pre-screen candidates to ensure you see only the most qualified, saving you valuable time. Each professional is carefully vetted for the precise skills, experience, and expertise you require.",
+    icon: <ZoomIcon />,
+  },
+  {
+    title: "04",
+    text: "Meet the team: Interview & portfolio",
+    description:
+      "Cresta takes care of all the arrangements, setting the stage for a successful...",
+    icon: <ZoomIcon />,
+  },
+  {
+    title: "05",
+    text: "Meet the team: Client interview",
+    description:
+      "Cresta takes care of all the arrangements, setting the stage for a successful...",
+    icon: <ZoomIcon />,
+  },
+  {
+    title: "06",
+    text: "Welcome aboard!",
+    description:
+      "Cresta takes care of all the arrangements, setting the stage for a successful...",
+    icon: <ZoomIcon />,
+  },
+];
+
 export default function ApplicationProcess() {
   const isMobile = useIsMobile(475);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -32,52 +78,22 @@ export default function ApplicationProcess() {
   const [activeStep, setActiveStep] = useState(0);
   const totalSteps = 6;
 
-  const stepsData = [
-    {
-      title: "01",
-      text: "Find your perfect fit & apply",
-      description:
-        "We pre-screen candidates to ensure you see only the most qualified...",
-      icon: <ZoomIcon />,
-    },
-    {
-      title: "02",
-      text: "Letʼs connect!",
-      description:
-        "We pre-screen candidates to ensure you see only the most qualified, saving you valuable time. Each professional is carefully vetted for the precise skills, experience, and expertise you require.",
-      icon: <ZoomIcon />,
-    },
-    {
-      title: "03",
-      text: "Showcase you skills (test project)",
-      description:
-        "We pre-screen candidates to ensure you see only the most qualified, saving you valuable time. Each professional is carefully vetted for the precise skills, experience, and expertise you require.",
-      icon: <ZoomIcon />,
-    },
-    {
-      title: "04",
-      text: "Meet the team: Interview & portfolio",
-      description:
-        "Cresta takes care of all the arrangements, setting the stage for a successful...",
-      icon: <ZoomIcon />,
-    },
-    {
-      title: "05",
-      text: "Meet the team: Client interview",
-      description:
-        "Cresta takes care of all the arrangements, setting the stage for a successful...",
-      icon: <ZoomIcon />,
-    },
-    {
-      title: "06",
-      text: "Welcome aboard!",
-      description:
-        "Cresta takes care of all the arrangements, setting the stage for a successful...",
-      icon: <ZoomIcon />,
-    },
-  ];
-
   const slides = stepsData.map((step) => [step]);
+
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (currentSlide < slides.length - 1) {
+        setCurrentSlide(currentSlide + 1);
+      }
+    },
+    onSwipedRight: () => {
+      if (currentSlide > 0) {
+        setCurrentSlide(currentSlide - 1);
+      }
+    },
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true, // optional: allows swipe detection with a mouse
+  });
 
   const handleMouseEnter = (index) => {
     setActiveStep(index + 1); // Now, first card sets activeStep to 1.
@@ -155,7 +171,7 @@ export default function ApplicationProcess() {
       {isMobile && (
         <div className={styles.containerMobile}>
           {/* Carousel Container */}
-          <div className={styles.carouselContainer}>
+          <div className={styles.carouselContainer} {...swipeHandlers}>
             <div
               className={styles.carouselTrack}
               style={{

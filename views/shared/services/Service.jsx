@@ -1,3 +1,6 @@
+"use client";
+import MotionSection from "@/components/MotionSection";
+
 import HeroService from "@/views/service/sections/Hero";
 import OverviewService from "@/views/service/sections/Overview";
 import SoftwareUsedService from "../SoftwareUsed";
@@ -16,7 +19,7 @@ export default function ServiceGeneric({
   extraTest,
 }) {
   return (
-    <main>
+    <main style={{ overflowX: "hidden" }}>
       <HeroService
         title={title}
         description={description}
@@ -24,21 +27,33 @@ export default function ServiceGeneric({
         extraTest={extraTest}
       />
 
-      <OverviewService
-        overviewItems={overviewItems}
-        overviewImage={overviewImage}
-        overviewDescription={overviewDescription}
-      />
+      <MotionSection>
+        <OverviewService
+          overviewItems={overviewItems}
+          overviewImage={overviewImage}
+          overviewDescription={overviewDescription}
+        />
+      </MotionSection>
 
-      <SoftwareUsedService />
+      <MotionSection>
+        <SoftwareUsedService />
+      </MotionSection>
 
-      <SeparatorChallengeService />
+      <MotionSection delay={0.3}>
+        <SeparatorChallengeService />
+      </MotionSection>
 
-      <OurServicesIndividual backgroundColor="white" />
+      <MotionSection>
+        <OurServicesIndividual backgroundColor="white" />
+      </MotionSection>
 
-      <FAQ rounded="true" />
+      <MotionSection>
+        <FAQ rounded="true" />
+      </MotionSection>
 
-      <JobAlert />
+      <MotionSection delay={0.3}>
+        <JobAlert />
+      </MotionSection>
     </main>
   );
 }

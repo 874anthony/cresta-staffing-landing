@@ -33,7 +33,7 @@ export default function HomePage() {
   ];
 
   return (
-    <main>
+    <main style={{ overflowX: "hidden" }}>
       <Hero />
 
       <MotionSection>

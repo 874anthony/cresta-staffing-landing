@@ -1,3 +1,6 @@
+"use client";
+import MotionSection from "@/components/MotionSection";
+
 import HeroFindJob from "@/views/find-a-job/sections/HeroFindJob";
 import ApplicationProcess from "@/views/find-a-job/sections/ApplicationProcess";
 import OurServicesJob from "@/views/shared/OurServices";
@@ -31,29 +34,48 @@ export default function FindJobPage() {
   ];
 
   return (
-    <main>
+    <main style={{ overflowX: "hidden" }}>
       <HeroFindJob />
 
-      <ApplicationProcess />
+      <MotionSection>
+        <ApplicationProcess />
+      </MotionSection>
 
-      <OurServicesJob
-        title="Whatʼs your professional focus?"
-        description="Your skills. The right job. Letʼs construct your success together!"
-        subCaption="Professional services"
-        backgroundColor="white"
-      />
+      <MotionSection>
+        <OurServicesJob
+          title="Whatʼs your professional focus?"
+          description="Your skills. The right job. Letʼs construct your success together!"
+          subCaption="Professional services"
+          backgroundColor="white"
+        />
+      </MotionSection>
 
-      <JobAlert roundedTopCorner="true" />
+      <MotionSection delay={0.3}>
+        <JobAlert roundedTopCorner="true" />
+      </MotionSection>
 
-      <BenefitsJob />
+      <MotionSection>
+        <BenefitsJob />
+      </MotionSection>
 
-      <WeeklyJobs />
+      <MotionSection>
+        <WeeklyJobs />
+      </MotionSection>
 
-      <Testimonials title="Voices from our team" testimonials={testimonials} />
+      <MotionSection>
+        <Testimonials
+          title="Voices from our team"
+          testimonials={testimonials}
+        />
+      </MotionSection>
 
-      <FAQ />
+      <MotionSection>
+        <FAQ />
+      </MotionSection>
 
-      <FindJobSeparator />
+      <MotionSection delay={0.3}>
+        <FindJobSeparator />
+      </MotionSection>
     </main>
   );
 }

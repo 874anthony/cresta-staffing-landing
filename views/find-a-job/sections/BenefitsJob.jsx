@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useSwipeable } from "react-swipeable";
 import useIsMobile from "@/hooks/useIsMobile";
 
 import styles from "./BenefitsJob.module.scss";
@@ -31,6 +32,21 @@ export default function BenefitsJob() {
   const isMobile = useIsMobile(475);
   const slides = items.map((benefit) => [benefit]);
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (currentSlide < slides.length - 1) {
+        setCurrentSlide(currentSlide + 1);
+      }
+    },
+    onSwipedRight: () => {
+      if (currentSlide > 0) {
+        setCurrentSlide(currentSlide - 1);
+      }
+    },
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true, // optional: allows swipe detection with a mouse
+  });
 
   const handleDotClick = (index) => {
     setCurrentSlide(index);
@@ -73,7 +89,7 @@ export default function BenefitsJob() {
       {isMobile && (
         <div className={styles.containerMobile}>
           {/* Carousel Container */}
-          <div className={styles.carouselContainer}>
+          <div className={styles.carouselContainer} {...swipeHandlers}>
             <div
               className={styles.carouselTrack}
               style={{

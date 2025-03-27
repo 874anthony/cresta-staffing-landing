@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useSwipeable } from "react-swipeable";
 
 import { ProfileIcon } from "@/components/icons/ProfileIcon";
 import { CheckZoomIcon } from "@/components/icons/CheckZoomIcon";
@@ -48,6 +49,21 @@ export default function OurProcess() {
   // activeStep is 0-indexed: 0 means no step active or starting state.
   const [activeStep, setActiveStep] = useState(0);
   const totalSteps = 4;
+
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (currentSlide < slides.length - 1) {
+        setCurrentSlide(currentSlide + 1);
+      }
+    },
+    onSwipedRight: () => {
+      if (currentSlide > 0) {
+        setCurrentSlide(currentSlide - 1);
+      }
+    },
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true, // optional: allows swipe detection with a mouse
+  });
 
   const handleMouseEnter = (index) => {
     setActiveStep(index + 1); // Now, first card sets activeStep to 1.
@@ -123,7 +139,8 @@ export default function OurProcess() {
 
       <div className={styles.containerMobile}>
         {/* Carousel Container */}
-        <div className={styles.carouselContainer}>
+        <div className={styles.carouselContainer} {...swipeHandlers}>
+          {/* Carousel Track */}
           <div
             className={styles.carouselTrack}
             style={{

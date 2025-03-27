@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useSwipeable } from "react-swipeable";
 import useIsMobile from "@/hooks/useIsMobile";
 
 import styles from "./Testimonials.module.scss";
@@ -22,6 +23,21 @@ export default function Testimonials({
   //     setSlides(slidesMobile);
   //   }
   // }, []);
+
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (currentSlide < slides.length - 1) {
+        setCurrentSlide(currentSlide + 1);
+      }
+    },
+    onSwipedRight: () => {
+      if (currentSlide > 0) {
+        setCurrentSlide(currentSlide - 1);
+      }
+    },
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true, // optional: allows swipe detection with a mouse
+  });
 
   const handleDotClick = (index) => {
     setCurrentSlide(index);
@@ -71,7 +87,7 @@ export default function Testimonials({
       {isMobile && (
         <>
           <div className={styles.containerMobile}>
-            <div className={styles.carouselContainer}>
+            <div className={styles.carouselContainer} {...swipeHandlers}>
               <div
                 className={styles.carouselTrack}
                 style={{

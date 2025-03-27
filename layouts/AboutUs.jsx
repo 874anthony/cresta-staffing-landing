@@ -1,3 +1,6 @@
+"use client";
+import MotionSection from "@/components/MotionSection";
+
 import HeroAbout from "@/views/about-us/sections/Hero";
 import Features from "@/views/about-us/sections/Features";
 import OurVisionMision from "@/views/about-us/sections/OurMisionVision";
@@ -6,16 +9,24 @@ import SeparatorAbout from "@/views/about-us/sections/Separator";
 
 export default function AboutUsPage() {
   return (
-    <main>
+    <main style={{ overflowX: "hidden" }}>
       <HeroAbout />
 
-      <Features />
+      <MotionSection>
+        <Features />
+      </MotionSection>
 
-      <OurVisionMision />
+      <MotionSection>
+        <OurVisionMision />
+      </MotionSection>
 
-      <OurTeam />
+      <MotionSection>
+        <OurTeam />
+      </MotionSection>
 
-      <SeparatorAbout />
+      <MotionSection delay={0.3}>
+        <SeparatorAbout />
+      </MotionSection>
     </main>
   );
 }
