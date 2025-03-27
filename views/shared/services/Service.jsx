@@ -19,7 +19,7 @@ export default function ServiceGeneric({
   extraTest,
 }) {
   return (
-    <main style={{ overflowX: "hidden" }}>
+    <main style={{ overflow: "hidden" }}>
       <HeroService
         title={title}
         description={description}

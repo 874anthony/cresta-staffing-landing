@@ -34,7 +34,7 @@ export default function FindJobPage() {
   ];
 
   return (
-    <main style={{ overflowX: "hidden" }}>
+    <main style={{ overflow: "hidden" }}>
       <HeroFindJob />
 
       <MotionSection>

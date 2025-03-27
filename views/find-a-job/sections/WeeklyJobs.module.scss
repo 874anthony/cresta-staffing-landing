@@ -30,9 +30,9 @@
 .weekly__jobCard {
   width: 100%;
   padding: 1.5rem 3rem;
+  overflow: hidden;
 
   border-radius: variables.$rounded-lg;
-  border-top-right-radius: 0;
 
   background-color: colors.$color-primary;
   box-shadow: utils.$shadow-normal;
@@ -43,6 +43,8 @@
     $size: 2rem,
     $color: colors.$text-color-white
   );
+  line-height: 1.3;
+  margin-bottom: 1rem;
 }
 
 .weekly__jobCardSubtitle {
@@ -51,12 +53,12 @@
     $color: colors.$text-color-white
   );
 
-  margin-top: -1rem;
   font-weight: 200;
+  letter-spacing: -0.5px;
 }
 
 .weekly__jobCardSubtitle + .weekly__jobCardSubtitle {
-  margin-left: 1rem;
+  margin-left: 0.2rem;
 }
 
 .weekly__jobCardList {
@@ -80,11 +82,17 @@
   justify-content: center;
 }
 
+.weekly__jobCard:nth-child(1) {
+  border-top-left-radius: 0;
+}
+
 .weekly__jobCard:nth-child(2) {
   background-color: #2e3191;
+  border-radius: variables.$rounded-lg;
+}
 
-  border-top-left-radius: 0;
-  border-top-right-radius: variables.$rounded-lg;
+.weekly__jobCard:nth-child(3) {
+  border-bottom-right-radius: 0;
 }
 
 // ======================== CAROUSEL STARTS HERE ========================
@@ -92,6 +100,7 @@
   display: block;
   overflow: hidden;
   position: relative;
+  margin-top: 1rem;
 }
 
 .carouselTrack {
@@ -102,7 +111,7 @@
 
 .carouselSlide {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   width: 100%;
 }
@@ -156,7 +165,7 @@
   .weekly__jobCard {
     padding-block: 1.6rem;
     padding-inline: 2rem;
-    border-radius: variables.$rounded-lg;
+    border-radius: variables.$rounded-lg !important;
   }
 
   .weekly__jobCardTitle {
@@ -176,5 +185,20 @@
     li {
       font-size: 0.875rem;
     }
+  }
+
+  // ======================== CAROUSEL STARTS HERE ========================
+  .carouselSlide {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .carouselSlide:nth-child(2n) {
+    .weekly__jobCard {
+      background-color: #2e3191;
+    }
+  }
+
+  .carouselTrack {
+    width: 600%; // Adjust this if the number of slides changes (100% * total slides)
   }
 }

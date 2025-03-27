@@ -92,15 +92,18 @@
   overflow: hidden; // ensures smooth transitions when content expands
 
   // Set a base height so they all look the same when not hovered
-  min-height: 300px; // adjust this value as needed
+  min-height: 200px; // adjust this value as needed
 
   .appProcess__stepHeader {
     // Fix the height so that even if title/text spans different lines,
     // every header occupies the same space.
-    min-height: 250px; // Adjust this value based on your design
+    min-height: 190px; // Adjust this value based on your design
   }
 
   svg {
+    width: 36px;
+    height: 36px;
+    fill: colors.$text-color-white;
     margin-left: auto;
   }
 
@@ -109,7 +112,7 @@
     color: colors.$text-color-dark-blue;
 
     svg {
-      stroke: colors.$color-primary;
+      fill: colors.$color-primary;
     }
 
     .appProcess__stepTitle {
@@ -164,7 +167,7 @@
 .carouselTrack {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 800%; // Adjust this if the number of slides changes (100% * total slides)
+  width: 600%; // Adjust this if the number of slides changes (100% * total slides)
 }
 
 .carouselSlide {

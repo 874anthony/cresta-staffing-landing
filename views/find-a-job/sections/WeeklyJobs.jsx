@@ -8,30 +8,73 @@ import Button from "@/components/Button";
 import styles from "./WeeklyJobs.module.scss";
 
 const jobs = [
-  {
-    title: "Full Stack Web Developer",
-    subtitle: "(SEO/SEM/UX)",
-    location: "Remote (Colombia)",
-    requirements: [
-      "A Bachelorʼs Degree in Software Engineering, Systems Engineering, or a related field.",
-      "Proficiency in front-end technologies (HTML, CSS, JavaScript)",
-      "Knowledge of CMS platforms such as WordPress, Webflow, or custom-built solutions.",
-    ],
-  },
-  {
-    title: "Senior Architect Lead",
-    location: "Remote (Colombia)",
-    requirements: [
-      "A Bachelorʼs Degree in Software Engineering, Systems Engineering, or a related field.",
-      "Proficiency in front-end technologies (HTML, CSS, JavaScript)",
-      "Knowledge of CMS platforms such as WordPress, Webflow, or custom-built solutions.",
-    ],
-  },
+  [
+    {
+      title: "Full Stack Web Developer",
+      location: "Remote (Colombia)",
+      requirements: [
+        "A Bachelorʼs Degree in Software Engineering, Systems Engineering, or a related field.",
+        "Proficiency in front-end technologies (HTML, CSS, JavaScript)",
+        "Knowledge of CMS platforms such as WordPress, Webflow, or custom-built solutions.",
+      ],
+    },
+    {
+      title: "Senior Architect Lead",
+      location: "Remote (Colombia)",
+      requirements: [
+        "A Bachelorʼs Degree in Software Engineering, Systems Engineering, or a related field.",
+        "Proficiency in front-end technologies (HTML, CSS, JavaScript)",
+        "Knowledge of CMS platforms such as WordPress, Webflow, or custom-built solutions.",
+      ],
+    },
+    {
+      title: "Full Stack Web Developer",
+      location: "Remote (Colombia)",
+      requirements: [
+        "A Bachelorʼs Degree in Software Engineering, Systems Engineering, or a related field.",
+        "Proficiency in front-end technologies (HTML, CSS, JavaScript)",
+        "Knowledge of CMS platforms such as WordPress, Webflow, or custom-built solutions.",
+      ],
+    },
+  ],
+  [
+    {
+      title: "Full Stack Web Developer",
+      location: "Remote (Colombia)",
+      requirements: [
+        "A Bachelorʼs Degree in Software Engineering, Systems Engineering, or a related field.",
+        "Proficiency in front-end technologies (HTML, CSS, JavaScript)",
+        "Knowledge of CMS platforms such as WordPress, Webflow, or custom-built solutions.",
+      ],
+    },
+    {
+      title: "Senior Architect Lead",
+      location: "Remote (Colombia)",
+      requirements: [
+        "A Bachelorʼs Degree in Software Engineering, Systems Engineering, or a related field.",
+        "Proficiency in front-end technologies (HTML, CSS, JavaScript)",
+        "Knowledge of CMS platforms such as WordPress, Webflow, or custom-built solutions.",
+      ],
+    },
+    {
+      title: "Full Stack Web Developer",
+      location: "Remote (Colombia)",
+      requirements: [
+        "A Bachelorʼs Degree in Software Engineering, Systems Engineering, or a related field.",
+        "Proficiency in front-end technologies (HTML, CSS, JavaScript)",
+        "Knowledge of CMS platforms such as WordPress, Webflow, or custom-built solutions.",
+      ],
+    },
+  ],
 ];
 
 export default function WeeklyJobs() {
   const isMobile = useIsMobile(475);
-  const slides = jobs.map((benefit) => [benefit]);
+
+  console.log("jobs", jobs);
+
+  const slides = isMobile ? jobs.flat().map((benefit) => [benefit]) : jobs;
+
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const swipeHandlers = useSwipeable({
@@ -61,117 +104,68 @@ export default function WeeklyJobs() {
         Explore our offers and stay updated for more!
       </p>
 
-      {!isMobile && (
-        <div className={styles.weekly__jobsList}>
-          {jobs.map((job, index) => (
-            <div key={index} className={styles.weekly__jobCard}>
-              <h4 className={styles.weekly__jobCardTitle}>{job.title}</h4>
+      {/* Carousel Container */}
+      <div className={styles.carouselContainer} {...swipeHandlers}>
+        <div
+          className={styles.carouselTrack}
+          style={{
+            transform: `translateX(-${currentSlide * (100 / slides.length)}%)`,
+          }}
+        >
+          {slides.map((slide, slideIndex) => (
+            <div key={slideIndex} className={styles.carouselSlide}>
+              {slide.map((job, jobIndex) => (
+                <div key={jobIndex} className={styles.weekly__jobCard}>
+                  <h4 className={styles.weekly__jobCardTitle}>{job.title}</h4>
 
-              {job.subtitle && (
-                <>
-                  <span className={styles.weekly__jobCardSubtitle}>
-                    {job.subtitle}
-                  </span>
-                  <span className={styles.weekly__jobCardSubtitle}>|</span>
-                </>
-              )}
-              <span className={styles.weekly__jobCardSubtitle}>
-                {job.location}
-              </span>
-
-              <ul className={styles.weekly__jobCardList}>
-                {job.requirements.map((requirement, index) => (
-                  <li key={index}>{requirement}</li>
-                ))}
-              </ul>
-
-              <div className={styles.weekly__jobCardFooter}>
-                <Button
-                  variant="secondary"
-                  style={{
-                    fontWeight: "bold",
-                  }}
-                >
-                  Apply
-                </Button>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-
-      {isMobile && (
-        <div className={styles.containerMobile} {...swipeHandlers}>
-          {/* Carousel Container */}
-          <div className={styles.carouselContainer}>
-            <div
-              className={styles.carouselTrack}
-              style={{
-                transform: `translateX(-${
-                  currentSlide * (100 / slides.length)
-                }%)`,
-              }}
-            >
-              {slides.map((slide, slideIndex) => (
-                <div key={slideIndex} className={styles.carouselSlide}>
-                  {slide.map((job, jobIndex) => (
-                    <div key={jobIndex} className={styles.weekly__jobCard}>
-                      <h4 className={styles.weekly__jobCardTitle}>
-                        {job.title}
-                      </h4>
-
-                      {job.subtitle && (
-                        <>
-                          <span className={styles.weekly__jobCardSubtitle}>
-                            {job.subtitle}
-                          </span>
-                          <span className={styles.weekly__jobCardSubtitle}>
-                            |
-                          </span>
-                        </>
-                      )}
-
+                  {job.subtitle && (
+                    <>
                       <span className={styles.weekly__jobCardSubtitle}>
-                        {job.location}
+                        {job.subtitle}
                       </span>
+                      <span className={styles.weekly__jobCardSubtitle}>|</span>
+                    </>
+                  )}
 
-                      <ul className={styles.weekly__jobCardList}>
-                        {job.requirements.map((requirement, index) => (
-                          <li key={index}>{requirement}</li>
-                        ))}
-                      </ul>
+                  <span className={styles.weekly__jobCardSubtitle}>
+                    {job.location}
+                  </span>
 
-                      <div className={styles.weekly__jobCardFooter}>
-                        <Button
-                          variant="secondary"
-                          style={{
-                            fontWeight: "bold",
-                          }}
-                        >
-                          Apply
-                        </Button>
-                      </div>
-                    </div>
-                  ))}
+                  <ul className={styles.weekly__jobCardList}>
+                    {job.requirements.map((requirement, index) => (
+                      <li key={index}>{requirement}</li>
+                    ))}
+                  </ul>
+
+                  <div className={styles.weekly__jobCardFooter}>
+                    <Button
+                      variant="secondary"
+                      style={{
+                        fontWeight: "bold",
+                      }}
+                    >
+                      Apply
+                    </Button>
+                  </div>
                 </div>
               ))}
             </div>
-          </div>
-
-          {/* Carousel Dots */}
-          <div className={styles.carouselDots}>
-            {slides.map((_, index) => (
-              <span
-                key={index}
-                className={`${styles.dot} ${
-                  currentSlide === index ? styles.active : ""
-                }`}
-                onClick={() => handleDotClick(index)}
-              ></span>
-            ))}
-          </div>
+          ))}
         </div>
-      )}
+      </div>
+
+      {/* Carousel Dots */}
+      <div className={styles.carouselDots}>
+        {slides.map((_, index) => (
+          <span
+            key={index}
+            className={`${styles.dot} ${
+              currentSlide === index ? styles.active : ""
+            }`}
+            onClick={() => handleDotClick(index)}
+          ></span>
+        ))}
+      </div>
     </section>
   );
 }

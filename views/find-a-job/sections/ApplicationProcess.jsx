@@ -4,26 +4,8 @@ import { useSwipeable } from "react-swipeable";
 import useIsMobile from "@/hooks/useIsMobile";
 
 import Button from "@/components/Button";
+import { CheckZoomIcon } from "@/components/icons/CheckZoomIcon";
 import styles from "./ApplicationProcess.module.scss";
-
-const ZoomIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    width={36}
-    height={36}
-    viewBox="0 0 24 24"
-    strokeWidth="1.5"
-    stroke="currentColor"
-    className="size-6"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607ZM10.5 7.5v6m3-3h-6"
-    />
-  </svg>
-);
 
 const stepsData = [
   {
@@ -31,42 +13,42 @@ const stepsData = [
     text: "Find your perfect fit & apply",
     description:
       "We pre-screen candidates to ensure you see only the most qualified...",
-    icon: <ZoomIcon />,
+    icon: <CheckZoomIcon />,
   },
   {
     title: "02",
     text: "Letʼs connect!",
     description:
       "We pre-screen candidates to ensure you see only the most qualified, saving you valuable time. Each professional is carefully vetted for the precise skills, experience, and expertise you require.",
-    icon: <ZoomIcon />,
+    icon: <CheckZoomIcon />,
   },
   {
     title: "03",
     text: "Showcase you skills (test project)",
     description:
       "We pre-screen candidates to ensure you see only the most qualified, saving you valuable time. Each professional is carefully vetted for the precise skills, experience, and expertise you require.",
-    icon: <ZoomIcon />,
+    icon: <CheckZoomIcon />,
   },
   {
     title: "04",
     text: "Meet the team: Interview & portfolio",
     description:
       "Cresta takes care of all the arrangements, setting the stage for a successful...",
-    icon: <ZoomIcon />,
+    icon: <CheckZoomIcon />,
   },
   {
     title: "05",
     text: "Meet the team: Client interview",
     description:
       "Cresta takes care of all the arrangements, setting the stage for a successful...",
-    icon: <ZoomIcon />,
+    icon: <CheckZoomIcon />,
   },
   {
     title: "06",
     text: "Welcome aboard!",
     description:
       "Cresta takes care of all the arrangements, setting the stage for a successful...",
-    icon: <ZoomIcon />,
+    icon: <CheckZoomIcon />,
   },
 ];
 

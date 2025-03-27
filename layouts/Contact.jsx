@@ -6,7 +6,7 @@ import SeparatorAbout from "@/views/contact/sections/Separator";
 
 export default function ContactPage() {
   return (
-    <main style={{ overflowX: "hidden" }}>
+    <main style={{ overflow: "hidden" }}>
       <HeroAbout />
 
       <MotionSection delay={0.3}>

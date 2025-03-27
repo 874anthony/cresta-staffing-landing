@@ -34,7 +34,7 @@ export default function ServicesPage() {
   ];
 
   return (
-    <main style={{ overflowX: "hidden" }}>
+    <main style={{ overflow: "hidden" }}>
       <HeroServices />
 
       <MotionSection>

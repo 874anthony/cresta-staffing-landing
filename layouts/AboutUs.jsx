@@ -9,7 +9,7 @@ import SeparatorAbout from "@/views/about-us/sections/Separator";
 
 export default function AboutUsPage() {
   return (
-    <main style={{ overflowX: "hidden" }}>
+    <main style={{ overflow: "hidden" }}>
       <HeroAbout />
 
       <MotionSection>

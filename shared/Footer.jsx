@@ -1,4 +1,6 @@
 "use client";
+import NextLink from "next/link";
+import { usePathname } from "next/navigation";
 import useIsMobile from "@/hooks/useIsMobile";
 
 import Button from "@/components/Button";
@@ -54,11 +56,45 @@ const LocationIcon = () => (
   </svg>
 );
 
+const navigationData = [
+  {
+    title: "3D Renderer",
+    slug: "3d-renderer",
+  },
+  {
+    title: "Estimator",
+    slug: "estimator",
+  },
+  {
+    title: "BIM Modelling",
+    slug: "bim",
+  },
+  {
+    title: "Construction Project Manager",
+    slug: "construction",
+  },
+  {
+    title: "Design Drafter & Documentation",
+    slug: "drafter-documentation",
+  },
+  {
+    title: "Drafter",
+    slug: "drafter",
+  },
+];
 export default function Footer() {
   const isMobile = useIsMobile();
+  const pathname = usePathname();
+
+  const isMobileAndServicesPage = isMobile && pathname === "/services";
 
   return (
-    <footer className={styles.footer}>
+    <footer
+      className={styles.footer}
+      style={{
+        paddingTop: isMobileAndServicesPage ? "3rem" : "6rem",
+      }}
+    >
       <div className={styles.footer__logo}>
         <img src="/assets/cresta_logo.png" alt="Cresta Logo" />
 
@@ -88,24 +124,11 @@ export default function Footer() {
         <h3>Follow Us</h3>
 
         <ul className={styles.footer__navLinkList}>
-          <li>
-            <a href="#">Drafter</a>
-          </li>
-          <li>
-            <a href="#">Design Drafter & Documentation</a>
-          </li>
-          <li>
-            <a href="#">3D Renderer</a>
-          </li>
-          <li>
-            <a href="#">BIM Modeling & Coordination</a>
-          </li>
-          <li>
-            <a href="#">Construction Project Manager</a>
-          </li>
-          <li>
-            <a href="#">Estimator</a>
-          </li>
+          {navigationData.map((item) => (
+            <li key={item.slug}>
+              <NextLink href={`/services/${item.slug}`}>{item.title}</NextLink>
+            </li>
+          ))}
         </ul>
 
         <ul className={styles.footer__navLinkList}>

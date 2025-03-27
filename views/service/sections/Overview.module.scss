@@ -95,15 +95,22 @@
   .overview__checklist {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 1.2rem;
   }
 
   .overview__checklistItem {
     display: grid;
     grid-template-columns: max-content 1fr;
+    gap: 0;
+    justify-items: center;
 
     svg {
-      width: 45%;
+      width: 60%;
+    }
+
+    &:nth-child(5) {
+      grid-column: 1 / -1;
+      align-self: center;
     }
   }
 

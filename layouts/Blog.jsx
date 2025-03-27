@@ -7,7 +7,7 @@ import SeparatorBlog from "@/views/blog/sections/Separator";
 
 export default function BlogPage() {
   return (
-    <main style={{ overflowX: "hidden" }}>
+    <main style={{ overflow: "hidden" }}>
       <HeroBlog />
 
       <MotionSection>

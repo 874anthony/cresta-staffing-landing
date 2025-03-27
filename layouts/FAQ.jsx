@@ -6,7 +6,7 @@ import SeparatorFAQPage from "@/views/faq/sections/Separator";
 
 export default function FAQPage() {
   return (
-    <main style={{ overflowX: "hidden" }}>
+    <main style={{ overflow: "hidden" }}>
       <FAQContainer />
 
       <MotionSection delay={0.3}>
