@@ -26,9 +26,26 @@
   align-items: center;
   gap: 1.2rem;
   margin-top: 1.5rem;
+  align-items: flex-end;
 
-  svg {
-    margin-right: 0.5rem;
+  .contact__formGroup {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .contact__formGroup label {
+    color: #fff;
+  }
+
+  .contact__formGroup input,
+  .contact__formGroup textarea {
+    padding: 0.8rem;
+    border-radius: variables.$rounded-md;
+    background-color: colors.$bg-color-gray;
+    border: none;
+    outline: 1px solid colors.$color-primary;
   }
 }
 
@@ -57,5 +74,22 @@
     flex-direction: column;
     gap: 1.5rem;
     width: 100%;
+    align-items: center;
+  }
+
+  .contact__formGroup {
+    input {
+      padding: 0.6rem !important;
+      font-size: typography.$font-size-sm;
+    }
+
+    label {
+      font-size: typography.$font-size-sm;
+    }
+
+    textarea {
+      padding: 0.6rem !important;
+      font-size: typography.$font-size-sm;
+    }
   }
 }

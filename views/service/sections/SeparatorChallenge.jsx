@@ -48,35 +48,15 @@ export default function SeparatorChallenge() {
       <span className={styles.aboutSeparatorText}>With expert consulting</span>
 
       <div className={styles.aboutSeparatorCTA}>
-        <OutlinedInput
-          id="name"
-          type="name"
-          placeholder="Enter your name"
-          sx={{
-            // flex: 1,
-            border: "1px solid #E5E5E5",
-            borderRadius: "4px",
-            color: "#fff",
-            paddingLeft: "1rem",
-            borderRadius: "999rem",
-          }}
-          startAdornment={<UserIcon />}
-        />
+        <div className={styles.contact__formGroup}>
+          <label htmlFor="firstName">First name</label>
+          <input type="text" id="firstName" name="firstName" />
+        </div>
 
-        <OutlinedInput
-          id="email"
-          type="email"
-          placeholder="Enter your email"
-          sx={{
-            flex: 1,
-            border: "1px solid #E5E5E5",
-            borderRadius: "4px",
-            color: "#fff",
-            paddingLeft: "1rem",
-            borderRadius: "999rem",
-          }}
-          startAdornment={<MailIcon />}
-        />
+        <div className={styles.contact__formGroup}>
+          <label htmlFor="email">E-mail</label>
+          <input type="email" id="email" name="email" />
+        </div>
 
         <Button variant="secondary" size="large">
           Book a consultation
