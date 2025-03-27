@@ -34,11 +34,9 @@ export default function FAQ() {
   const [activeQuestions, setActiveQuestions] = useState([]);
 
   useEffect(() => {
-    console.log("faqType", faqType);
     // Reset active questions when the faqType changes.
 
     const newSectionKeys = Object.keys(faqGeneralData[faqType]);
-    console.log("newSectionKeys", newSectionKeys);
 
     setSelectedSection(newSectionKeys[0]);
     setActiveQuestions([]);
