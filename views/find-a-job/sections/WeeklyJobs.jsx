@@ -70,9 +70,6 @@ const jobs = [
 
 export default function WeeklyJobs() {
   const isMobile = useIsMobile(475);
-
-  console.log("jobs", jobs);
-
   const slides = isMobile ? jobs.flat().map((benefit) => [benefit]) : jobs;
 
   const [currentSlide, setCurrentSlide] = useState(0);

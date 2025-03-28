@@ -7,9 +7,13 @@ import styles from "./ContactForm.module.scss";
 export default function ContactForm() {
   const isMobile = useIsMobile(475);
 
+  const srcImage = `/assets/home/contact/${
+    isMobile ? "contact-us-mobile.png" : "contact-us.png"
+  }`;
+
   return (
     <section id="home-expert-consultation" className={styles.contact__section}>
-      <img src="/assets/home/contact/contact-us.png" alt="Contact Us Image" />
+      <img src={srcImage} alt="Contact Us Image" loading="lazy" />
 
       <div className={styles.contact__container}>
         <div className={styles.contact__text}>

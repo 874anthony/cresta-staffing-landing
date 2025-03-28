@@ -10,9 +10,11 @@ import styles from "./Hero.module.scss";
 const topImages = [
   "/assets/home/home_banner_slide_1.png",
   "/assets/home/home_banner_slide_3.png",
+  "/assets/home/home_banner_slide_5.png",
 ];
 
 const bottomImages = [
+  "/assets/home/home_banner_slide_2.png",
   "/assets/home/home_banner_slide_4.png",
   "/assets/home/home_banner_slide_6.png",
 ];
@@ -82,18 +84,31 @@ export default function Hero() {
       </div>
 
       <div className={styles.hero__images}>
-        <div className={styles.topImages}>
-          {topImages.map((src, index) => (
+        {isMobile ? (
+          <div className={styles.topImages}>
             <img
-              key={`top-${index}`}
-              src={src}
+              key={`top-1`}
+              src="/assets/home/home_banner_mobile.png"
               alt="AEC Staffing Agency"
               className={`
+                  ${styles.top} ${styles.active}
+                `}
+            />
+          </div>
+        ) : (
+          <div className={styles.topImages}>
+            {topImages.map((src, index) => (
+              <img
+                key={`top-${index}`}
+                src={src}
+                alt="AEC Staffing Agency"
+                className={`
                 ${styles.top} ${index === topIndex ? styles.active : ""}
               `}
-            />
-          ))}
-        </div>
+              />
+            ))}
+          </div>
+        )}
         <div className={styles.bottomImages}>
           {bottomImages.map((src, index) => (
             <img

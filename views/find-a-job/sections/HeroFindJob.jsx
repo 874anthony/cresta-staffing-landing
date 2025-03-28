@@ -1,8 +1,13 @@
+"use client";
+import useIsMobile from "@/hooks/useIsMobile";
+
 import Button from "@/components/Button";
 
 import styles from "./HeroFindJob.module.scss";
 
 export default function HeroFindJob() {
+  const isMobile = useIsMobile(475);
+
   return (
     <section className={styles.hero}>
       <div className={styles.hero__caption}>
@@ -25,12 +30,7 @@ export default function HeroFindJob() {
 
       <div className={styles.hero__images}>
         <img
-          src={"/assets/jobs/image_find_a_job_1.png"}
-          alt="AEC Staffing Agency"
-        />
-
-        <img
-          src={"/assets/jobs/image_find_a_job_2.png"}
+          src={"/assets/jobs/image_find_a_job.png"}
           alt="AEC Staffing Agency"
         />
       </div>

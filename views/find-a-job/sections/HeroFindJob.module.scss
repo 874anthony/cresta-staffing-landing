@@ -44,7 +44,7 @@
 }
 
 .hero__images img {
-  width: 50%;
+  width: 100%;
   height: auto;
   object-fit: cover;
 }
@@ -54,7 +54,7 @@
   .hero {
     display: flex;
     flex-direction: column;
-    gap: 6rem;
+    gap: 3rem;
     padding-top: 5rem;
     padding-inline: 1.5rem;
     padding-bottom: 8rem;
@@ -81,10 +81,5 @@
 
   .hero__captionCTA {
     gap: 1rem;
-  }
-
-  .hero__images {
-    // margin-top: 1rem;
-    height: 150px;
   }
 }
