@@ -54,7 +54,8 @@
   img {
     width: 3rem;
     height: 3rem;
-    object-fit: cover;
+    // object-fit: cover; // Uncomment this if you want to cover the entire area of the image
+    object-fit: contain;
     border-radius: 50%;
   }
 }

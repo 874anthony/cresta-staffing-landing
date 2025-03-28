@@ -82,4 +82,8 @@
   .hero__captionCTA {
     gap: 1rem;
   }
+
+  .hero__images img {
+    animation: none !important;
+  }
 }

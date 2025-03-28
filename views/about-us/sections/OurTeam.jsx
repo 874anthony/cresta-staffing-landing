@@ -27,19 +27,19 @@ const ChevronRight = () => (
 const members = [
   [
     {
-      name: "Juan Mercado Toloza",
-      position: "Hiring Manager",
-      email: "juan.m@crestastaffing.com",
+      name: "Jose Patiño",
+      position: "Quality Manager",
+      // email: "juan.m@crestastaffing.com",
     },
     {
       name: "Juan Mercado Toloza",
       position: "Hiring Manager",
-      email: "juan.m@crestastaffing.com",
+      // email: "juan.m@crestastaffing.com",
     },
     {
-      name: "Juan Mercado Toloza",
+      name: "Sara Correa",
       position: "Hiring Manager",
-      email: "juan.m@crestastaffing.com",
+      // email: "juan.m@crestastaffing.com",
     },
   ],
 ];
@@ -93,7 +93,7 @@ export default function OurTeam() {
                     <p className={styles.member__cardPosition}>
                       {card.position}
                     </p>
-                    <p className={styles.member__cardEmail}>{card.email}</p>
+                    {/* <p className={styles.member__cardEmail}>{card.email}</p> */}
 
                     <button className={styles.member__cardButton}>
                       LinkedIn

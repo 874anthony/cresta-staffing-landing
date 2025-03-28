@@ -122,17 +122,17 @@
   }
 
   &:nth-child(1)::before {
-    background-image: url("/assets/about/team/juan-mercado-toloza.jpg");
+    background-image: url("/assets/about/team/image_team-jose.jpg");
     background-position: 35% 70%;
   }
 
   &:nth-child(2)::before {
-    background-image: url("/assets/about/team/juan-mercado-toloza.jpg");
+    background-image: url("/assets/about/team/image_team-juanes.jpg");
     background-position: 35% 70%;
   }
 
   &:nth-child(3)::before {
-    background-image: url("/assets/about/team/juan-mercado-toloza.jpg");
+    background-image: url("/assets/about/team/image_team-sara.jpg");
     background-position: 35% 70%;
   }
 }
@@ -203,7 +203,9 @@
     }
 
     .member__cardContent {
-      transform: translateY(calc(100% - 4.5rem));
+      transform: translateY(
+        calc(100% - 1.5rem)
+      ); // Adjust this value to control the slide-up effect
 
       > * {
         opacity: 1;

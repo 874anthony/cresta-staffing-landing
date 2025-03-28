@@ -54,33 +54,6 @@ const navigationData = [
   },
 ];
 
-const servicesNavigationData = [
-  {
-    title: "3D Renderer",
-    slug: "3d-renderer",
-  },
-  {
-    title: "Estimator",
-    slug: "estimator",
-  },
-  {
-    title: "BIM Modelling",
-    slug: "bim",
-  },
-  {
-    title: "Construction Project Manager",
-    slug: "construction",
-  },
-  {
-    title: "Design Drafter & Documentation",
-    slug: "drafter-documentation",
-  },
-  {
-    title: "Drafter",
-    slug: "drafter",
-  },
-];
-
 export default function Navbar() {
   const [showServices, setShowServices] = useState(false);
   const router = useRouter();
@@ -214,7 +187,7 @@ export default function Navbar() {
                     </NextLink>
                   </li>
 
-                  {servicesNavigationData.map((item) => (
+                  {navigationData.map((item) => (
                     <li key={item.slug} className={styles.navigation__item}>
                       <NextLink
                         className={styles.navigation__link}
@@ -253,6 +226,12 @@ export default function Navbar() {
               ) : (
                 // Render default navigation
                 <>
+                  <li className={styles.navigation__item}>
+                    <NextLink className={styles.navigation__link} href="/">
+                      Home
+                    </NextLink>
+                  </li>
+
                   <li className={styles.navigation__item}>
                     {/* Use button behavior for Services item */}
                     <button

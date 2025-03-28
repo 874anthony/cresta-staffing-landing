@@ -99,9 +99,13 @@
     gap: 1rem;
   }
 
-  .hero__images {
-    img {
-      animation: none;
-    }
+  .hero__images img:nth-child(1) {
+    transform: translateY(-1.2rem) translateX(0.25rem);
+    animation: none !important;
+  }
+
+  .hero__images img:nth-child(2) {
+    transform: translateY(1.2rem) translateX(-0.25rem);
+    animation: none !important;
   }
 }

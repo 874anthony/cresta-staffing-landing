@@ -81,6 +81,7 @@
 
 // TODO: 23px font-size for cards
 .ourProcess__step {
+  cursor: pointer;
   @include mixins.bg-gradient-primary($direction: 190deg);
   font-family: "Inter", sans-serif;
   display: flex;
