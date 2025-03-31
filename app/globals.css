@@ -68,3 +68,9 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+@media screen and (min-width: 2200px) {
+  html {
+    font-size: 24px;
+  }
+}

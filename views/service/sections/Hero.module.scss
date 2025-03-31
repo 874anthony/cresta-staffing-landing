@@ -108,3 +108,25 @@
     }
   }
 }
+
+@media screen and (min-width: 2200px) {
+  .hero {
+    padding-top: 6rem;
+    padding-inline: 3rem;
+    padding-bottom: 8rem;
+  }
+
+  .hero__captionTitle {
+    font-size: 3.5rem;
+    line-height: 1.2;
+  }
+
+  .hero__captionText {
+    font-size: 1.25rem;
+  }
+
+  .hero__images {
+    height: 750px;
+    gap: 0.5rem;
+  }
+}

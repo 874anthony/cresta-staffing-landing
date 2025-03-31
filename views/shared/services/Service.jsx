@@ -11,6 +11,8 @@ import FAQ from "../FAQ";
 import Separator from "../Separator";
 import FindJobSeparator from "@/views/find-a-job/sections/FindJobSeparator";
 
+import styles from "@/layouts/Layout.module.scss";
+
 export default function ServiceGeneric({
   title,
   description,
@@ -22,7 +24,7 @@ export default function ServiceGeneric({
   extraTest,
 }) {
   return (
-    <main style={{ overflow: "hidden" }}>
+    <main className={styles.main} style={{ overflow: "hidden" }}>
       <HeroService
         title={title}
         description={description}

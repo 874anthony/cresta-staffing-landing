@@ -49,15 +49,11 @@
 }
 
 .hero__images img:nth-child(1) {
-  transform: translateY(-1.2rem);
-
-  @include animations.tilt-in-left-2;
+  @include animations.slide-right-2;
 }
 
 .hero__images img:nth-child(2) {
-  transform: translateY(1.2rem);
-
-  @include animations.tilt-in-right-2;
+  @include animations.slide-left-2;
 }
 
 // ========== MEDIA QUERIES ==========
@@ -107,5 +103,27 @@
   .hero__images img:nth-child(2) {
     transform: translateY(1.2rem) translateX(-0.25rem);
     animation: none !important;
+  }
+}
+
+@media screen and (min-width: 2200px) {
+  .hero {
+    padding-top: 10rem;
+    padding-inline: 3rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .hero__captionTitle {
+    font-size: 3.5rem;
+    line-height: 1.2;
+  }
+
+  .hero__captionText {
+    font-size: 1.25rem;
+  }
+
+  .hero__images {
+    height: 750px;
+    gap: 0.5rem;
   }
 }

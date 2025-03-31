@@ -10,6 +10,8 @@ import Testimonials from "@/views/shared/Testimonials";
 import ContactForm from "@/views/home/sections/ContactForm";
 import OurServicesHome from "@/views/shared/OurServices";
 
+import styles from "./Layout.module.scss";
+
 const testimonials = [
   {
     name: "Jose Patiño",
@@ -33,7 +35,12 @@ const testimonials = [
 
 export default function HomePage() {
   return (
-    <main style={{ overflow: "hidden" }}>
+    <main
+      className={styles.main}
+      style={{
+        overflow: "hidden",
+      }}
+    >
       <Hero />
 
       <MotionSection>

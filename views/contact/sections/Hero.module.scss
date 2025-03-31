@@ -4,6 +4,7 @@
 @use "../../../scss/utils/utils" as utils;
 @use "../../../scss/mixins/mixins" as mixins;
 @use "../../../scss/mixins/typography" as typographyMixins;
+@use "../../../scss/mixins/animations" as animations;
 
 .hero {
   @include mixins.hero-container;
@@ -49,6 +50,7 @@
 // =================== The form contact starts right here ===================
 
 .contact__container {
+  @include animations.slide-left;
   @include mixins.bg-gradient-primary($direction: to bottom right);
   font-family: "Inter", sans-serif;
   display: flex;
@@ -198,5 +200,27 @@
   .contact__terms {
     gap: 0.2rem;
     font-size: 0.75rem;
+  }
+}
+
+@media screen and (min-width: 2200px) {
+  .hero {
+    padding-top: 8rem;
+    padding-inline: 1rem;
+    padding-bottom: 8rem;
+  }
+
+  .hero__captionTitle {
+    font-size: 3.5rem;
+    line-height: 1.2;
+  }
+
+  .hero__captionText {
+    font-size: 1.25rem;
+  }
+
+  .hero__images {
+    height: 750px;
+    gap: 0.5rem;
   }
 }

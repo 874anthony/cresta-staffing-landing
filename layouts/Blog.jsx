@@ -6,9 +6,11 @@ import Posts from "@/views/blog/sections/Posts";
 // import SeparatorBlog from "@/views/blog/sections/Separator";
 import Separator from "@/views/shared/Separator";
 
+import styles from "./Layout.module.scss";
+
 export default function BlogPage() {
   return (
-    <main style={{ overflow: "hidden" }}>
+    <main className={styles.main} style={{ overflow: "hidden" }}>
       <HeroBlog />
 
       <MotionSection>

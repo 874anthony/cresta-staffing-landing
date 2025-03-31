@@ -57,8 +57,8 @@
   display: flex;
   flex-direction: column;
   // justify-content: space-between; // places topImages at the top and bottomImages at the bottom
-  height: 460px;
-  gap: 0.35rem;
+  height: 450px;
+  gap: 0.45rem;
 }
 
 .topImages,
@@ -153,12 +153,13 @@
 @media screen and (min-width: 2200px) {
   .hero {
     padding-top: 6rem;
-    padding-inline: 8rem;
+    padding-inline: 3rem;
     padding-bottom: 3.5rem;
   }
 
   .hero__captionTitle {
     font-size: 3.5rem;
+    line-height: 1.2;
   }
 
   .hero__captionText {
@@ -166,6 +167,7 @@
   }
 
   .hero__images {
-    height: 760px;
+    height: 750px;
+    gap: 0.5rem;
   }
 }

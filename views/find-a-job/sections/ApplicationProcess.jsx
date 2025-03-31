@@ -1,60 +1,62 @@
 "use client";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { useSwipeable } from "react-swipeable";
 import useIsMobile from "@/hooks/useIsMobile";
 
 import Button from "@/components/Button";
 import { CheckZoomIcon } from "@/components/icons/CheckZoomIcon";
 import styles from "./ApplicationProcess.module.scss";
+import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 
 const stepsData = [
   {
     title: "01",
     text: "Find your perfect fit & apply",
     description:
-      "We pre-screen candidates to ensure you see only the most qualified...",
+      "Explore and choose the role that best matches your skills, experience, and career goals.",
     icon: <CheckZoomIcon />,
   },
   {
     title: "02",
     text: "Letʼs connect!",
     description:
-      "We pre-screen candidates to ensure you see only the most qualified, saving you valuable time. Each professional is carefully vetted for the precise skills, experience, and expertise you require.",
+      "Apply for the role that excites you! If your skills match our needs, we’ll connect for a friendly chat to learn more about you and your career goals. Time to shine!",
     icon: <CheckZoomIcon />,
   },
   {
     title: "03",
     text: "Showcase you skills (test project)",
     description:
-      "We pre-screen candidates to ensure you see only the most qualified, saving you valuable time. Each professional is carefully vetted for the precise skills, experience, and expertise you require.",
+      "It's a win-win: you get to highlight your abilities through a test project, and we get to see your strengths.",
     icon: <CheckZoomIcon />,
   },
   {
     title: "04",
     text: "Meet the team: Interview & portfolio",
     description:
-      "Cresta takes care of all the arrangements, setting the stage for a successful...",
+      "You'll have an in-depth chat with the Hiring Manager about your experience, goals, and potential role at Cresta. Afterward, we'll guide you in refining your portfolio to impress our client.",
     icon: <CheckZoomIcon />,
   },
   {
     title: "05",
     text: "Meet the team: Client interview",
     description:
-      "Cresta takes care of all the arrangements, setting the stage for a successful...",
+      "You'll have the chance to connect directly with our client, make a great impression, and show them why you're the perfect fit for their team.",
     icon: <CheckZoomIcon />,
   },
   {
     title: "06",
     text: "Welcome aboard!",
     description:
-      "Cresta takes care of all the arrangements, setting the stage for a successful...",
+      "Congratulations! You're a match, get ready to embark on an exciting new chapter with Cresta. We can't wait to welcome you to the team!",
     icon: <CheckZoomIcon />,
   },
 ];
 
 export default function ApplicationProcess() {
-  const router = useRouter();
+  const smoothScroll = useSmoothScroll();
+  const weeklyJobs = "weekly-jobs";
+
   const isMobile = useIsMobile(475);
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -210,9 +212,7 @@ export default function ApplicationProcess() {
           fontSize: isMobile ? "0.875rem" : "1.275rem",
           padding: isMobile ? "0.6rem 2.4rem" : "1rem 6rem",
         }}
-        onClick={() => {
-          router.push("/find-a-job?scrollTo=weekly-jobs");
-        }}
+        onClick={() => smoothScroll(weeklyJobs)}
       >
         Apply Now
       </Button>

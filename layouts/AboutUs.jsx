@@ -8,9 +8,11 @@ import OurTeam from "@/views/about-us/sections/OurTeam";
 // import SeparatorAbout from "@/views/about-us/sections/Separator";
 import Separator from "@/views/shared/Separator";
 
+import styles from "./Layout.module.scss";
+
 export default function AboutUsPage() {
   return (
-    <main style={{ overflow: "hidden" }}>
+    <main className={styles.main} id style={{ overflow: "hidden" }}>
       <HeroAbout />
 
       <MotionSection>

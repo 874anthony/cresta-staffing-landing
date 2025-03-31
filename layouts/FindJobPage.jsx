@@ -15,6 +15,8 @@ import Testimonials from "@/views/shared/Testimonials";
 import FAQ from "@/views/shared/FAQ";
 import FindJobSeparator from "@/views/find-a-job/sections/FindJobSeparator";
 
+import styles from "./Layout.module.scss";
+
 const testimonials = [
   {
     name: "Jose Patiño",
@@ -52,7 +54,7 @@ export default function FindJobPage() {
   }, [scrollToSection]);
 
   return (
-    <main style={{ overflow: "hidden" }}>
+    <main className={styles.main} style={{ overflow: "hidden" }}>
       <HeroFindJob />
 
       <MotionSection>
