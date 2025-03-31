@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+
 import { useSwipeable } from "react-swipeable";
 import useIsMobile from "@/hooks/useIsMobile";
 
@@ -9,20 +11,13 @@ export default function Testimonials({
   title = "Real Stories, Real Results",
   testimonials = [],
 }) {
+  const pathname = usePathname();
   const isMobile = useIsMobile(475);
 
+  const isFindAJobPage = pathname === "/find-a-job";
+
   const slides = testimonials.flat().map((item) => [item]);
-
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  // useEffect(() => {
-  //   const { width } = window.screen;
-
-  //   if (width <= 475) {
-  //     const slidesMobile =
-  //     setSlides(slidesMobile);
-  //   }
-  // }, []);
 
   const swipeHandlers = useSwipeable({
     onSwipedLeft: () => {
@@ -64,11 +59,13 @@ export default function Testimonials({
                 <p className={styles.testimonials__cardText}>{text}</p>
 
                 <div className={styles.testimonials__cardAuthor}>
-                  <img
-                    src={avatarImage}
-                    alt="Author"
-                    className={styles.testimonials__cardAvatar}
-                  />
+                  {isFindAJobPage && (
+                    <img
+                      src={avatarImage}
+                      alt="Author"
+                      className={styles.testimonials__cardAvatar}
+                    />
+                  )}
                   <div className={styles.testimonials__cardAuthorInfo}>
                     <h5 className={styles.testimonials__cardAuthorName}>
                       {name}

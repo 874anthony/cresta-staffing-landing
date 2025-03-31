@@ -1,12 +1,12 @@
 "use client";
-import useIsMobile from "@/hooks/useIsMobile";
+import { useRouter } from "next/navigation";
 
 import Button from "@/components/Button";
 
 import styles from "./HeroFindJob.module.scss";
 
 export default function HeroFindJob() {
-  const isMobile = useIsMobile(475);
+  const router = useRouter();
 
   return (
     <section className={styles.hero}>
@@ -22,7 +22,11 @@ export default function HeroFindJob() {
         </p>
 
         <div className={styles.hero__captionCTA}>
-          <Button variant="primary" size="large">
+          <Button
+            variant="primary"
+            size="large"
+            onClick={() => router.push("/contact")}
+          >
             Get Expert Consultation
           </Button>
         </div>
