@@ -14,6 +14,10 @@ export default {
     overviewImage: "/assets/service/estimator/overview.png",
     overviewDescription:
       "A carefully chosen Estimator who is highly detail-oriented, analytical, and knowledgeable about construction processes and materials.",
+    servicesImages: Array.from(
+      { length: 7 },
+      (_, i) => `/assets/service/estimator/software/software-${i + 1}.png`
+    ),
   },
   bim: {
     title: "BIM Modelling",
@@ -30,6 +34,10 @@ export default {
     overviewImage: "/assets/service/estimator/overview.png",
     overviewDescription:
       "A competent BIM Modeler who was hand-selected from hundreds of qualified applicants through a rigorous selection process that meets our exclusive requirements.",
+    servicesImages: Array.from(
+      { length: 8 },
+      (_, i) => `/assets/service/bim/software/software-${i + 1}.png`
+    ),
   },
   construction: {
     title: "Construction Project Manager",
@@ -47,6 +55,10 @@ export default {
     overviewImage: "/assets/service/construction/overview.png",
     overviewDescription:
       "A qualified project manager who has been chosen among hundreds of talented applicants and can perform up to par with our high standard of management services.",
+    servicesImages: Array.from(
+      { length: 9 },
+      (_, i) => `/assets/service/construction/software/software-${i + 1}.png`
+    ),
   },
   "drafter-documentation": {
     title: "Design Drafter & Documentation",
@@ -65,6 +77,11 @@ export default {
     overviewImage: "/assets/service/drafter-documentation/overview.png",
     overviewDescription:
       "A highly skilled drafter and documentation specialist who has been hand-selected from a pool of talented candidates, demonstrating exceptional performance that meets our superior standards.",
+    servicesImages: Array.from(
+      { length: 9 },
+      (_, i) =>
+        `/assets/service/drafter-documentation/software/software-${i + 1}.png`
+    ),
   },
   "3d-renderer": {
     title: "3D Renderer",
@@ -82,6 +99,10 @@ export default {
     overviewImage: "/assets/service/3d-renderer/overview.png",
     overviewDescription:
       "A talented 3D Renderer who has been carefully vetted and meets our outstanding industry standards. He/She is proficient in 3D modeling and animation, is fast, efficient and able to work with complex details.",
+    servicesImages: Array.from(
+      { length: 10 },
+      (_, i) => `/assets/service/3d-renderer/software/software-${i + 1}.png`
+    ),
   },
   drafter: {
     title: "Drafter",
@@ -100,5 +121,9 @@ export default {
     overviewImage: "/assets/service/drafter/overview.png",
     overviewDescription:
       "A professional drafter who has been carefully selected among hundreds of talented others, and has been put to the test expertly performing up to par with our superior standards.",
+    servicesImages: Array.from(
+      { length: 11 },
+      (_, i) => `/assets/service/drafter/software/software-${i + 1}.png`
+    ),
   },
 };

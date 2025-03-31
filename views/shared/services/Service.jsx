@@ -18,6 +18,7 @@ export default function ServiceGeneric({
   overviewItems,
   overviewImage,
   overviewDescription,
+  servicesImages,
   extraTest,
 }) {
   return (
@@ -38,7 +39,7 @@ export default function ServiceGeneric({
       </MotionSection>
 
       <MotionSection>
-        <SoftwareUsedService />
+        <SoftwareUsedService servicesImages={servicesImages} />
       </MotionSection>
 
       <MotionSection delay={0.3}>

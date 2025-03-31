@@ -275,7 +275,7 @@
     }
 
     .service__cardContent {
-      transform: translateY(calc(100% - 6.5rem));
+      transform: translateY(calc(100% - 20rem));
 
       > *:not(.service__cardTitle) {
         opacity: 1;
@@ -287,10 +287,24 @@
 }
 
 .carouselSlide:nth-child(1) {
+  .service__card:nth-child(2):hover,
+  .service__card:nth-child(2):focus-within {
+    .service__cardContent {
+      transform: translateY(calc(100% - 17.5rem));
+    }
+  }
+
+  .service__card:nth-child(3):hover,
+  .service__card:nth-child(3):focus-within {
+    .service__cardContent {
+      transform: translateY(calc(100% - 22rem));
+    }
+  }
+
   .service__card:nth-child(4):hover,
   .service__card:nth-child(4):focus-within {
     .service__cardContent {
-      transform: translateY(calc(100% - 9.7rem));
+      transform: translateY(calc(100% - 25.5rem));
     }
   }
 }
@@ -299,7 +313,14 @@
   .service__card:nth-child(1):hover,
   .service__card:nth-child(1):focus-within {
     .service__cardContent {
-      transform: translateY(calc(100% - 7.5rem));
+      transform: translateY(calc(100% - 23rem));
+    }
+  }
+
+  .service__card:nth-child(2):hover,
+  .service__card:nth-child(2):focus-within {
+    .service__cardContent {
+      transform: translateY(calc(100% - 13rem));
     }
   }
 }

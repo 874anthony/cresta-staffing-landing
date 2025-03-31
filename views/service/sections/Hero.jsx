@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/navigation";
 import useIsMobile from "@/hooks/useIsMobile";
 
 import Button from "@/components/Button";
@@ -6,6 +7,7 @@ import Button from "@/components/Button";
 import styles from "./Hero.module.scss";
 
 export default function Hero({ title, description, heroImage, extraTest }) {
+  const router = useRouter();
   const isMobile = useIsMobile(475);
 
   return (
@@ -27,6 +29,7 @@ export default function Hero({ title, description, heroImage, extraTest }) {
               fontSize: isMobile ? "0.875rem" : "1.275rem",
               padding: isMobile ? "0.6rem 1.4rem" : "0.6rem 2.4rem",
             }}
+            onClick={() => router.push("/contact")}
           >
             Get Expert Consultation
           </Button>
@@ -38,6 +41,7 @@ export default function Hero({ title, description, heroImage, extraTest }) {
               fontSize: isMobile ? "0.875rem" : "1.275rem",
               padding: isMobile ? "0.6rem 1.4rem" : "0.6rem 2.4rem",
             }}
+            onClick={() => router.push("/find-a-job")}
           >
             Find a job
           </Button>

@@ -17,6 +17,7 @@ export default async function Service({ params }) {
     overviewImage,
     overviewDescription,
     extraTest,
+    servicesImages,
   } = serviceData;
 
   return (
@@ -27,6 +28,7 @@ export default async function Service({ params }) {
       overviewItems={overviewItems}
       overviewImage={overviewImage}
       overviewDescription={overviewDescription}
+      servicesImages={servicesImages}
       extraTest={extraTest}
     />
   );

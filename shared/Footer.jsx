@@ -82,6 +82,7 @@ const navigationData = [
     slug: "drafter",
   },
 ];
+
 export default function Footer() {
   const pathname = usePathname();
   const router = useRouter();
@@ -157,24 +158,24 @@ export default function Footer() {
 
         <ul className={styles.footer__navLinkList}>
           <li>
-            <a href="#">Home</a>
+            <NextLink href="/">Home</NextLink>
           </li>
           <li>
-            <a href="#">About</a>
+            <NextLink href="/about-us">About</NextLink>
           </li>
           <li>
-            <a href="#">Services</a>
+            <NextLink href="/services">Services</NextLink>
           </li>
           <li>
-            <a href="#">Find a job</a>
-          </li>
-
-          <li>
-            <a href="#">Blog</a>
+            <NextLink href="/find-a-job">Find a job</NextLink>
           </li>
 
           <li>
-            <a href="#">FAQ</a>
+            <NextLink href="/blog">Blog</NextLink>
+          </li>
+
+          <li>
+            <NextLink href="/faq">FAQ</NextLink>
           </li>
         </ul>
 
