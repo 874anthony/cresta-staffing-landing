@@ -103,24 +103,7 @@ export default function Navbar() {
             </li>
 
             <li className={styles.nav__item}>
-              <NextLink href="/about-us">
-                About{" "}
-                <span>
-                  <ChevronDown />
-                </span>
-              </NextLink>
-
-              <ul className={styles.nav__dropdown}>
-                <li>
-                  <a href="#">Service 1</a>
-                </li>
-                <li>
-                  <a href="#">Service 2</a>
-                </li>
-                <li>
-                  <a href="#">Service 3</a>
-                </li>
-              </ul>
+              <NextLink href="/about-us">About</NextLink>
             </li>
 
             <li className={styles.nav__item}>
@@ -129,6 +112,10 @@ export default function Navbar() {
 
             <li className={styles.nav__item}>
               <NextLink href="/faq">FAQ</NextLink>
+            </li>
+
+            <li className={styles.nav__item}>
+              <NextLink href="/contact">Contact Us</NextLink>
             </li>
           </ul>
 
@@ -193,7 +180,7 @@ export default function Navbar() {
                         className={styles.navigation__link}
                         href={`/services/${item.slug}`}
                         style={{
-                          fontSize: "1.8rem",
+                          fontSize: "1.5rem",
                         }}
                       >
                         {item.title}
@@ -257,6 +244,30 @@ export default function Navbar() {
                   <li className={styles.navigation__item}>
                     <NextLink className={styles.navigation__link} href="/faq">
                       FAQ
+                    </NextLink>
+                  </li>
+                  <li className={styles.navigation__item}>
+                    <NextLink
+                      className={styles.navigation__link}
+                      href="/contact"
+                    >
+                      Contact Us
+                    </NextLink>
+                  </li>
+                  <li className={styles.navigation__item}>
+                    <NextLink
+                      className={styles.navigation__link}
+                      href="/find-a-job"
+                    >
+                      Find a Job
+                    </NextLink>
+                  </li>
+                  <li className={styles.navigation__item}>
+                    <NextLink
+                      className={styles.navigation__link}
+                      href="/contact"
+                    >
+                      Get Expert Consultation
                     </NextLink>
                   </li>
                 </>

@@ -10,36 +10,6 @@
   @include mixins.centered-bg-white-section($gap: 0.5rem);
 }
 
-.faq__typeSelector {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.faq__typeSelectorButtons {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.faq__typeSelectorButton {
-  background: transparent;
-  border: 1px solid colors.$color-primary;
-  padding: 0.4rem 1.2rem;
-  border-radius: variables.$rounded-sm;
-  font-size: typography.$font-size-sm;
-  font-weight: 500;
-  color: colors.$text-color-dark-blue;
-  cursor: pointer;
-
-  &.active,
-  &:hover {
-    background: colors.$color-primary;
-    color: colors.$text-color-white;
-  }
-}
-
 .faqTitle {
   @include typographyMixins.title($color: colors.$color-primary);
 }
@@ -50,9 +20,28 @@
   color: colors.$text-color-dark-blue;
 }
 
-.faqTitle,
-.faqText {
-  align-self: flex-start;
+.faq__typeSelectorButtons {
+  margin-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.faq__typeSelectorButton {
+  background: transparent;
+  border: 1px solid colors.$color-primary;
+  padding: 0.8rem 1.6rem;
+  border-radius: variables.$rounded-sm;
+  font-size: typography.$font-size-md;
+  font-weight: 600;
+  color: colors.$text-color-dark-blue;
+  cursor: pointer;
+
+  &.active,
+  &:hover {
+    background: colors.$color-primary;
+    color: colors.$text-color-white;
+  }
 }
 
 .faqList {
@@ -194,9 +183,14 @@
     padding-top: 6rem;
   }
 
-  .faq__typeSelector {
-    flex-direction: column-reverse;
-    gap: 1rem;
+  .faq__typeSelectorButtons {
+    gap: 0.5rem;
+  }
+
+  .faq__typeSelectorButton {
+    padding: 0.4rem 0.8rem;
+    font-weight: 600;
+    font-size: 0.875rem;
   }
 
   .faqTitle {

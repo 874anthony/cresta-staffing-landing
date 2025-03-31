@@ -6,7 +6,6 @@ export default {
       answer:
         "A BPO (Business Process Outsourcing) company is a firm that handles business operations and tasks for other companies. These tasks can include customer service, HR, accounting, IT support, and more. BPOs help businesses reduce costs and improve efficiency by outsourcing non-core functions to specialized service providers.",
     },
-
     {
       question: "What is a BPO 2?",
       answer:
