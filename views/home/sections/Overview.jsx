@@ -1,8 +1,9 @@
 "use client";
+import useIsMobile from "@/hooks/useIsMobile";
+import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 
 import Button from "@/components/Button";
 import styles from "./Overview.module.scss";
-import useIsMobile from "@/hooks/useIsMobile";
 
 const CheckIcon = () => (
   <svg
@@ -23,6 +24,8 @@ const CheckIcon = () => (
 
 export default function Overview() {
   const isMobile = useIsMobile(475);
+  const smoothScroll = useSmoothScroll();
+  const homeExpertConsultation = "home-expert-consultation";
 
   return (
     <section className={styles.overview}>
@@ -79,6 +82,7 @@ export default function Overview() {
               alignSelf: isMobile ? "center" : "",
               fontSize: isMobile ? "0.875rem" : "",
             }}
+            onClick={() => smoothScroll(homeExpertConsultation)}
           >
             Get Expert Consultation
           </Button>

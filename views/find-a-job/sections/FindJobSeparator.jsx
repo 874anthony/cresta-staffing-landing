@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/navigation";
 import useIsMobile from "@/hooks/useIsMobile";
 
 import Button from "@/components/Button";
@@ -6,6 +7,7 @@ import Button from "@/components/Button";
 import styles from "./FindJobSeparator.module.scss";
 
 export default function FindJobSeparator() {
+  const router = useRouter();
   const isMobile = useIsMobile(475);
 
   return (
@@ -24,6 +26,9 @@ export default function FindJobSeparator() {
         style={{
           fontWeight: "bold",
           fontSize: isMobile ? "0.875rem" : "1.275rem",
+        }}
+        onClick={() => {
+          router.push("/contact");
         }}
       >
         Let&apos;s get started

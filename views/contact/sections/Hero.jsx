@@ -1,4 +1,6 @@
 "use client";
+import NextLink from "next/link";
+
 import useIsMobile from "@/hooks/useIsMobile";
 
 import Button from "@/components/Button";
@@ -28,6 +30,10 @@ export default function Hero() {
             alignSelf: isMobile ? "center" : "flex-start",
             fontSize: isMobile ? ".875rem" : "1rem",
           }}
+          onClick={() => {
+            const inputFullname = document.getElementById("fullName");
+            inputFullname?.focus();
+          }}
         >
           Solve challenges now
         </Button>
@@ -38,9 +44,12 @@ export default function Hero() {
           </p>
           <p className={styles.hero__captionContactText}>
             To apply for job opportunities,{" "}
-            <a className={styles.hero__captionContactLink} href="#">
+            <NextLink
+              className={styles.hero__captionContactLink}
+              href="/find-a-job?scrollTo=weekly-jobs"
+            >
               click here.
-            </a>
+            </NextLink>
           </p>
         </div>
       </div>
@@ -56,13 +65,13 @@ export default function Hero() {
 
         <form className={styles.contact__form}>
           <div className={styles.contact__formGroup}>
-            <label htmlFor="firstName">First name</label>
-            <input type="text" id="firstName" name="firstName" />
+            <label htmlFor="fullName">Full name</label>
+            <input type="text" id="fullName" name="fullName" />
           </div>
 
           <div className={styles.contact__formGroup}>
-            <label htmlFor="lastName">Last name</label>
-            <input type="text" id="lastName" name="lastName" />
+            <label htmlFor="companyName">Company name</label>
+            <input type="text" id="companyName" name="companyName" />
           </div>
 
           <div className={styles.contact__formGroup}>

@@ -18,15 +18,30 @@ export default function Separator() {
           For questions about our services, talent pool, or process, contact us.
         </p>
 
-        <Button
-          variant="secondary"
-          size="large"
+        <a
+          href="mailto:office@crestastaffing.com"
           style={{
+            fontFamily: "'Inter', sans-serif",
+            padding: "0.6rem 2.4rem",
+            borderRadius: "9999px",
             fontSize: isMobile ? "0.875rem" : "1.25rem",
+            fontWeight: "500",
+            border: 0,
+            cursor: "pointer",
+            transition: "transform 0.3s ease",
+            backgroundColor: "#ffc907",
+            textDecoration: "none",
+            color: "#2a3a42",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = "scale(1.05)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = "scale(1)";
           }}
         >
           office@crestastaffing.com
-        </Button>
+        </a>
       </div>
 
       <div className={styles.separatorSection}>

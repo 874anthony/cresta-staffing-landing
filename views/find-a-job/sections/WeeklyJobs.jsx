@@ -94,7 +94,7 @@ export default function WeeklyJobs() {
   };
 
   return (
-    <section className={styles.weekly__jobs}>
+    <section className={styles.weekly__jobs} id="weekly-jobs">
       <h3 className={styles.weekly__jobsTitle}>Jobs of the week</h3>
 
       <p className={styles.weekly__subCaption}>

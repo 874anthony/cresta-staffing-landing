@@ -3,7 +3,8 @@ import MotionSection from "@/components/MotionSection";
 
 import HeroBlog from "@/views/blog/sections/Hero";
 import Posts from "@/views/blog/sections/Posts";
-import SeparatorBlog from "@/views/blog/sections/Separator";
+// import SeparatorBlog from "@/views/blog/sections/Separator";
+import Separator from "@/views/shared/Separator";
 
 export default function BlogPage() {
   return (
@@ -15,7 +16,8 @@ export default function BlogPage() {
       </MotionSection>
 
       <MotionSection delay={0.3}>
-        <SeparatorBlog />
+        {/* <SeparatorBlog /> */}
+        <Separator />
       </MotionSection>
     </main>
   );

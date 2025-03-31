@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { useSwipeable } from "react-swipeable";
 import useIsMobile from "@/hooks/useIsMobile";
 
@@ -53,6 +54,7 @@ const stepsData = [
 ];
 
 export default function ApplicationProcess() {
+  const router = useRouter();
   const isMobile = useIsMobile(475);
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -207,6 +209,9 @@ export default function ApplicationProcess() {
           marginTop: "2rem",
           fontSize: isMobile ? "0.875rem" : "1.275rem",
           padding: isMobile ? "0.6rem 2.4rem" : "1rem 6rem",
+        }}
+        onClick={() => {
+          router.push("/find-a-job?scrollTo=weekly-jobs");
         }}
       >
         Apply Now

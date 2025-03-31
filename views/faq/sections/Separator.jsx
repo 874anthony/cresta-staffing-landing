@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/navigation";
 import useIsMobile from "@/hooks/useIsMobile";
 
 import Button from "@/components/Button";
@@ -6,6 +7,7 @@ import Button from "@/components/Button";
 import styles from "./Separator.module.scss";
 
 export default function Separator() {
+  const router = useRouter();
   const isMobile = useIsMobile(475);
 
   return (
@@ -24,6 +26,7 @@ export default function Separator() {
           fontWeight: isMobile ? "500" : "bold",
           fontSize: isMobile ? ".875rem" : "1.125rem",
         }}
+        onClick={() => router.push("/contact")}
       >
         Get Expert Consultation
       </Button>

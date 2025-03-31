@@ -26,13 +26,13 @@ export default function ContactForm() {
 
         <form className={styles.contact__form}>
           <div className={styles.contact__formGroup}>
-            <label htmlFor="firstName">First name</label>
-            <input type="text" id="firstName" name="firstName" />
+            <label htmlFor="fullName">Full name</label>
+            <input type="text" id="fullName" name="fullName" />
           </div>
 
           <div className={styles.contact__formGroup}>
-            <label htmlFor="lastName">Last name</label>
-            <input type="text" id="lastName" name="lastName" />
+            <label htmlFor="companyName">Company name</label>
+            <input type="text" id="companyName" name="companyName" />
           </div>
 
           <div className={styles.contact__formGroup}>

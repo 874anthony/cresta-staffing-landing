@@ -4,10 +4,12 @@ import MotionSection from "@/components/MotionSection";
 import HeroService from "@/views/service/sections/Hero";
 import OverviewService from "@/views/service/sections/Overview";
 import SoftwareUsedService from "../SoftwareUsed";
-import SeparatorChallengeService from "@/views/service/sections/SeparatorChallenge";
+// import SeparatorChallengeService from "@/views/service/sections/SeparatorChallenge";
 import OurServicesIndividual from "../OurServices";
 import FAQ from "../FAQ";
-import JobAlert from "../JobAlert";
+// import JobAlert from "../JobAlert";
+import Separator from "../Separator";
+import FindJobSeparator from "@/views/find-a-job/sections/FindJobSeparator";
 
 export default function ServiceGeneric({
   title,
@@ -40,7 +42,8 @@ export default function ServiceGeneric({
       </MotionSection>
 
       <MotionSection delay={0.3}>
-        <SeparatorChallengeService />
+        {/* <SeparatorChallengeService /> */}
+        <Separator />
       </MotionSection>
 
       <MotionSection>
@@ -52,7 +55,8 @@ export default function ServiceGeneric({
       </MotionSection>
 
       <MotionSection delay={0.3}>
-        <JobAlert />
+        {/* <JobAlert /> */}
+        <FindJobSeparator />
       </MotionSection>
     </main>
   );

@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 import Button from "@/components/Button";
 import { FaqIconClosed, FaqIconOpen } from "@/components/icons/faq/FaqIcons";
@@ -24,6 +25,8 @@ const ChevronRight = () => (
 );
 
 export default function FAQ({ bgColor = "gray", rounded = false }) {
+  const router = useRouter();
+
   // Track which section is selected; default to the first one
   const sectionKeys = Object.keys(faqData);
   const [selectedSection, setSelectedSection] = useState(sectionKeys[0]);
@@ -110,7 +113,9 @@ export default function FAQ({ bgColor = "gray", rounded = false }) {
       <div className={styles.faq__CTA}>
         <span className={styles.faq__CTAText}>Got any more questions?</span>
 
-        <Button variant="secondary">Get in touch</Button>
+        <Button variant="secondary" onClick={() => router.push("/contact")}>
+          Get in touch
+        </Button>
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 "use client";
 import NextLink from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import useIsMobile from "@/hooks/useIsMobile";
 
 import Button from "@/components/Button";
@@ -83,8 +83,9 @@ const navigationData = [
   },
 ];
 export default function Footer() {
-  const isMobile = useIsMobile();
   const pathname = usePathname();
+  const router = useRouter();
+  const isMobile = useIsMobile();
 
   const isMobileAndServicesPage = isMobile && pathname === "/services";
 
@@ -108,6 +109,7 @@ export default function Footer() {
               fontSize: isMobile ? "0.85rem" : "1.125rem",
               padding: isMobile ? "0.5rem 1.6rem" : "0.75rem 1.5rem",
             }}
+            onClick={() => router.push("/contact")}
           >
             Hire top talent
           </Button>
