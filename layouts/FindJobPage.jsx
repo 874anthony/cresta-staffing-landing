@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 
 import MotionSection from "@/components/MotionSection";
@@ -54,49 +54,51 @@ export default function FindJobPage() {
   }, [scrollToSection]);
 
   return (
-    <main className={styles.main} style={{ overflow: "hidden" }}>
-      <HeroFindJob />
+    <Suspense fallback={<div>Loading...</div>}>
+      <main className={styles.main} style={{ overflow: "hidden" }}>
+        <HeroFindJob />
 
-      <MotionSection>
-        <ApplicationProcess />
-      </MotionSection>
+        <MotionSection>
+          <ApplicationProcess />
+        </MotionSection>
 
-      <MotionSection>
-        <OurServicesJob
-          title="Whatʼs your professional focus?"
-          description="Your skills. The right job. Letʼs construct your success together!"
-          subCaption="Professional services"
-          backgroundColor="white"
-        />
-      </MotionSection>
+        <MotionSection>
+          <OurServicesJob
+            title="Whatʼs your professional focus?"
+            description="Your skills. The right job. Letʼs construct your success together!"
+            subCaption="Professional services"
+            backgroundColor="white"
+          />
+        </MotionSection>
 
-      <MotionSection delay={0.3}>
-        {/* <JobAlert roundedTopCorner="true" /> */}
-        <Separator />
-      </MotionSection>
+        <MotionSection delay={0.3}>
+          {/* <JobAlert roundedTopCorner="true" /> */}
+          <Separator />
+        </MotionSection>
 
-      <MotionSection>
-        <BenefitsJob />
-      </MotionSection>
+        <MotionSection>
+          <BenefitsJob />
+        </MotionSection>
 
-      <MotionSection>
-        <WeeklyJobs />
-      </MotionSection>
+        <MotionSection>
+          <WeeklyJobs />
+        </MotionSection>
 
-      <MotionSection>
-        <Testimonials
-          title="Voices from our team"
-          testimonials={testimonials}
-        />
-      </MotionSection>
+        <MotionSection>
+          <Testimonials
+            title="Voices from our team"
+            testimonials={testimonials}
+          />
+        </MotionSection>
 
-      <MotionSection>
-        <FAQ />
-      </MotionSection>
+        <MotionSection>
+          <FAQ />
+        </MotionSection>
 
-      <MotionSection delay={0.3}>
-        <FindJobSeparator />
-      </MotionSection>
-    </main>
+        <MotionSection delay={0.3}>
+          <FindJobSeparator />
+        </MotionSection>
+      </main>
+    </Suspense>
   );
 }
