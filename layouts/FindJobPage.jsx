@@ -19,22 +19,22 @@ import styles from "./Layout.module.scss";
 
 const testimonials = [
   {
-    name: "Jose Patiño",
-    position: "Recruitment Coordinator",
+    name: "Mario Pinzón",
+    position: "Estimator",
     avatarImage: "/assets/home/testimonials/team_1.jpg",
-    text: "We were in a bind—our lead structural engineer resigned mid-project, and deadlines were looming. Cresta stepped in, understood our needs, and within days, we had a top-tier remote engineer onboard. Not only did we avoid costly delays, but we also finished ahead of schedule. Cresta made it effortless!",
+    text: "Working at Cresta has been a fantastic experience both professionally and personally. I've had the opportunity to grow and learn in an international work environment, while also having the support of a team always ready to assist in any situation. Additionally, the flexibility of working from home has greatly contributed to achieving a better work-life balance.",
   },
   {
-    name: "Sara Correa",
-    position: "Recruitment Coordinator",
+    name: "Jesus Perez",
+    position: "Fire Protection Engineer",
     avatarImage: "/assets/home/testimonials/team_1.jpg",
-    text: "When we won a big commercial project, we needed experienced architects fast. Our internal hiring process would have taken months, but Cresta provided thoroughly screened candidates within a week. Thanks to them, we hit the ground running without missing a beat!",
+    text: "Working at Cresta has been an incredible experience that has significantly contributed to my career growth. Since joining the team, I have had the opportunity to face new challenges, learn from a group of highly skilled people, and improve my abilities in key areas. The work culture at Cresta has allowed me to develop as a professional, gain a broader perspective of my field, and strengthen my ability to make strategic decisions. Without a doubt, my time at Cresta has been fundamental to my evolution, and I am grateful for everything I have learned here.",
   },
   {
-    name: "Jose Patiño",
-    position: "Recruitment Coordinator",
+    name: "Sara Polo",
+    position: "Architect Project Manager",
     avatarImage: "/assets/home/testimonials/team_1.jpg",
-    text: "As a growing company, we didn’t have time to sift through hundreds of resumes or conduct endless interviews. Cresta handled it all—within days, they matched us with a skilled Project Manager architect who integrated seamlessly into our team. Hiring has never been this easy!",
+    text: "From the very beginning, Cresta made the hiring process feel human and thoughtful, valuing my professional experience. Since joining, they have continuously supported me, listened to me, and followed my growth.orking with Cresta has been a truly rewarding experience where I feel valued and appreciated.",
   },
 ];
 

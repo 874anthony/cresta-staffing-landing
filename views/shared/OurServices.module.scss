@@ -323,6 +323,20 @@
       transform: translateY(calc(100% - 13rem));
     }
   }
+
+  .service__card:nth-child(3):hover,
+  .service__card:nth-child(3):focus-within {
+    .service__cardContent {
+      transform: translateY(calc(100% - 22rem));
+    }
+  }
+
+  .service__card:nth-child(4):hover,
+  .service__card:nth-child(4):focus-within {
+    .service__cardContent {
+      transform: translateY(calc(100% - 18.5rem));
+    }
+  }
 }
 
 .service__card:focus-within {
@@ -479,6 +493,20 @@
 
     .service__card:nth-child(2):hover,
     .service__card:nth-child(2):focus-within {
+      .service__cardContent {
+        transform: translateY(calc(100% - 20rem));
+      }
+    }
+
+    .service__card:nth-child(3):hover,
+    .service__card:nth-child(3):focus-within {
+      .service__cardContent {
+        transform: translateY(calc(100% - 22rem));
+      }
+    }
+
+    .service__card:nth-child(4):hover,
+    .service__card:nth-child(4):focus-within {
       .service__cardContent {
         transform: translateY(calc(100% - 20rem));
       }

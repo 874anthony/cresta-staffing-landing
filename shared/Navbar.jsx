@@ -52,6 +52,14 @@ const navigationData = [
     title: "Drafter",
     slug: "drafter",
   },
+  {
+    title: "Expediator",
+    slug: "expediator",
+  },
+  {
+    title: "Executive Assistant",
+    slug: "assistant",
+  },
 ];
 
 export default function Navbar() {

@@ -126,4 +126,37 @@ export default {
       (_, i) => `/assets/service/drafter/software/software-${i + 1}.png`
     ),
   },
+  expediator: {
+    title: "Expeditor",
+    description:
+      "Our skilled architects excel in construction administration, building codes, and permit processes. They have the expertise to review and manage complex architectural drawings with precision while ensuring thorough documentation. With strong organizational, communication, and problem-solving skills, our experts deliver efficient and reliable project oversight.",
+    heroImage: "/assets/service/drafter/hero.png",
+    overviewItems: [
+      "Ensure compliance with NYC building codes and zoning laws.",
+      "Manage the filing process efficiently.",
+      "Review plans and coordinate with stakeholders.",
+      "Maintain organized documentation for high-value projects.",
+      "Tech-savvy and proficient in CAD software (AutoCAD, Revit).",
+    ],
+    // overviewImage: "/assets/service/expediator/overview.png",
+    overviewImage: "/assets/service/drafter/overview.png",
+    overviewDescription:
+      "Selected from a competitive pool, our architect project coordinator, specializing in construction administration and complex drawings, ensures precise, efficient, and reliable project delivery that meets our rigorous management standards.",
+  },
+  assistant: {
+    title: "Executive Assistant",
+    description:
+      "Our Executive Assistant manages the daily operations of a fast-paced design and construction environment. They excel at coordinating multiple teams and ensuring seamless communication while maintaining precise oversight of administrative processes.",
+    heroImage: "/assets/service/drafter/hero.png",
+    overviewItems: [
+      "Project coordination and workflow to meet deadlines.",
+      "Remote office administration and task organization.",
+      "Payroll processing, invoicing, and financial tracking.",
+      "Strong customer service and client communication.",
+      "Scheduling and team coordination for seamless operations.",
+    ],
+    overviewImage: "/assets/service/drafter/overview.png",
+    overviewDescription:
+      "Chosen for excellence, our executive assistant delivers precise administrative support and team coordination in a dynamic design and construction environment.",
+  },
 };

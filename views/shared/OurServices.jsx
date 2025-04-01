@@ -51,12 +51,14 @@ export default function OurServices({
         link: "/services/estimator",
       },
       {
-        title: "Estimator",
-        text: "Skilled 3D renderers with technical and creative expertise.",
+        title: "Expediator",
+        text: "Our skilled architects excel in construction administration, building codes, and permit processes. They have the expertise to review and manage complex architectural drawings with precision while ensuring thorough documentation.",
+        link: "/services/expeditor",
       },
       {
-        title: "Estimator",
-        text: "Skilled 3D renderers with technical and creative expertise.",
+        title: "Executive Assistant",
+        text: "They excel at coordinating multiple teams and ensuring seamless communication while maintaining precise oversight of administrative processes.",
+        link: "/services/assistant",
       },
     ],
   ];
