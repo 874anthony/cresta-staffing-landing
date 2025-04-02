@@ -12,7 +12,7 @@ import styles from "./Layout.module.scss";
 
 export default function AboutUsPage() {
   return (
-    <main className={styles.main} id style={{ overflow: "hidden" }}>
+    <main className={styles.main} style={{ overflow: "hidden" }}>
       <HeroAbout />
 
       <MotionSection>
