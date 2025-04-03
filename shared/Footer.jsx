@@ -191,7 +191,11 @@ export default function Footer() {
           className={`${styles.footer__navLinkList} ${styles.footer__social}`}
         >
           <li>
-            <a href="#">
+            <a
+              href="https://www.linkedin.com/company/crestastaffing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <LinkedinIcon />
             </a>
           </li>

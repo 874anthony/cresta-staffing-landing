@@ -3,6 +3,17 @@ import { notFound } from "next/navigation";
 
 import services from "@/data/services";
 
+export async function generateMetadata({ params }) {
+  const { service } = await params;
+
+  const serviceTitle = service.charAt(0).toUpperCase() + service.slice(1);
+  const title = `${serviceTitle} job - Cresta Staffing`;
+
+  return {
+    title,
+  };
+}
+
 export default async function Service({ params }) {
   const { service } = await params;
   const serviceData = services[service];

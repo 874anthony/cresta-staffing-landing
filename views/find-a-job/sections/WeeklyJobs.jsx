@@ -37,35 +37,6 @@ const jobs = [
       ],
     },
   ],
-  [
-    {
-      title: "Full Stack Web Developer",
-      location: "Remote (Colombia)",
-      requirements: [
-        "A Bachelorʼs Degree in Software Engineering, Systems Engineering, or a related field.",
-        "Proficiency in front-end technologies (HTML, CSS, JavaScript)",
-        "Knowledge of CMS platforms such as WordPress, Webflow, or custom-built solutions.",
-      ],
-    },
-    {
-      title: "Senior Architect Lead",
-      location: "Remote (Colombia)",
-      requirements: [
-        "A Bachelorʼs Degree in Software Engineering, Systems Engineering, or a related field.",
-        "Proficiency in front-end technologies (HTML, CSS, JavaScript)",
-        "Knowledge of CMS platforms such as WordPress, Webflow, or custom-built solutions.",
-      ],
-    },
-    {
-      title: "Full Stack Web Developer",
-      location: "Remote (Colombia)",
-      requirements: [
-        "A Bachelorʼs Degree in Software Engineering, Systems Engineering, or a related field.",
-        "Proficiency in front-end technologies (HTML, CSS, JavaScript)",
-        "Knowledge of CMS platforms such as WordPress, Webflow, or custom-built solutions.",
-      ],
-    },
-  ],
 ];
 
 export default function WeeklyJobs() {

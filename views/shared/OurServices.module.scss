@@ -275,7 +275,7 @@
     }
 
     .service__cardContent {
-      transform: translateY(calc(100% - 20rem));
+      transform: translateY(calc(100% - 8.5rem));
 
       > *:not(.service__cardTitle) {
         opacity: 1;
@@ -290,21 +290,21 @@
   .service__card:nth-child(2):hover,
   .service__card:nth-child(2):focus-within {
     .service__cardContent {
-      transform: translateY(calc(100% - 17.5rem));
+      transform: translateY(calc(100% - 8.5rem));
     }
   }
 
   .service__card:nth-child(3):hover,
   .service__card:nth-child(3):focus-within {
     .service__cardContent {
-      transform: translateY(calc(100% - 22rem));
+      transform: translateY(calc(100% - 11rem));
     }
   }
 
   .service__card:nth-child(4):hover,
   .service__card:nth-child(4):focus-within {
     .service__cardContent {
-      transform: translateY(calc(100% - 25.5rem));
+      transform: translateY(calc(100% - 12rem));
     }
   }
 }
@@ -313,28 +313,28 @@
   .service__card:nth-child(1):hover,
   .service__card:nth-child(1):focus-within {
     .service__cardContent {
-      transform: translateY(calc(100% - 23rem));
+      transform: translateY(calc(100% - 12rem));
     }
   }
 
   .service__card:nth-child(2):hover,
   .service__card:nth-child(2):focus-within {
     .service__cardContent {
-      transform: translateY(calc(100% - 13rem));
+      transform: translateY(calc(100% - 8.5rem));
     }
   }
 
   .service__card:nth-child(3):hover,
   .service__card:nth-child(3):focus-within {
     .service__cardContent {
-      transform: translateY(calc(100% - 22rem));
+      transform: translateY(calc(100% - 11rem));
     }
   }
 
   .service__card:nth-child(4):hover,
   .service__card:nth-child(4):focus-within {
     .service__cardContent {
-      transform: translateY(calc(100% - 18.5rem));
+      transform: translateY(calc(100% - 19rem));
     }
   }
 }
@@ -457,28 +457,28 @@
     .service__card:nth-child(1):hover,
     .service__card:nth-child(1):focus-within {
       .service__cardContent {
-        transform: translateY(calc(100% - 29rem));
+        transform: translateY(calc(100% - 15rem));
       }
     }
 
     .service__card:nth-child(2):hover,
     .service__card:nth-child(2):focus-within {
       .service__cardContent {
-        transform: translateY(calc(100% - 24.5rem));
+        transform: translateY(calc(100% - 15rem));
       }
     }
 
     .service__card:nth-child(3):hover,
     .service__card:nth-child(3):focus-within {
       .service__cardContent {
-        transform: translateY(calc(100% - 31rem));
+        transform: translateY(calc(100% - 15rem));
       }
     }
 
     .service__card:nth-child(4):hover,
     .service__card:nth-child(4):focus-within {
       .service__cardContent {
-        transform: translateY(calc(100% - 36rem));
+        transform: translateY(calc(100% - 22rem));
       }
     }
   }
@@ -487,28 +487,28 @@
     .service__card:nth-child(1):hover,
     .service__card:nth-child(1):focus-within {
       .service__cardContent {
-        transform: translateY(calc(100% - 39rem));
+        transform: translateY(calc(100% - 25rem));
       }
     }
 
     .service__card:nth-child(2):hover,
     .service__card:nth-child(2):focus-within {
       .service__cardContent {
-        transform: translateY(calc(100% - 20rem));
+        transform: translateY(calc(100% - 13rem));
       }
     }
 
     .service__card:nth-child(3):hover,
     .service__card:nth-child(3):focus-within {
       .service__cardContent {
-        transform: translateY(calc(100% - 22rem));
+        transform: translateY(calc(100% - 16rem));
       }
     }
 
     .service__card:nth-child(4):hover,
     .service__card:nth-child(4):focus-within {
       .service__cardContent {
-        transform: translateY(calc(100% - 20rem));
+        transform: translateY(calc(100% - 28rem));
       }
     }
   }

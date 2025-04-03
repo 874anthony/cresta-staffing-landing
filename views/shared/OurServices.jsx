@@ -20,39 +20,39 @@ export default function OurServices({
     [
       {
         title: "Drafter",
-        text: "We deliver accurate, code-compliant CAD drawings that align with your goals. Our skilled drafters seamlessly translate your specifications into detailed technical plans, ensuring every standard and regulation is met.",
+        text: "Drafting accurate, efficient and professional drafts to ensure meticulous attention to detail.",
         link: "/services/drafter",
       },
       {
         title: "3D Renderer",
-        text: "Masters of their craft, they bring not just technical proficiency but also a creative spark to every project, delivering stunning visuals that capture the true essence of your design.",
+        text: "Transforming concepts into vivid realizations will instantly bring them closer to reality.",
         link: "/services/3d-renderer",
       },
       {
         title: "BIM Modeling",
-        text: "Our BIM experts use Revit and top software to create precise, coordinated digital models of buildings and infrastructure. With deep expertise in architectural, structural, and MEP systems, they ensure accuracy in every project detail.",
+        text: "Creating streamlined modeling for clear examination of every architectural and structural aspect.",
         link: "/services/bim",
       },
       {
         title: "Construction Project Manager",
-        text: "Our skilled construction project managers keep every stakeholder—clients, architects, engineers, and contractors—aligned through clear communication and strategic coordination. Build with confidence. Deliver with precision!",
+        text: "Managing your construction project in a more efficient, successful and seamless manner.",
         link: "/services/construction",
       },
     ],
     [
       {
         title: "Design Drafter & Documentation",
-        text: "Our expert drafters deliver precise CAD and Revit drawings for architectural, structural, and mechanical projects. From floor plans to structural layouts, they ensure accuracy, compliance, and clear design intent.",
+        text: "Detailing design drawings and documentation based on specifications from interior designers.",
         link: "/services/drafter-documentation",
       },
       {
         title: "Estimator",
-        text: "Our expert estimators deliver precise, reliable cost estimates by interpreting complex blueprints and staying updated on market costs.",
+        text: "Specify accurate cost assessment and plan details by analyzing project specifications.",
         link: "/services/estimator",
       },
       {
         title: "Expediator",
-        text: "Our skilled architects excel in construction administration, building codes, and permit processes. They have the expertise to review and manage complex architectural drawings with precision while ensuring thorough documentation.",
+        text: "Our skilled architects excel in construction administration, building codes, and permit processes.",
         link: "/services/expeditor",
       },
       {

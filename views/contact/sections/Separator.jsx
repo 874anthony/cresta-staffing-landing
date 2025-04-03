@@ -51,7 +51,12 @@ export default function Separator() {
         </p>
 
         <div className={styles.socials}>
-          <a className={styles.socialsItem}>
+          <a
+            className={styles.socialsItem}
+            href="https://www.linkedin.com/company/crestastaffing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <LinkedinIcon />
           </a>
           <a className={styles.socialsItem}>

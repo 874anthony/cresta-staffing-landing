@@ -106,7 +106,7 @@
 .carouselTrack {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 200%; // Adjust this if the number of slides changes (100% * total slides)
+  width: 100%; // Adjust this if the number of slides changes (100% * total slides)
 }
 
 .carouselSlide {
