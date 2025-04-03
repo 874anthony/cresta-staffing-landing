@@ -1,9 +1,12 @@
+"use client";
+import { Suspense } from "react";
+
 import FindJobPage from "@/layouts/FindJobPage";
 
-export const metadata = {
-  title: "Find a Job - Cresta Staffing",
-};
-
 export default function FindJob() {
-  return <FindJobPage />;
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <FindJobPage />;
+    </Suspense>
+  );
 }

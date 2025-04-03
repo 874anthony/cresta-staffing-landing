@@ -44,6 +44,8 @@ export default function FindJobPage() {
   const scrollToSection = searchParams.get("scrollTo");
 
   useEffect(() => {
+    document.title = "Find a Job - Cresta Staffing";
+
     // Smooth scroll to the section if it exists in the URL
     if (scrollToSection) {
       const section = document.getElementById(scrollToSection);
