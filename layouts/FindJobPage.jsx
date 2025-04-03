@@ -54,7 +54,7 @@ export default function FindJobPage() {
   }, [scrollToSection]);
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense>
       <main className={styles.main} style={{ overflow: "hidden" }}>
         <HeroFindJob />
 
