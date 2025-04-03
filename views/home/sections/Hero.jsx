@@ -96,32 +96,44 @@ export default function Hero() {
             />
           </div>
         ) : (
-          <div className={styles.topImages}>
-            {topImages.map((src, index) => (
-              <img
-                key={`top-${index}`}
-                src={src}
-                alt="AEC Staffing Agency"
-                className={`
-                ${styles.top} ${index === topIndex ? styles.active : ""}
-              `}
-              />
-            ))}
-          </div>
-        )}
-        <div className={styles.bottomImages}>
-          {bottomImages.map((src, index) => (
-            <img
-              key={`bottom-${index}`}
-              src={src}
-              alt="AEC Staffing Agency"
-              className={`
-                ${styles.bottom} ${index === bottomIndex ? styles.active : ""}
-              `}
+          <video autoPlay loop muted className={styles.video}>
+            <source
+              src="/assets/home/website_home_animation.mp4"
+              type="video/mp4"
             />
-          ))}
-        </div>
+            Your browser does not support the video tag.
+          </video>
+        )}
       </div>
     </section>
   );
 }
+
+// <>
+// <div className={styles.topImages}>
+//   {topImages.map((src, index) => (
+//     <img
+//       key={`top-${index}`}
+//       src={src}
+//       alt="AEC Staffing Agency"
+//       className={` ${styles.top} ${
+//         index === topIndex ? styles.active : ""
+//       }
+//   `}
+//     />
+//   ))}
+// </div>
+
+// <div className={styles.bottomImages}>
+//   {bottomImages.map((src, index) => (
+//     <img
+//       key={`bottom-${index}`}
+//       src={src}
+//       alt="AEC Staffing Agency"
+//       className={` ${styles.bottom} ${
+//         index === bottomIndex ? styles.active : ""
+//       }`}
+//     />
+//   ))}
+// </div>
+// </>

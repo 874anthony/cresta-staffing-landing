@@ -1,5 +1,5 @@
 export const faqGeneralData = {
-  client: {
+  jobseeker: {
     "About Cresta": [
       {
         question: "What is Cresta?",
@@ -86,30 +86,5 @@ export const faqGeneralData = {
       },
     ],
   },
-  jobseeker: {
-    "Job Applications": [
-      {
-        question: "How do I apply for a job?",
-        answer:
-          "You can apply through our website or submit your resume to our HR department.",
-      },
-      {
-        question: "What are the requirements?",
-        answer:
-          "Requirements vary by role, but generally include relevant experience and a passion for the industry.",
-      },
-    ],
-    "Career Growth": [
-      {
-        question: "What growth opportunities are available?",
-        answer:
-          "We offer regular training, mentorship programs, and clear career progression paths.",
-      },
-      {
-        question: "Do you support professional development?",
-        answer:
-          "Yes, we actively support professional development through workshops, courses, and certifications.",
-      },
-    ],
-  },
+  client: {},
 };

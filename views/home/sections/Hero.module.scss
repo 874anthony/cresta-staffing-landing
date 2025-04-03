@@ -6,7 +6,7 @@
 @use "../../../scss/mixins/animations" as animations;
 
 .hero {
-  background-image: url("/assets/shared/hero/background.png");
+  // background-image: url("/assets/shared/hero/background.png");
   @include mixins.hero-container;
 }
 
@@ -57,7 +57,7 @@
   display: flex;
   flex-direction: column;
   // justify-content: space-between; // places topImages at the top and bottomImages at the bottom
-  height: 450px;
+  // height: 450px;
   gap: 0.45rem;
 }
 
@@ -169,7 +169,7 @@
   }
 
   .hero__images {
-    height: 770px;
+    // height: 770px;
     gap: 0.5rem;
   }
 }
