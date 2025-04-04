@@ -96,6 +96,11 @@
   @include animations.slide-in-right;
 }
 
+.video {
+  clip-path: fill-box;
+  filter: grayscale(0);
+}
+
 // ============================ MEDIA QUERIES ============================
 @media screen and (max-width: 475px) {
   .hero {
