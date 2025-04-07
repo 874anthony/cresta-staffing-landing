@@ -82,8 +82,8 @@ const navigationData = [
     slug: "drafter",
   },
   {
-    title: "Expediator",
-    slug: "expediator",
+    title: "Expediter",
+    slug: "expediter",
   },
   {
     title: "Executive Assistant",

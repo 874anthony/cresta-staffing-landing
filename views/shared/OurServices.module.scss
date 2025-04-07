@@ -204,13 +204,13 @@
 
   .service__card:nth-child(3) {
     &::before {
-      background-image: url("/assets/shared/our-services/estimator_1.jpg");
+      background-image: url("/assets/shared/our-services/expediter_1.jpg");
     }
   }
 
   .service__card:nth-child(4) {
     &::before {
-      background-image: url("/assets/shared/our-services/estimator_1.jpg");
+      background-image: url("/assets/shared/our-services/assistant_1.jpg");
     }
   }
 }
@@ -256,6 +256,12 @@
 
   .carouselSlide:nth-child(2) {
     .service__card:nth-child(1) {
+      .service__cardContent {
+        transform: translateY(calc(100% - 6rem));
+      }
+    }
+
+    .service__card:nth-child(4) {
       .service__cardContent {
         transform: translateY(calc(100% - 6rem));
       }

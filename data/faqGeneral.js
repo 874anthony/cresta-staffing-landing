@@ -85,6 +85,216 @@ export const faqGeneralData = {
           "To be considered, candidates must demonstrate professional English proficiency (C1 or C2 level) and achieve a score of 4 or 5 on our evaluation form. Candidates who score a 3, 2, or 1 will be unable to reapply for six months.",
       },
     ],
+    "Interview & Feedback": [
+      {
+        question: "When will my test project be reviewed?",
+        answer:
+          "We'll begin reviewing your test project as soon as you submit it.",
+      },
+      {
+        question: "What happens after I submit my assessment?",
+        answer:
+          "Your test will be reviewed, and we will notify you when feedback is available.",
+      },
+      {
+        question:
+          "If my test results meet expectations, what is the next step?",
+        answer:
+          "A successful test will move you forward to the Hiring Manager interview stage.",
+      },
+      {
+        question: "What happens if I don’t complete the test on time?",
+        answer:
+          "If you don't complete the test by the deadline, we'll send you a reminder. Please submit your test by the day after the reminder to continue in the application process. After that, we'll have to close your application.",
+      },
+      {
+        question:
+          "What does the company I'll be working with do, and what are their expectations for my role?",
+        answer:
+          "The expectations vary depending on the position and the client's specific requirements for each candidate. However, they generally look for strong assertive communication skills, responsibility, autonomy, teamwork, and consistency to effectively carry out their duties.",
+      },
+    ],
+    "Offer & Onboarding": [
+      {
+        question: "What does the onboarding process look like?",
+        answer:
+          "Onboarding is all about getting you settled in and ready to succeed. We'll give you a warm welcome, get your accounts set up, and walk you through the basics of our clients and processes. We'll also make sure to address any questions you have, so you feel confident and supported from day one.",
+      },
+      {
+        question:
+          "Are there any additional documents I need to submit before starting?",
+        answer:
+          "When we send you the link for onboarding, it will include a form with all the necessary documents listed. We're here to help if you have any questions about what's needed.",
+      },
+      {
+        question: "What are the working hours like?",
+        answer:
+          "For candidates in Colombia: The schedule is from 8:00 AM to 5:00 PM, with a 1-hour break at 1:00 PM (8-hour workday). You must be located within the GMT-5 or UTC-5 time zone.",
+      },
+      {
+        question: "If I am selected, when will I receive my contract?",
+        answer:
+          "Great! If you're selected, we'll email you the onboarding form. After you've filled it out and scheduled your onboarding, your contract will be on its way within 24 hours.",
+      },
+      {
+        question: "What type of contract will I have?",
+        answer:
+          "This contract is for a service provider role, which means you'll be responsible for your own social security and taxes.",
+      },
+      {
+        question: "How does PTO (Paid Time Off) work?",
+        answer:
+          "While traditional vacation benefits aren't offered to service providers, we value work-life balance. We're happy to work with you to arrange time off when you need it, with prior notification.",
+      },
+      {
+        question: "How does payment work?",
+        answer:
+          "The Employee will be paid on a monthly basis. The specific payment date will be either the 1st or the 15th of each month, depending on the Employee's start date.\n\nStart Date on or before the 15th of the month: The Employee will be paid on the 1st of the following month.\n\nStart Date after the 15th of the month: The Employee will be paid on the 15th of the following month.",
+      },
+      {
+        question: "What are the payment methods?",
+        answer:
+          "We want to make getting paid as easy as possible! You'll receive your earnings in Colombian Pesos (COP). You can choose to be paid through Wise, Payoneer, or, in some cases, directly to your bank account. While we calculate your earnings in US Dollars (USD), the amount you receive will be the equivalent in COP, based on the current market exchange rate provided by your payment platform.",
+      },
+      {
+        question: "Do you provide Work Materials Crestas professionals?",
+        answer:
+          "As independent contractors, candidates are responsible for having their own equipment, including a personal computer, a comfortable workspace, and a high-speed internet connection. However, Cresta provides licenses for the following programs: [List the programs here], ensuring you have the essential tools to excel in your role.",
+      },
+      {
+        question: "Could you walk me through how Time Doctor tracks time?",
+        answer:
+          "We understand you might have questions about time tracking. With Time Doctor, you're in control. You turn the application on when you're working and off when you're not. This ensures that only your active work time is tracked.",
+      },
+      {
+        question: "Need more info?",
+        answer:
+          "At Cresta, you’ll never have to worry about your next step—we’re here to help you unlock your true potential with endless opportunities. Your success depends on your proactive mindset; we provide the tools, and you make it happen. You’ll become part of a strong, supportive community of professionals, all with ample room for growth. Best of all, we take care of finding clients for you!\n\nAt Cresta, you’re never alone. If anything isn’t clear, don’t hesitate to reach out—we’re always here to help and ready to assist!",
+      },
+    ],
   },
-  client: {},
+  client: {
+    "What is a BPO?": [
+      {
+        question: "What is a BPO company?",
+        answer:
+          "A BPO (Business Process Outsourcing) company is a firm that handles business operations and tasks for other companies. These tasks can include customer service, HR, accounting, IT support, and more. BPOs help businesses reduce costs and improve efficiency by outsourcing non-core functions to specialized service providers.",
+      },
+      {
+        question: "Why choose CRESTA?",
+        answer:
+          "CRESTA is a specialized staffing agency focused exclusively on the construction and design sector. Our in-depth industry knowledge enables us to connect clients with top-tier talent, ensuring a perfect fit for their needs. This expertise allows for seamless integration and outstanding results, making CRESTA the ideal partner for construction and design staffing solutions.",
+      },
+      {
+        question: "What sets CRESTA apart from other BPO staffing agencies?",
+        answer:
+          "CRESTA stands out as a specialized staffing agency exclusively dedicated to the construction and design sector. Our deep understanding of the industry’s nuances allows us to precisely match clients with top-tier talent, ensuring seamless integration and exceptional results.",
+      },
+      {
+        question: "What types of construction services can be outsourced?",
+        answer:
+          "Services include:\n- Project Management: Overseeing schedules, budgets, and coordination.\n- Design & Engineering: Architectural, structural, and MEP design.\n- Preconstruction Services: Cost estimation, feasibility studies, and planning.\n- Drafting & BIM Services: CAD drafting, 3D modeling, and Building Information Modeling (BIM).\n- Procurement & Supply Chain Management: Sourcing materials and managing vendor relationships.\n- Site Supervision & Quality Control: Ensuring compliance with safety and quality standards.\n- Administrative Support: Document control, permits, and reporting.",
+      },
+      {
+        question:
+          "Can you provide case studies or examples of successful construction outsourcing projects?",
+        answer:
+          "We’d be happy to! Please reach out directly so we can share relevant examples tailored to your area of interest.",
+      },
+    ],
+    "Working with CRESTA": [
+      {
+        question: "What are the hiring options?",
+        answer:
+          "We offer flexible hiring options tailored to your needs. Whether you require temporary, long-term, or permanent professionals, CRESTA provides staffing solutions that match your business objectives.",
+      },
+      {
+        question: "How long does it take to hire?",
+        answer:
+          "The timeline can vary based on your specific needs, but we typically provide top-tier candidates within a few days. Our process is fast, efficient, and always focused on quality.",
+      },
+      {
+        question: "How to hire?",
+        answer:
+          "Hiring with CRESTA is simple: Reach out to our team with your requirements, and we’ll present you with vetted candidates that fit your project. Once you choose a candidate, we’ll handle the rest—from onboarding to timesheets.",
+      },
+      {
+        question: "Does CRESTA offer quality guarantees?",
+        answer:
+          "Absolutely! We track all of our professionals using timesheets that you can access at any time. These include a detailed description of tasks and hours worked. If you're not satisfied with how hours were used for a specific task, we won’t charge you for them.",
+      },
+      {
+        question: "Are there any upfront fees?",
+        answer:
+          "Nope. We don’t charge any upfront fees. You only pay once you’ve started working with a professional you’re happy with.",
+      },
+      {
+        question:
+          "Does CRESTA offer staffing services for both temporary and permanent roles?",
+        answer:
+          "Yes! We provide staffing solutions for temporary, long-term, and permanent roles based on your business needs.",
+      },
+      {
+        question: "What are the rates per hour?",
+        answer:
+          "Rates depend on the role and level of experience required. Get in touch with us, and we’ll provide a custom quote based on your project and expectations.",
+      },
+      {
+        question: "What payment options do you offer?",
+        answer:
+          "We support a variety of payment methods including bank transfers, Wise, and Payoneer. We'll work with you to find the most convenient method.",
+      },
+    ],
+    "Hiring a Remote Team": [
+      {
+        question: "In which time-zone does CRESTA work?",
+        answer:
+          "All of our professionals work in your same time zone. We believe working together during the same hours—no matter the physical location—leads to better communication and more efficient teamwork.",
+      },
+      {
+        question:
+          "What are the benefits of hiring remote talent through CRESTA?",
+        answer:
+          "You get access to highly skilled, pre-vetted professionals at competitive rates, with flexible terms. CRESTA handles all the admin, saving you time and resources while letting you scale your team quickly.",
+      },
+      {
+        question:
+          "Can talent in Latin America perform at the same level as US-based people?",
+        answer:
+          "Absolutely. Our professionals are carefully vetted for experience, skill, and communication. Many have worked with US-based clients and are fully aligned with industry standards.",
+      },
+      {
+        question:
+          "Why should I hire remote talent instead of local in-house talent?",
+        answer:
+          "Remote teams allow you to tap into a broader talent pool, often at a lower cost. You also gain flexibility, reduced overhead, and access to top-tier professionals without being limited by geography.",
+      },
+      {
+        question: "Do the professionals have experience in the US?",
+        answer:
+          "Yes, most of our professionals have worked with US-based clients or companies and are comfortable with the standards, workflows, and communication styles required.",
+      },
+      {
+        question: "Do they work in imperial?",
+        answer:
+          "Yes. Our professionals are experienced with both imperial and metric systems and can adjust to your project’s requirements seamlessly.",
+      },
+      {
+        question: "Can my remote team work on US Federal holidays?",
+        answer:
+          "That’s up to you. Our professionals are flexible and can follow your company’s holiday schedule, including US Federal holidays, if needed.",
+      },
+      {
+        question:
+          "How can I know that the professionals are working productively and using their time properly?",
+        answer:
+          "We use transparent time-tracking tools like Time Doctor. You’ll have access to detailed timesheets and productivity reports so you can always see exactly what’s being done and how long it takes.",
+      },
+      {
+        question: "How will I communicate with my remote team?",
+        answer:
+          "You can communicate with your team using your preferred tools—Zoom, Slack, Teams, or any other platform. We ensure communication is seamless and aligned with your internal processes.",
+      },
+    ],
+  },
 };

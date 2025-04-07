@@ -51,9 +51,9 @@ export default function OurServices({
         link: "/services/estimator",
       },
       {
-        title: "Expediator",
+        title: "Expediter",
         text: "Our skilled architects excel in construction administration, building codes, and permit processes.",
-        link: "/services/expediator",
+        link: "/services/expediter",
       },
       {
         title: "Executive Assistant",
