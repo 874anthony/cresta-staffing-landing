@@ -53,7 +53,7 @@ export default function OurServices({
       {
         title: "Expediator",
         text: "Our skilled architects excel in construction administration, building codes, and permit processes.",
-        link: "/services/expeditor",
+        link: "/services/expediator",
       },
       {
         title: "Executive Assistant",

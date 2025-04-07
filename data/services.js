@@ -127,7 +127,7 @@ export default {
     ),
   },
   expediator: {
-    title: "Expeditor",
+    title: "Expediator",
     description:
       "Our skilled architects excel in construction administration, building codes, and permit processes. They have the expertise to review and manage complex architectural drawings with precision while ensuring thorough documentation. With strong organizational, communication, and problem-solving skills, our experts deliver efficient and reliable project oversight.",
     heroImage: "/assets/service/drafter/hero.png",
