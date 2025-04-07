@@ -136,7 +136,7 @@ export default {
       "Manage the filing process efficiently.",
       "Review plans and coordinate with stakeholders.",
       "Maintain organized documentation for high-value projects.",
-      "Tech-savvy and proficient in CAD software (AutoCAD, Revit).",
+      // "Tech-savvy and proficient in CAD software (AutoCAD, Revit).",
     ],
     // overviewImage: "/assets/service/expediator/overview.png",
     overviewImage: "/assets/service/drafter/overview.png",
@@ -153,7 +153,7 @@ export default {
       "Remote office administration and task organization.",
       "Payroll processing, invoicing, and financial tracking.",
       "Strong customer service and client communication.",
-      "Scheduling and team coordination for seamless operations.",
+      // "Scheduling and team coordination for seamless operations.",
     ],
     overviewImage: "/assets/service/drafter/overview.png",
     overviewDescription:
