@@ -52,12 +52,12 @@ export default function OurServices({
       },
       {
         title: "Expediter",
-        text: "Our skilled architects excel in construction administration, building codes, and permit processes.",
+        text: "Our architects streamline permits, processes, and documentation for smoother projects.",
         link: "/services/expediter",
       },
       {
         title: "Executive Assistant",
-        text: "They excel at coordinating multiple teams and ensuring seamless communication while maintaining precise oversight of administrative processes.",
+        text: "Executive support that keeps teams aligned and operations smooth in a fast-paced design environment.",
         link: "/services/assistant",
       },
     ],

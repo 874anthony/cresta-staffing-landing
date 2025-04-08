@@ -44,10 +44,10 @@ export const faqGeneralData = {
         answer:
           "Of course! If your profile is selected to be a part of our creative talent pool, you will receive guidance from your Recruiter to follow best practices during the process.",
       },
-      {
-        question: "I can’t find available interview slots, what should I do?",
-        answer: "Click HERE (link) and open more slots in the calendar.",
-      },
+      // {
+      //   question: "I can’t find available interview slots, what should I do?",
+      //   answer: "Click HERE (link) and open more slots in the calendar.",
+      // },
       {
         question: "I need to reschedule my interview. What should I do?",
         answer:

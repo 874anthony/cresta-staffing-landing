@@ -229,69 +229,6 @@
   }
 }
 
-@media (hover: hover) and (min-width: 600px) {
-  .service__card::after {
-    transform: translateY(0);
-  }
-
-  .service__cardContent {
-    transform: translateY(calc(100% - 4.5rem));
-
-    > *:not(.service__cardTitle) {
-      opacity: 0;
-      transform: translateY(1rem);
-      transition: transform variables.$card-effect-duration
-          variables.$card-effect,
-        opacity variables.$card-effect-duration variables.$card-effect;
-    }
-  }
-
-  .carouselSlide:nth-child(1) {
-    .service__card:nth-child(4) {
-      .service__cardContent {
-        transform: translateY(calc(100% - 6.5rem));
-      }
-    }
-  }
-
-  .carouselSlide:nth-child(2) {
-    .service__card:nth-child(1) {
-      .service__cardContent {
-        transform: translateY(calc(100% - 6rem));
-      }
-    }
-
-    .service__card:nth-child(4) {
-      .service__cardContent {
-        transform: translateY(calc(100% - 6rem));
-      }
-    }
-  }
-
-  .service__card:hover,
-  .service__card:focus-within {
-    align-items: center;
-
-    &::before {
-      transform: translateY(-4%);
-    }
-
-    &::after {
-      transform: translateY(-50%);
-    }
-
-    .service__cardContent {
-      transform: translateY(calc(100% - 8.5rem));
-
-      > *:not(.service__cardTitle) {
-        opacity: 1;
-        transform: translateY(0);
-        transition-delay: calc(variables.$card-effect-duration / 8);
-      }
-    }
-  }
-}
-
 .carouselSlide:nth-child(1) {
   .service__card:nth-child(2):hover,
   .service__card:nth-child(2):focus-within {
@@ -355,6 +292,84 @@
 }
 
 // ==================== MEDIA QUERIES ====================
+
+@media (hover: hover) and (min-width: 600px) {
+  .service__card::after {
+    transform: translateY(0);
+  }
+
+  .service__cardContent {
+    transform: translateY(calc(100% - 4.5rem));
+
+    > *:not(.service__cardTitle) {
+      opacity: 0;
+      transform: translateY(1rem);
+      transition: transform variables.$card-effect-duration
+          variables.$card-effect,
+        opacity variables.$card-effect-duration variables.$card-effect;
+    }
+  }
+
+  .carouselSlide:nth-child(1) {
+    .service__card:nth-child(4) {
+      .service__cardContent {
+        transform: translateY(calc(100% - 6.5rem));
+      }
+    }
+  }
+
+  .carouselSlide:nth-child(2) {
+    .service__card:nth-child(1) {
+      .service__cardContent {
+        transform: translateY(calc(100% - 6rem));
+      }
+    }
+
+    .service__card:nth-child(3):hover,
+    .service__card:nth-child(3):focus-within {
+      .service__cardContent {
+        transform: translateY(calc(100% - 8.5rem));
+      }
+    }
+
+    .service__card:nth-child(4) {
+      .service__cardContent {
+        transform: translateY(calc(100% - 6rem));
+      }
+    }
+
+    .service__card:nth-child(4):hover,
+    .service__card:nth-child(4):focus-within {
+      .service__cardContent {
+        transform: translateY(calc(100% - 14rem));
+      }
+    }
+  }
+
+  .service__card:hover,
+  .service__card:focus-within {
+    align-items: center;
+
+    &::before {
+      transform: translateY(-4%);
+    }
+
+    &::after {
+      transform: translateY(-50%);
+    }
+
+    .service__cardContent {
+      transform: translateY(calc(100% - 8.5rem));
+
+      > *:not(.service__cardTitle) {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: calc(variables.$card-effect-duration / 8);
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 475px) {
   .our__services {
     padding-block: 2rem;
@@ -458,33 +473,33 @@
   }
 }
 
-@media (hover: hover) and (min-width: 2200px) {
+@media (hover: hover) and (min-width: 1900px) {
   .carouselSlide:nth-child(1) {
     .service__card:nth-child(1):hover,
     .service__card:nth-child(1):focus-within {
       .service__cardContent {
-        transform: translateY(calc(100% - 15rem));
+        transform: translateY(calc(100% - 6.5rem));
       }
     }
 
     .service__card:nth-child(2):hover,
     .service__card:nth-child(2):focus-within {
       .service__cardContent {
-        transform: translateY(calc(100% - 15rem));
+        transform: translateY(calc(100% - 6.5rem));
       }
     }
 
     .service__card:nth-child(3):hover,
     .service__card:nth-child(3):focus-within {
       .service__cardContent {
-        transform: translateY(calc(100% - 15rem));
+        transform: translateY(calc(100% - 6.5rem));
       }
     }
 
     .service__card:nth-child(4):hover,
     .service__card:nth-child(4):focus-within {
       .service__cardContent {
-        transform: translateY(calc(100% - 22rem));
+        transform: translateY(calc(100% - 9.5rem));
       }
     }
   }
@@ -493,28 +508,90 @@
     .service__card:nth-child(1):hover,
     .service__card:nth-child(1):focus-within {
       .service__cardContent {
-        transform: translateY(calc(100% - 25rem));
+        transform: translateY(calc(100% - 10rem));
       }
     }
 
     .service__card:nth-child(2):hover,
     .service__card:nth-child(2):focus-within {
       .service__cardContent {
-        transform: translateY(calc(100% - 13rem));
+        transform: translateY(calc(100% - 6.5rem));
       }
     }
 
     .service__card:nth-child(3):hover,
     .service__card:nth-child(3):focus-within {
       .service__cardContent {
-        transform: translateY(calc(100% - 16rem));
+        transform: translateY(calc(100% - 6.5rem));
       }
     }
 
     .service__card:nth-child(4):hover,
     .service__card:nth-child(4):focus-within {
       .service__cardContent {
-        transform: translateY(calc(100% - 28rem));
+        transform: translateY(calc(100% - 6.5rem));
+      }
+    }
+  }
+}
+
+@media (hover: hover) and (min-width: 2200px) {
+  .carouselSlide:nth-child(1) {
+    .service__card:nth-child(1):hover,
+    .service__card:nth-child(1):focus-within {
+      .service__cardContent {
+        transform: translateY(calc(100% - 18rem));
+      }
+    }
+
+    .service__card:nth-child(2):hover,
+    .service__card:nth-child(2):focus-within {
+      .service__cardContent {
+        transform: translateY(calc(100% - 21rem));
+      }
+    }
+
+    .service__card:nth-child(3):hover,
+    .service__card:nth-child(3):focus-within {
+      .service__cardContent {
+        transform: translateY(calc(100% - 23rem));
+      }
+    }
+
+    .service__card:nth-child(4):hover,
+    .service__card:nth-child(4):focus-within {
+      .service__cardContent {
+        transform: translateY(calc(100% - 24rem));
+      }
+    }
+  }
+
+  .carouselSlide:nth-child(2) {
+    .service__card:nth-child(1):hover,
+    .service__card:nth-child(1):focus-within {
+      .service__cardContent {
+        transform: translateY(calc(100% - 30rem));
+      }
+    }
+
+    .service__card:nth-child(2):hover,
+    .service__card:nth-child(2):focus-within {
+      .service__cardContent {
+        transform: translateY(calc(100% - 15rem));
+      }
+    }
+
+    .service__card:nth-child(3):hover,
+    .service__card:nth-child(3):focus-within {
+      .service__cardContent {
+        transform: translateY(calc(100% - 17rem));
+      }
+    }
+
+    .service__card:nth-child(4):hover,
+    .service__card:nth-child(4):focus-within {
+      .service__cardContent {
+        transform: translateY(calc(100% - 23rem));
       }
     }
   }

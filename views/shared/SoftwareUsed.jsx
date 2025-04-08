@@ -16,6 +16,10 @@ const servicesImagesGeneral = [
 export default function SoftwareUsed({
   servicesImages = servicesImagesGeneral,
 }) {
+  const half = Math.ceil(servicesImages.length / 2); // Calculate the half index
+  const firstHalf = servicesImages.slice(0, half); // First half of the array
+  const secondHalf = servicesImages.slice(half); // Second half of the array
+
   return (
     <>
       <section className={styles.software__used}>
@@ -29,11 +33,7 @@ export default function SoftwareUsed({
 
       <div className={styles.software__usedList}>
         <div className={styles.software__firstRow}>
-          {[
-            ...servicesImages.slice(0, 5),
-            ...servicesImages.slice(0, 5),
-            ...servicesImages.slice(0, 5),
-          ].map((image, index) => (
+          {[...firstHalf, ...firstHalf, ...firstHalf].map((image, index) => (
             <div key={index} className={styles.software__usedItem}>
               <img
                 src={image}
@@ -45,11 +45,7 @@ export default function SoftwareUsed({
         </div>
 
         <div className={styles.software__secondRow}>
-          {[
-            ...servicesImages.slice(5),
-            ...servicesImages.slice(5),
-            ...servicesImages.slice(5),
-          ].map((image, index) => (
+          {[...secondHalf, ...secondHalf, ...secondHalf].map((image, index) => (
             <div key={index} className={styles.software__usedItem}>
               <img
                 src={image}

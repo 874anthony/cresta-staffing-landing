@@ -21,7 +21,7 @@ export default function HeroFindJob() {
           Work remotely on the most innovative construction projects in the U.S.
         </p>
 
-        <div className={styles.hero__captionCTA}>
+        {/* <div className={styles.hero__captionCTA}>
           <Button
             variant="primary"
             size="large"
@@ -29,7 +29,7 @@ export default function HeroFindJob() {
           >
             Get Expert Consultation
           </Button>
-        </div>
+        </div> */}
       </div>
 
       <div className={styles.hero__images}>

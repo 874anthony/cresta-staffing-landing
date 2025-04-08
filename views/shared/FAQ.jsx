@@ -1,10 +1,11 @@
 "use client";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
+
+import { faqGeneralData } from "@/data/faqGeneral";
 
 import Button from "@/components/Button";
 import { FaqIconClosed, FaqIconOpen } from "@/components/icons/faq/FaqIcons";
-import faqData from "@/data/faq";
 import styles from "./FAQ.module.scss";
 
 const ChevronRight = () => (
@@ -24,8 +25,19 @@ const ChevronRight = () => (
   </svg>
 );
 
+const faqTypes = {
+  services: "client",
+  "find-a-job": "jobseeker",
+};
+
 export default function FAQ({ bgColor = "gray", rounded = false }) {
   const router = useRouter();
+  const pathname = usePathname();
+
+  const path = pathname.split("/")[1];
+  const faqType = faqTypes[path] || "jobseeker";
+
+  const faqData = faqGeneralData[faqType];
 
   // Track which section is selected; default to the first one
   const sectionKeys = Object.keys(faqData);

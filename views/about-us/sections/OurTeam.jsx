@@ -30,16 +30,20 @@ const members = [
       name: "Jose Patiño",
       position: "Quality Manager",
       // email: "juan.m@crestastaffing.com",
+      linkedIn: "https://www.linkedin.com/in/jose-pati%C3%B1o-846782155/",
     },
     {
       name: "Juan Mercado Toloza",
       position: "Hiring Manager",
       // email: "juan.m@crestastaffing.com",
+      linkedIn:
+        " https://www.linkedin.com/in/juan-esteban-mercado-toloza-84a319112/",
     },
     {
       name: "Sara Correa",
       position: "Hiring Manager",
       // email: "juan.m@crestastaffing.com",
+      linkedIn: "https://www.linkedin.com/in/sara-correa-franco-575380156/",
     },
   ],
 ];
@@ -95,7 +99,16 @@ export default function OurTeam() {
                     </p>
                     {/* <p className={styles.member__cardEmail}>{card.email}</p> */}
 
-                    <button className={styles.member__cardButton}>
+                    <button
+                      className={styles.member__cardButton}
+                      onClick={() => {
+                        window.open(
+                          card.linkedIn,
+                          "_blank",
+                          "noopener,noreferrer"
+                        );
+                      }}
+                    >
                       LinkedIn
                       <ChevronRight />
                     </button>
