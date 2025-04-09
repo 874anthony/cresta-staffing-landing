@@ -129,7 +129,7 @@ export default {
   expediter: {
     title: "Expediter",
     description:
-      "Our skilled architects excel in construction administration, building codes, and permit processes. They have the expertise to review and manage complex architectural drawings with precision while ensuring thorough documentation. With strong organizational, communication, and problem-solving skills, our experts deliver efficient and reliable project oversight.",
+      "Our architects streamline construction processes, handle permits with ease, and ensure all documentation is accurate and on point, making every project smoother from start to finish.",
     heroImage: "/assets/service/expediter/hero.png",
     overviewItems: [
       "Ensure code and zoning compliance",
@@ -144,7 +144,7 @@ export default {
   assistant: {
     title: "Executive Assistant",
     description:
-      "Our Executive Assistant manages the daily operations of a fast-paced design and construction environment. They excel at coordinating multiple teams and ensuring seamless communication while maintaining precise oversight of administrative processes.",
+      "Our Executive Assistant keeps operations running smoothly, coordinating teams and streamlining communication in a dynamic design and construction setting.",
     heroImage: "/assets/service/assistant/hero.png",
     overviewItems: [
       "Project and workflow coordination",
