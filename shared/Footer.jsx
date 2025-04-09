@@ -156,7 +156,9 @@ export default function Footer() {
             }}
           >
             <MailIcon />
-            <a href="#">office@crestastaffing.com</a>
+            <a href="mailto:office@crestastaffing.com">
+              office@crestastaffing.com
+            </a>
           </li>
           <li style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}>
             <LocationIcon />
