@@ -114,11 +114,13 @@ export default function Testimonials({
                           </p>
 
                           <div className={styles.testimonials__cardAuthor}>
-                            <img
-                              src={avatarImage}
-                              alt="Author"
-                              className={styles.testimonials__cardAvatar}
-                            />
+                            {isFindAJobPage && (
+                              <img
+                                src={avatarImage}
+                                alt="Author"
+                                className={styles.testimonials__cardAvatar}
+                              />
+                            )}
                             <div
                               className={styles.testimonials__cardAuthorInfo}
                             >

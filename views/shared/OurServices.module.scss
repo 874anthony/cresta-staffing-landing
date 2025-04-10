@@ -425,7 +425,7 @@
   .carouselSlide:nth-child(2) {
     .service__card {
       &::before {
-        background-image: url("/assets/shared/our-services/3d_renderer_1.jpg");
+        background-image: url("/assets/shared/our-services/3d_renderer_1.jpg") !important;
       }
     }
   }

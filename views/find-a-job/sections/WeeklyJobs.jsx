@@ -111,6 +111,13 @@ export default function WeeklyJobs() {
                       style={{
                         fontWeight: "bold",
                       }}
+                      onClick={() => {
+                        window.open(
+                          "https://www.linkedin.com/company/crestastaffing/jobs/?viewAsMember=true",
+                          "_blank",
+                          "noopener noreferrer"
+                        );
+                      }}
                     >
                       Apply
                     </Button>

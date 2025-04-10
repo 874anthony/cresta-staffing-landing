@@ -251,6 +251,19 @@
   .carouselSlide {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  // CORRESPONDING IMAGES FOR MOBILE VIEW
+  .carouselSlide:nth-child(2) {
+    .member__card::before {
+      background-image: url("/assets/about/team/image_team-juanes.jpg");
+    }
+  }
+
+  .carouselSlide:nth-child(3) {
+    .member__card::before {
+      background-image: url("/assets/about/team/image_team-sara.jpg");
+    }
+  }
 }
 
 @media (hover: hover) and (min-width: 2200px) {

@@ -152,6 +152,7 @@
   .testimonials__card {
     // width: 100%;
     padding: 0.8rem 1.2rem;
+    gap: 0.5rem;
   }
 
   .testimonials__cardQuote {
@@ -164,6 +165,7 @@
   }
 
   .testimonials__cardAuthor {
+    margin-top: 0.5rem;
     gap: 0.5rem;
   }
 
