@@ -28,10 +28,10 @@ export async function POST(req) {
 
     // Configure AWS S3 client
     const s3 = new S3Client({
-      region: process.env.AWS_REGION,
+      region: process.env.AWS_REGION_CUSTOM,
       credentials: {
-        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+        accessKeyId: process.env.AWS_ACCESS_KEY_ID_CUSTOM,
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY_CUSTOM,
       },
     });
 
@@ -48,7 +48,7 @@ export async function POST(req) {
 
     // Define S3 upload parameters
     const params = {
-      Bucket: process.env.AWS_S3_BUCKET_NAME, // set this in your environment variables
+      Bucket: process.env.AWS_S3_BUCKET_NAME_CUSTOM, // set this in your environment variables
       Key: fileName,
       Body: buffer,
       ContentType:
