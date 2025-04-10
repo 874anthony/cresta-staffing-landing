@@ -21,19 +21,19 @@ const testimonials = [
   {
     name: "Mario Pinzón",
     position: "Estimator",
-    avatarImage: "/assets/home/testimonials/team_1.jpg",
+    avatarImage: "/assets/jobs/testimonials/mario_pinzon_photo.jpg",
     text: "Working at Cresta has been a fantastic experience both professionally and personally. I've had the opportunity to grow and learn in an international work environment, while also having the support of a team always ready to assist in any situation. Additionally, the flexibility of working from home has greatly contributed to achieving a better work-life balance.",
   },
   {
     name: "Jesus Perez",
     position: "Fire Protection Engineer",
-    avatarImage: "/assets/home/testimonials/team_1.jpg",
+    avatarImage: "/assets/jobs/testimonials/jesus_perez_photo.jpg",
     text: "Working at Cresta has been an incredible experience that has significantly contributed to my career growth. Since joining the team, I have had the opportunity to face new challenges, learn from a group of highly skilled people, and improve my abilities in key areas. The work culture at Cresta has allowed me to develop as a professional, gain a broader perspective of my field, and strengthen my ability to make strategic decisions. Without a doubt, my time at Cresta has been fundamental to my evolution, and I am grateful for everything I have learned here.",
   },
   {
     name: "Sara Polo",
     position: "Architect Project Manager",
-    avatarImage: "/assets/home/testimonials/team_1.jpg",
+    avatarImage: "/assets/jobs/testimonials/sara_polo_photo.jpg",
     text: "From the very beginning, Cresta made the hiring process feel human and thoughtful, valuing my professional experience. Since joining, they have continuously supported me, listened to me, and followed my growth.orking with Cresta has been a truly rewarding experience where I feel valued and appreciated.",
   },
 ];

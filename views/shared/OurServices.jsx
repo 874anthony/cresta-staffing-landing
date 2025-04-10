@@ -51,9 +51,9 @@ export default function OurServices({
         link: "/services/estimator",
       },
       {
-        title: "Expediter",
+        title: "Project Coordinator",
         text: "Our architects streamline permits, processes, and documentation for smoother projects.",
-        link: "/services/expediter",
+        link: "/services/project-coordinator",
       },
       {
         title: "Executive Assistant",

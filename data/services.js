@@ -126,18 +126,18 @@ export default {
       (_, i) => `/assets/service/drafter/software/software-${i + 1}.png`
     ),
   },
-  expediter: {
-    title: "Expediter",
+  "project-coordinator": {
+    title: "Project Coordinator",
     description:
       "Our architects streamline construction processes, handle permits with ease, and ensure all documentation is accurate and on point, making every project smoother from start to finish.",
-    heroImage: "/assets/service/expediter/hero.png",
+    heroImage: "/assets/service/project-coordinator/hero.png",
     overviewItems: [
       "Ensure code and zoning compliance",
       "Manage filings",
       "Review plans and coordinate",
       "Organize project documentation",
     ],
-    overviewImage: "/assets/service/expediter/overview.png",
+    overviewImage: "/assets/service/project-coordinator/overview.png",
     overviewDescription:
       "Selected from a competitive pool, our architect project coordinator, specializing in construction administration and complex drawings, ensures precise, efficient, and reliable project delivery that meets our rigorous management standards.",
   },

@@ -204,7 +204,7 @@
 
   .service__card:nth-child(3) {
     &::before {
-      background-image: url("/assets/shared/our-services/expediter_1.jpg");
+      background-image: url("/assets/shared/our-services/project_coordinator_1.jpg");
     }
   }
 
@@ -325,10 +325,16 @@
       }
     }
 
+    .service__card:nth-child(3) {
+      .service__cardContent {
+        transform: translateY(calc(100% - 6rem));
+      }
+    }
+
     .service__card:nth-child(3):hover,
     .service__card:nth-child(3):focus-within {
       .service__cardContent {
-        transform: translateY(calc(100% - 8.5rem));
+        transform: translateY(calc(100% - 12rem));
       }
     }
 
@@ -459,7 +465,7 @@
   .carouselSlide:nth-child(7) {
     .service__card {
       &::before {
-        background-image: url("/assets/shared/our-services/estimator_1.jpg");
+        background-image: url("/assets/shared/our-services/project_coordinator_1.jpg");
       }
     }
   }
@@ -467,7 +473,7 @@
   .carouselSlide:nth-child(8) {
     .service__card {
       &::before {
-        background-image: url("/assets/shared/our-services/estimator_1.jpg");
+        background-image: url("/assets/shared/our-services/assistant_1.jpg");
       }
     }
   }
@@ -519,10 +525,22 @@
       }
     }
 
+    .service__card:nth-child(3) {
+      .service__cardContent {
+        transform: translateY(calc(100% - 4.5rem));
+      }
+    }
+
     .service__card:nth-child(3):hover,
     .service__card:nth-child(3):focus-within {
       .service__cardContent {
         transform: translateY(calc(100% - 6.5rem));
+      }
+    }
+
+    .service__card:nth-child(4) {
+      .service__cardContent {
+        transform: translateY(calc(100% - 4.5rem));
       }
     }
 

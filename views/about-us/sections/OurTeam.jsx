@@ -41,7 +41,7 @@ const members = [
     },
     {
       name: "Sara Correa",
-      position: "Hiring Manager",
+      position: "Talent Acquisition",
       // email: "juan.m@crestastaffing.com",
       linkedIn: "https://www.linkedin.com/in/sara-correa-franco-575380156/",
     },
