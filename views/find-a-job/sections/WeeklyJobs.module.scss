@@ -31,9 +31,7 @@
   width: 100%;
   padding: 1.5rem 3rem;
   overflow: hidden;
-
   border-radius: variables.$rounded-lg;
-
   background-color: colors.$color-primary;
   box-shadow: utils.$shadow-normal;
 }
@@ -82,17 +80,8 @@
   justify-content: center;
 }
 
-.weekly__jobCard:nth-child(1) {
-  border-top-left-radius: 0;
-}
-
 .weekly__jobCard:nth-child(2) {
   background-color: #2e3191;
-  border-radius: variables.$rounded-lg;
-}
-
-.weekly__jobCard:nth-child(3) {
-  border-bottom-right-radius: 0;
 }
 
 // ======================== CAROUSEL STARTS HERE ========================
@@ -165,7 +154,6 @@
   .weekly__jobCard {
     padding-block: 1.6rem;
     padding-inline: 2rem;
-    border-radius: variables.$rounded-lg !important;
   }
 
   .weekly__jobCardTitle {

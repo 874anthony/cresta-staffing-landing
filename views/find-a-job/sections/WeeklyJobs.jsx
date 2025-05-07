@@ -10,30 +10,33 @@ import styles from "./WeeklyJobs.module.scss";
 const jobs = [
   [
     {
-      title: "Full Stack Web Developer",
+      title: "Estimator",
       location: "Remote (Colombia)",
       requirements: [
-        "A Bachelorʼs Degree in Software Engineering, Systems Engineering, or a related field.",
-        "Proficiency in front-end technologies (HTML, CSS, JavaScript)",
-        "Knowledge of CMS platforms such as WordPress, Webflow, or custom-built solutions.",
+        "Bachelor's degree in Electrical Engineering, Electronics, Telecommunications (related fields).",
+        "Accurate LV drawing interpretation for quantity takeoffs.",
+        "Comprehensive cost estimation for LV residential/commercial projects.",
+        "Proficient in AutoCAD, BlueBeam, QuoteWerks, and PROCORE for LV project workflows.",
       ],
     },
     {
-      title: "Senior Architect Lead",
+      title: "Project Coordinator",
       location: "Remote (Colombia)",
       requirements: [
-        "A Bachelorʼs Degree in Software Engineering, Systems Engineering, or a related field.",
-        "Proficiency in front-end technologies (HTML, CSS, JavaScript)",
-        "Knowledge of CMS platforms such as WordPress, Webflow, or custom-built solutions.",
+        "Bachelor's degree in Mechanical Engineering, Architecture, Civil Engineering- (related fields).",
+        "Reviewing MEP drawings for constructability and code compliance (NYC).",
+        "Coordinating MEP drawing accuracy with contractors and internal teams.",
+        "Proficient in CAD/BIM (AutoCAD, Revit) and clash detection (Navisworks, BIM 360).",
       ],
     },
     {
-      title: "Full Stack Web Developer",
+      title: "Project Manager",
       location: "Remote (Colombia)",
       requirements: [
-        "A Bachelorʼs Degree in Software Engineering, Systems Engineering, or a related field.",
-        "Proficiency in front-end technologies (HTML, CSS, JavaScript)",
-        "Knowledge of CMS platforms such as WordPress, Webflow, or custom-built solutions.",
+        "Bachelor's degree in Civil Engineering or Architecture (related fields).",
+        "Evaluates subcontractor bids and provides clear selection reports.",
+        "Ensures accurate project documentation and bid records.",
+        "Excel proficiency; CAD/BIM/Revit and project management software knowledge.",
       ],
     },
   ],
