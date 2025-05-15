@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { useSwipeable } from "react-swipeable";
 
 import Button from "@/components/Button";
 import styles from "./OurServices.module.scss";
+import { useCarousel } from "@/hooks/useCarousel";
 
 export default function OurServices({
   title = "Our professional services",
@@ -77,19 +77,11 @@ export default function OurServices({
     }
   }, []);
 
-  const swipeHandlers = useSwipeable({
-    onSwipedLeft: () => {
-      if (currentSlide < slides.length - 1) {
-        setCurrentSlide(currentSlide + 1);
-      }
-    },
-    onSwipedRight: () => {
-      if (currentSlide > 0) {
-        setCurrentSlide(currentSlide - 1);
-      }
-    },
-    preventDefaultTouchmoveEvent: true,
-    trackMouse: true, // optional: allows swipe detection with a mouse
+  const { swipeHandlers } = useCarousel({
+    currentSlide,
+    setCurrentSlide,
+    slidesLength: totalSlides,
+    autoPlay: true,
   });
 
   const handleDotClick = (index) => {

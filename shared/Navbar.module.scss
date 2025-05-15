@@ -48,6 +48,22 @@
       cursor: pointer;
     }
 
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: colors.$color-primary;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
     &:hover .nav__dropdown,
     &:hover .nav__dropdown:hover {
       opacity: 1;

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { useSwipeable } from "react-swipeable";
+import { useCarousel } from "@/hooks/useCarousel";
 import useIsMobile from "@/hooks/useIsMobile";
 
 import Button from "@/components/Button";
@@ -62,23 +62,14 @@ export default function ApplicationProcess() {
 
   // activeStep is 0-indexed: 0 means no step active or starting state.
   const [activeStep, setActiveStep] = useState(0);
-  const totalSteps = 6;
+  const totalSteps = stepsData.length;
 
   const slides = stepsData.map((step) => [step]);
-
-  const swipeHandlers = useSwipeable({
-    onSwipedLeft: () => {
-      if (currentSlide < slides.length - 1) {
-        setCurrentSlide(currentSlide + 1);
-      }
-    },
-    onSwipedRight: () => {
-      if (currentSlide > 0) {
-        setCurrentSlide(currentSlide - 1);
-      }
-    },
-    preventDefaultTouchmoveEvent: true,
-    trackMouse: true, // optional: allows swipe detection with a mouse
+  const { swipeHandlers } = useCarousel({
+    currentSlide,
+    setCurrentSlide,
+    slidesLength: slides.length,
+    autoPlay: true,
   });
 
   const handleMouseEnter = (index) => {
@@ -102,7 +93,7 @@ export default function ApplicationProcess() {
         <span className={styles.appProcess__subCaption}>How to Apply?</span>
         <h2 className={styles.appProcess__captionTitle}>Application process</h2>
         <p className={styles.appProcess__captionText}>
-          6 Simple steps to <span>Get Started</span>
+          {totalSteps} Simple steps to <span>Get Started</span>
         </p>
       </div>
 
