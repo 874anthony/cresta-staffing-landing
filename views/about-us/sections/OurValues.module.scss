@@ -1,0 +1,90 @@
+@use "../../../scss/base/variables" as variables;
+@use "../../../scss/base/colors" as colors;
+@use "../../../scss/base/typography" as typography;
+@use "../../../scss/mixins/mixins" as mixins;
+@use "../../../scss/mixins/typography" as typographyMixins;
+
+.our__values {
+  @include mixins.centered-bg-white-section($gap: 1.2rem);
+}
+
+.our__valuesSubCaption {
+  @include typographyMixins.subCaption($weight: 400);
+}
+
+.our__valuesTitle {
+  @include typographyMixins.title($color: colors.$color-primary);
+}
+
+.our__valuesText {
+  @include typographyMixins.sectionCaptionText;
+}
+
+.our__valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+  padding-inline: 14rem;
+}
+
+.valueCard {
+  cursor: pointer;
+  background: colors.$bg-color-gray;
+  border-radius: variables.$rounded-lg;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.valueCard__number {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background: colors.$bg-color-gray;
+  color: colors.$text-color-dark-blue;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.valueCard__title {
+  margin-block: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: colors.$text-color-dark-blue;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.valueCard__illustration {
+  margin: 1.5rem 0;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+  }
+}
+
+.valueCard__description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: colors.$text-color-gray;
+  margin: 0;
+}

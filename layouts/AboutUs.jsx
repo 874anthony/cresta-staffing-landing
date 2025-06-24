@@ -7,6 +7,7 @@ import OurVisionMision from "@/views/about-us/sections/OurMisionVision";
 import OurTeam from "@/views/about-us/sections/OurTeam";
 // import SeparatorAbout from "@/views/about-us/sections/Separator";
 import Separator from "@/views/shared/Separator";
+import OurValues from "@/views/about-us/sections/OurValues";
 
 import styles from "./Layout.module.scss";
 
@@ -25,6 +26,10 @@ export default function AboutUsPage() {
 
       <MotionSection>
         <OurTeam />
+      </MotionSection>
+
+      <MotionSection>
+        <OurValues />
       </MotionSection>
 
       <MotionSection delay={0.3}>
